@@ -1,26 +1,170 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ─── Tailwind v4 Theme Tokens ─── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #0f172a;
+  --color-accent: #2563eb;
+  --color-surface-light: #f8fafc;
+  --color-border-subtle: #e2e8f0;
+  --color-charcoal: #334155;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 3rem;
+
+  --animate-rotate-slow: rotate-slow 20s linear infinite;
+  --animate-rotate-fast: rotate-slow 10s linear infinite;
+  --animate-rotate-reverse: rotate-reverse 15s linear infinite;
+  --animate-counter-rotate: rotate-reverse 20s linear infinite;
+  --animate-counter-rotate-reverse: rotate-slow 15s linear infinite;
+  --animate-gentle-pulse: gentle-pulse 3s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Base Styles ─── */
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-white overflow-x-hidden;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Keyframes ─── */
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes gentle-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(37, 99, 235, 0);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  }
+}
+
+/* ─── Utility: Dot Pattern ─── */
+.tech-pattern {
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ─── Bento Card ─── */
+.bento-card {
+  @apply bg-white border border-border-subtle p-8 transition-all duration-500 overflow-hidden relative;
+  border-radius: 2rem;
+}
+
+.bento-card:hover {
+  @apply shadow-2xl -translate-y-2;
+}
+
+.bento-card::before {
+  content: "";
+  @apply absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none;
+  border-radius: 2rem;
+  background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y),
+      rgba(37, 99, 235, 0.06),
+      transparent 80%);
+}
+
+.bento-card:hover::before {
+  @apply opacity-100;
+}
+
+.bento-card::after {
+  content: "";
+  @apply absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none;
+  border-radius: 2rem;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  mask-image: radial-gradient(150px circle at var(--mouse-x) var(--mouse-y),
+      black,
+      transparent);
+}
+
+.bento-card:hover::after {
+  @apply opacity-100;
+}
+
+/* ─── Nav Capsule (scroll state) ─── */
+.nav-capsule {
+  top: 1rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 95% !important;
+  max-width: 64rem !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(24px) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  height: 3.5rem !important;
+}
+
+/* ─── Glass Shard (floating code snippets) ─── */
+.glass-shard {
+  @apply absolute p-4 text-slate-600 select-none pointer-events-none;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 1rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+/* ─── Neural Ring ─── */
+.neural-ring {
+  @apply absolute rounded-full transition-transform duration-1000;
+  border-width: 1px;
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* ─── Pulse Nucleus ─── */
+.pulse-nucleus {
+  box-shadow: 0 0 60px 10px rgba(37, 99, 235, 0.4);
+}
+
+
+/* ─── FAB Text Reveal ─── */
+.fab-text {
+  @apply overflow-hidden whitespace-nowrap inline-block align-middle;
+  width: 0;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.fab-container:hover .fab-text {
+  width: 7rem;
+  opacity: 1;
+  margin-left: 0.5rem;
 }
