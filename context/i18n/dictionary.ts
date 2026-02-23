@@ -53,26 +53,73 @@ export const translations = {
         projects: {
             title: "Some things",
             titleAccent: "I've built",
+            receptionist: {
+                tag: "AI Prototype",
+                type: "NLP",
+                title: "AI Receptionist",
+                description: "An intelligent virtual assistant that actually listens. It uses sentiment analysis to route customer calls to the right person, ensuring priority issues get handled first.",
+                id: "ai-receptionist",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "OpenAI", "WebRTC", "Tailwind CSS"],
+                features: [
+                    { title: "Sentiment Analysis", description: "Real-time tone detection to prioritize urgent customer needs." },
+                    { title: "Smart Routing", description: "Automatically transfers calls to the most qualified agent based on intent." },
+                    { title: "Voice-to-Text", description: "Instant transcription of calls for better record-keeping and analysis." }
+                ],
+                gallery: ["/projects/receptionist-1.png", "/projects/receptionist-2.png", "/projects/receptionist-3.png"],
+                challenge: "High-volume call centers often struggle with long wait times and misrouted calls, leading to customer frustration and operational inefficiency.",
+                solution: "Developed a voice-AI system using OpenAI's Whisper and GPT-4 to analyze caller intent and sentiment in real-time. The system routes calls dynamically based on urgency.",
+                results: "Priority issues are now addressed 3x faster, and customer satisfaction scores for initial triage increased significantly."
+            },
             rahigo: {
                 tag: "Marketplace",
                 type: "Mobility",
                 title: "Rahigo",
-                description: "A better way to book professional transport. I built this multi-vendor marketplace to handle complex bidding and real-time partner routing, making it easy for users to find the best ride without the usual back-and-forth."
+                description: "A better way to book professional transport. I built this multi-vendor marketplace to handle complex bidding and real-time partner routing, making it easy for users to find the best ride without the usual back-and-forth.",
+                id: "rahigo",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["React Native", "Node.js", "MongoDB", "Google Maps API"],
+                features: [
+                    { title: "Multi-Vendor Bidding", description: "Allows multiple partners to bid on a single trip request for the best price." },
+                    { title: "Real-time Routing", description: "Advanced algorithms to match passengers with the nearest available professional driver." },
+                    { title: "Partner Dashboard", description: "Comprehensive management tools for transport vendors to track earnings and fleets." }
+                ],
+                gallery: ["/projects/rahigo-1.png", "/projects/rahigo-2.png", "/projects/rahigo-3.png"],
+                challenge: "Building a trust-based marketplace for professional transport required a delicate balance between partner flexibility and passenger reliability.",
+                solution: "I engineered a custom bidding engine that allows vetted partners to compete in real-time, coupled with a smart routing algorithm for the best match.",
+                results: "Reduced booking turnaround time by 60% and increased partner engagement. The platform now handles hundreds of trips monthly."
             },
             travel: {
                 tag: "Automation",
                 type: "SaaS",
                 title: "Travel CRM",
-                description: "Helping travel agencies grow without the paperwork. This platform automates everything from trip estimation to WhatsApp bookings, so agents can focus on the trip, not the admin."
+                description: "Helping travel agencies grow without the paperwork. This platform automates everything from trip estimation to WhatsApp bookings, so agents can focus on the trip, not the admin.",
+                id: "travel-crm",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "Prisma", "PostgreSQL", "WhatsApp API"],
+                features: [
+                    { title: "Automated Estimation", description: "Generates professional trip quotes in seconds based on real-time data." },
+                    { title: "WhatsApp Integration", description: "Send itineraries and booking confirmations directly to clients via WhatsApp." },
+                    { title: "Lead Tracking", description: "Centralized dashboard to manage and convert travel inquiries efficiently." }
+                ],
+                gallery: ["/projects/travel-1.png", "/projects/travel-2.png", "/projects/travel-3.png"],
+                challenge: "Travel agencies were drowning in manual paperwork and disjointed communication channels, leading to slow response times.",
+                solution: "Implemented an automated estimation engine and WhatsApp integration, creating a single source of truth for itineraries and bookings.",
+                results: "Agents saved an average of 15 hours per week on administrative tasks, and WhatsApp conversion rates improved by 40%."
             },
-            receptionist: {
-                tag: "AI Prototype",
-                type: "NLP",
-                title: "AI Receptionist",
-                description: "An intelligent virtual assistant that actually listens. It uses sentiment analysis to route customer calls to the right person, ensuring priority issues get handled first."
+            caseStudyNav: {
+                overview: "Overview",
+                challenge: "The Challenge",
+                solution: "The Solution",
+                features: "Core Features",
+                gallery: "Media Gallery",
+                results: "Results & Impact",
+                tech: "Tech Stack",
+                backToProjects: "Back to Projects"
             },
             liveDemo: "Live Demo",
-            github: "Github Source"
+            github: "Github Source",
+            caseStudy: "Case Study"
         },
         cta: {
             title: "Ready to bring your",
@@ -140,26 +187,73 @@ export const translations = {
         projects: {
             title: "चयनित",
             titleAccent: "एआई प्रोजेक्ट्स",
+            receptionist: {
+                tag: "एआई सिस्टम",
+                type: "NLP",
+                title: "AI रिसेप्शनिस्ट: इंटेलिजेंट कॉल रूटिंग",
+                description: "एक एआई-पावर्ड वर्चुअल रिसेप्शनिस्ट जो इरादे और भावना के आधार पर ग्राहकों की कॉल को समझदारी से रूट करता है।",
+                id: "ai-receptionist",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "OpenAI", "WebRTC", "Tailwind CSS"],
+                features: [
+                    { title: "भावना विश्लेषण", description: "तत्काल ग्राहक आवश्यकताओं को प्राथमिकता देने के लिए रीयल-टाइम टोन डिटेक्शन।" },
+                    { title: "स्मार्ट रूटिंग", description: "इरादे के आधार पर कॉल को स्वचालित रूप से सबसे योग्य एजेंट को स्थानांतरित करता है।" },
+                    { title: "वॉयस-टू-टेक्स्ट", description: "बेहतर रिकॉर्ड-कीपिंग और विश्लेषण के लिए कॉल का तत्काल ट्रांसक्रिप्शन।" }
+                ],
+                gallery: ["/projects/receptionist-1.png", "/projects/receptionist-2.png", "/projects/receptionist-3.png"],
+                challenge: "उच्च-मात्रा वाले कॉल सेंटरों को अक्सर लंबे इंतजार और गलत कॉल रूटिंग का सामना करना पड़ता है, जिससे ग्राहक निराशा होती है और परिचालन अक्षमता होती है।",
+                solution: "रीयल-टाइम में कॉल करने वाले के इरादे और भावना का विश्लेषण करने के लिए OpenAI's Whisper और GPT-4 का उपयोग करके एक आवाज-एआई प्रणाली विकसित की।",
+                results: "प्राथमिकता वाले मुद्दों को अब 3 गुना तेजी से हल किया जाता है, और ग्राहकों की संतुष्टि स्कोर में काफी वृद्धि हुई है।"
+            },
             rahigo: {
                 tag: "मार्केटप्लेस",
                 type: "फुल स्टैक",
                 title: "Rahigo: वाहन बुकिंग मार्केटप्लेस",
-                description: "कस्टम ऑफर बिडिंग इंजन, पार्टनर ऑनबोर्डिंग वर्कफ़्लो और स्वचालित ऑफर तुलना लॉजिक के साथ एक मल्टी-वेंडर वाहन बुकिंग प्लेटफ़ॉर्म।"
+                description: "कस्टम ऑफर बिडिंग इंजन, पार्टनर ऑनबोर्डिंग वर्कफ़्लो और स्वचालित ऑफर तुलना लॉजिक के साथ एक मल्टी-वेंडर वाहन बुकिंग प्लेटफ़ॉर्म।",
+                id: "rahigo",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["React Native", "Node.js", "MongoDB", "Google Maps API"],
+                features: [
+                    { title: "मल्टी-वेंडर बिडिंग", description: "सर्वोत्तम मूल्य के लिए कई भागीदारों को एक ही यात्रा अनुरोध पर बोली लगाने की अनुमति देता है।" },
+                    { title: "रीयल-टाइम रूटिंग", description: "यात्रियों को निकटतम उपलब्ध पेशेवर ड्राइवर के साथ मिलाने के लिए उन्नत एल्गोरिदम।" },
+                    { title: "पार्टनर डैशबोर्ड", description: "परिवहन विक्रेताओं के लिए कमाई और बेड़े को ट्रैक करने के लिए व्यापक प्रबंधन उपकरण।" }
+                ],
+                gallery: ["/projects/rahigo-1.png", "/projects/rahigo-2.png", "/projects/rahigo-3.png"],
+                challenge: "पेशेवर परिवहन के लिए विश्वास-आधारित बाज़ार बनाने के लिए पार्टनर लचीलेपन और यात्री विश्वसनीयता के बीच एक नाजुक संतुलन की आवश्यकता थी।",
+                solution: "मैंने एक कस्टम बिडिंग इंजन तैयार किया है जो सत्यापित भागीदारों को रीयल-टाइम में प्रतिस्पर्धा करने की अनुमति देता है, साथ ही सर्वोत्तम मिलान के लिए एक स्मार्ट रूटिंग एल्गोरिदम भी।",
+                results: "बुकिंग टर्नअराउंड समय में 60% की कमी आई और पार्टनर जुड़ाव में वृद्धि हुई। प्लेटफॉर्म अब मासिक रूप से सैकड़ों यात्राएं संभालता है।"
             },
             travel: {
                 tag: "SaaS",
                 type: "ऑटोमेशन",
                 title: "ट्रैवल CRM और बुकिंग प्लेटफॉर्म",
-                description: "एक कस्टम CRM के साथ एकीकृत SEO-संचालित ट्रैवल प्लेटफॉर्म। इसमें डायनेमिक ट्रिप एस्टीमेटर और व्हाट्सएप बुकिंग ऑटोमेशन शामिल हैं।"
+                description: "एक कस्टम CRM के साथ एकीकृत SEO-संचालित ट्रैवल प्लेटफॉर्म। इसमें डायनेमिक ट्रिप एस्टीमेटर और व्हाट्सएप बुकिंग ऑटोमation शामिल हैं।",
+                id: "travel-crm",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "Prisma", "PostgreSQL", "WhatsApp API"],
+                features: [
+                    { title: "स्वचालित अनुमान", description: "रीयल-टाइम डेटा के आधार पर सेकंडों में पेशेवर यात्रा उद्धरण तैयार करता है।" },
+                    { title: "व्हाट्सएप एकीकरण", description: "व्हाट्सएप के माध्यम से सीधे ग्राहकों को यात्रा कार्यक्रम और बुकिंग पुष्टिकरण भेजें।" },
+                    { title: "लीड ट्रैकिंग", description: "यात्रा पूछताछ को कुशलतापूर्वक प्रबंधित और परिवर्तित करने के लिए केंद्रीकृत डैशबोर्ड।" }
+                ],
+                gallery: ["/projects/travel-1.png", "/projects/travel-2.png", "/projects/travel-3.png"],
+                challenge: "ट्रैवल एजेंसियां मैनुअल कागजी कार्रवाई और बिखरे हुए संचार चैनलों में डूबी हुई थीं, जिससे प्रतिक्रिया समय धीमा हो गया था।",
+                solution: "एक स्वचालित अनुमान इंजन और व्हाट्सएप एकीकरण लागू किया, जिससे यात्रा कार्यक्रमों और बुकिंग के लिए सच्चाई का एक स्रोत बना।",
+                results: "एजेंटों ने प्रशासनिक कार्यों पर प्रति सप्ताह औसतन 15 घंटे बचाए, और व्हाट्सएप रूपांतरण दरों में 40% सुधार हुआ।"
             },
-            receptionist: {
-                tag: "एआई सिस्टम",
-                type: "NLP",
-                title: "AI रिसेप्शनिस्ट: इंटेलिजेंट कॉल रूटिंग",
-                description: "एक एआई-पावर्ड वर्चुअल रिसेप्शनिस्ट जो इरादे और भावना के आधार पर ग्राहकों की कॉल को समझदारी से रूट करता है।"
+            caseStudyNav: {
+                overview: "अवलोकन",
+                challenge: "चुनौती",
+                solution: "समाधान",
+                features: "प्रमुख विशेषताएं",
+                gallery: "मीडिया गैलरी",
+                results: "परिणाम और प्रभाव",
+                tech: "टेक स्टैक",
+                backToProjects: "प्रोजेक्ट्स पर वापस"
             },
             liveDemo: "लाइव डेमो",
-            github: "गिटहब सोर्स"
+            github: "गिटहब सोर्स",
+            caseStudy: "केस स्टडी"
         },
         cta: {
             title: "अपने अगले इंटेलिजेंट वेंचर को",
@@ -227,26 +321,73 @@ export const translations = {
         projects: {
             title: "Proyectos de",
             titleAccent: "IA Seleccionados",
+            receptionist: {
+                tag: "Sistemas de IA",
+                type: "NLP",
+                title: "Recepcionista de IA: Enrutamiento de Llamadas Inteligente",
+                description: "Una recepcionista virtual impulsada por IA que enruta de manera inteligente las llamadas de los clientes según la intención y el sentimiento.",
+                id: "ai-receptionist",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "OpenAI", "WebRTC", "Tailwind CSS"],
+                features: [
+                    { title: "Análisis de Sentimiento", description: "Detección de tono en tiempo real para priorizar las necesidades urgentes del cliente." },
+                    { title: "Enrutamiento Inteligente", description: "Transfiere automáticamente las llamadas al agente más calificado según la intención." },
+                    { title: "Voz a Texto", description: "Transcripción instantánea de llamadas para un mejor registro y análisis." }
+                ],
+                gallery: ["/projects/receptionist-1.png", "/projects/receptionist-2.png", "/projects/receptionist-3.png"],
+                challenge: "Los centros de llamadas de alto volumen a menudo luchan con largos tiempos de espera y llamadas mal dirigidas, lo que genera frustración en el cliente.",
+                solution: "Desarrollé un sistema de IA de voz utilizando Whisper y GPT-4 de OpenAI para analizar la intención y el sentimiento del llamador en tiempo real.",
+                results: "Los problemas prioritarios se abordan ahora 3 veces más rápido y la satisfacción del cliente ha aumentado significativamente."
+            },
             rahigo: {
                 tag: "Marketplace",
                 type: "Full Stack",
                 title: "Rahigo: Marketplace de Reserva de Vehículos",
-                description: "Una plataforma de reserva de vehículos multi-proveedor con un motor de pujas de ofertas personalizado y flujos de trabajo de incorporación de socios."
+                description: "Una plataforma de reserva de vehículos multi-proveedor con un motor de pujas de ofertas personalizado y flujos de trabajo de incorporación de socios.",
+                id: "rahigo",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["React Native", "Node.js", "MongoDB", "Google Maps API"],
+                features: [
+                    { title: "Pujas Multi-Proveedor", description: "Permite que múltiples socios pujen por una sola solicitud de viaje para obtener el mejor precio." },
+                    { title: "Enrutamiento en Tiempo Real", description: "Algoritmos avanzados para emparejar pasajeros con el conductor profesional disponible más cercano." },
+                    { title: "Panel de Socios", description: "Herramientas de gestión integrales para que los proveedores de transporte realicen un seguimiento de las ganancias y las flotas." }
+                ],
+                gallery: ["/projects/rahigo-1.png", "/projects/rahigo-2.png", "/projects/rahigo-3.png"],
+                challenge: "Construir un mercado basado en la confianza para el transporte profesional requería un equilibrio delicado entre la flexibilidad del socio y la confiabilidad del pasajero.",
+                solution: "Diseñé un motor de pujas personalizado que permite a los socios verificados competir en tiempo real, junto con un algoritmo de enrutamiento inteligente.",
+                results: "Reducción del tiempo de respuesta de reserva en un 60% y aumento del compromiso de los socios. La plataforma ahora gestiona cientos de viajes mensualmente."
             },
             travel: {
                 tag: "SaaS",
                 type: "Automatización",
                 title: "CRM de Viajes y Plataforma de Reservas",
-                description: "Una plataforma de viajes impulsada por SEO integrada con un CRM personalizado. Incluye un estimador de viajes dinámico y automatización de reservas por WhatsApp."
+                description: "Una plataforma de viajes impulsada por SEO integrada con un CRM personalizado. Incluye un estimador de viajes dinámico y automatización de reservas por WhatsApp.",
+                id: "travel-crm",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "Prisma", "PostgreSQL", "WhatsApp API"],
+                features: [
+                    { title: "Estimación Automatizada", description: "Genera presupuestos de viajes profesionales en segundos basados en datos en tiempo real." },
+                    { title: "Integración de WhatsApp", description: "Envíe itinerarios y confirmaciones de reserva directamente a los clientes a través de WhatsApp." },
+                    { title: "Seguimiento de Clientes Potenciales", description: "Panel centralizado para gestionar y convertir consultas de viajes de manera eficiente." }
+                ],
+                gallery: ["/projects/travel-1.png", "/projects/travel-2.png", "/projects/travel-3.png"],
+                challenge: "Las agencias de viajes estaban saturadas de papeleo manual y canales de comunicación inconexos, lo que provocaba tiempos de respuesta lentos.",
+                solution: "Se implementó un motor de estimación automatizado e integración con WhatsApp, creando una única fuente de verdad para itinerarios y reservas.",
+                results: "Los agentes ahorraron un promedio de 15 horas por semana en tareas administrativas y las tasas de conversión de WhatsApp mejoraron en un 40%."
             },
-            receptionist: {
-                tag: "Sistemas de IA",
-                type: "NLP",
-                title: "Recepcionista de IA: Enrutamiento de Llamadas Inteligente",
-                description: "Una recepcionista virtual impulsada por IA que enruta de manera inteligente las llamadas de los clientes según la intención y el sentimiento."
+            caseStudyNav: {
+                overview: "Visión General",
+                challenge: "El Desafío",
+                solution: "La Solución",
+                features: "Características",
+                gallery: "Galería de Medios",
+                results: "Resultados e Impacto",
+                tech: "Tecnologías",
+                backToProjects: "Volver a Proyectos"
             },
             liveDemo: "DEMO EN VIVO",
-            github: "CÓDIGO GITHUB"
+            github: "CÓDIGO GITHUB",
+            caseStudy: "ESTUDIO DE CASO"
         },
         cta: {
             title: "¿Listo para escalar tu próxima",
@@ -314,26 +455,73 @@ export const translations = {
         projects: {
             title: "Projets",
             titleAccent: "IA Sélectionnés",
+            receptionist: {
+                tag: "Systèmes IA",
+                type: "NLP",
+                title: "Réceptionniste IA : Routage Intelligent d'Appels",
+                description: "Réceptionniste virtuelle routant intelligemment les appels selon l'intention et le sentiment.",
+                id: "ai-receptionist",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "OpenAI", "WebRTC", "Tailwind CSS"],
+                features: [
+                    { title: "Analyse de Sentiment", description: "Détection du ton en temps réel pour prioriser les besoins urgents des clients." },
+                    { title: "Routage Intelligent", description: "Transfère automatiquement les appels vers l'agent le plus qualifié en fonction de l'intention." },
+                    { title: "Voix vers Texte", description: "Transcription instantanée des appels pour un meilleur suivi et une meilleure analyse." }
+                ],
+                gallery: ["/projects/receptionist-1.png", "/projects/receptionist-2.png", "/projects/receptionist-3.png"],
+                challenge: "Les centres d'appels à gros volume souffrent souvent de longs temps d'attente et d'appels mal acheminés, ce qui entraîne la frustration des clients.",
+                solution: "Développement d'un système d'IA vocale utilisant Whisper et GPT-4 d'OpenAI pour analyser l'intention et le sentiment de l'appelant en temps réel.",
+                results: "Les problèmes prioritaires sont désormais traités 3 fois plus vite, et le score de satisfaction client a augmenté de manière significative."
+            },
             rahigo: {
                 tag: "Marketplace",
                 type: "Full Stack",
                 title: "Rahigo : Marketplace de Réservation de Véhicules",
-                description: "Plateforme multi-vendeurs avec moteur d'enchères personnalisé et workflows d'intégration de partenaires."
+                description: "Plateforme multi-vendeurs avec moteur d'enchères personnalisé et workflows d'intégration de partenaires.",
+                id: "rahigo",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["React Native", "Node.js", "MongoDB", "Google Maps API"],
+                features: [
+                    { title: "Enchères Multi-Vendeurs", description: "Permet à plusieurs partenaires d'enchérir sur une seule demande de voyage pour obtenir le meilleur prix." },
+                    { title: "Routage en Temps Réel", description: "Algorithmes avancés pour faire correspondre les passagers avec le conducteur professionnel disponible le plus proche." },
+                    { title: "Tableau de Bord Partenaire", description: "Outils de gestion complets pour les vendeurs de transport pour suivre les revenus et les flottes." }
+                ],
+                gallery: ["/projects/rahigo-1.png", "/projects/rahigo-2.png", "/projects/rahigo-3.png"],
+                challenge: "Bâtir une place de marché basée sur la confiance pour le transport professionnel a nécessité un équilibre délicat entre la flexibilité des partenaires et la fiabilité des passagers.",
+                solution: "J'ai conçu un moteur d'enchères personnalisé qui permet aux partenaires vérifiés de concourir en temps réel, couplé à un algorithme de routage intelligent.",
+                results: "Réduction du délai de réservation de 60 % et augmentation de l'engagement des partenaires. La plateforme gère désormais des centaines de trajets par mois."
             },
             travel: {
                 tag: "SaaS",
                 type: "Automatisation",
                 title: "Plateforme de Réservation & CRM Voyage",
-                description: "Plateforme SEO-driven avec CRM personnalisé, estimateur de voyage dynamique et automatisation WhatsApp."
+                description: "Plateforme SEO-driven avec CRM personnalisé, estimateur de voyage dynamique et automatisation WhatsApp.",
+                id: "travel-crm",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "Prisma", "PostgreSQL", "WhatsApp API"],
+                features: [
+                    { title: "Estimation Automatisée", description: "Génère des devis de voyage professionnels en quelques secondes basés sur des données en temps réel." },
+                    { title: "Intégration WhatsApp", description: "Envoyez des itinéraires et des confirmations de réservation directement aux clients via WhatsApp." },
+                    { title: "Suivi des Prospects", description: "Tableau de bord centralisé pour gérer et convertir efficacement les demandes de voyage." }
+                ],
+                gallery: ["/projects/travel-1.png", "/projects/travel-2.png", "/projects/travel-3.png"],
+                challenge: "Les agences de voyages étaient noyées sous la paperasse manuelle et les canaux de communication décousus, ce qui entraînait des temps de réponse lents.",
+                solution: "Mise en œuvre d'un moteur d'estimation automatisé et d'une intégration WhatsApp, créant une source unique de vérité pour les itinéraires et les réservations.",
+                results: "Les agents ont économisé en moyenne 15 heures par semaine sur les tâches administratives, et les taux de conversion WhatsApp ont progressé de 40 %."
             },
-            receptionist: {
-                tag: "Systèmes IA",
-                type: "NLP",
-                title: "Réceptionniste IA : Routage Intelligent d'Appels",
-                description: "Réceptionniste virtuelle routant intelligemment les appels selon l'intention et le sentiment."
+            caseStudyNav: {
+                overview: "Aperçu",
+                challenge: "Le Défi",
+                solution: "La Solution",
+                features: "Fonctionnalités",
+                gallery: "Galerie Média",
+                results: "Résultats & Impact",
+                tech: "Tech Stack",
+                backToProjects: "Retour aux Projets"
             },
             liveDemo: "DÉMO LIVE",
-            github: "SOURCE GITHUB"
+            github: "SOURCE GITHUB",
+            caseStudy: "ÉTUDE DE CAS"
         },
         cta: {
             title: "Prêt à propulser votre prochain",
@@ -401,26 +589,73 @@ export const translations = {
         projects: {
             title: "厳選された",
             titleAccent: "AIプロジェクト",
+            receptionist: {
+                tag: "AIシステム",
+                type: "NLP",
+                title: "AI受付嬢: インテリジェント・コールルーティング",
+                description: "意図と感情に基づいて顧客の電話をインテリジェントに転送するAIバーチャル受付。",
+                id: "ai-receptionist",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "OpenAI", "WebRTC", "Tailwind CSS"],
+                features: [
+                    { title: "感情分析", description: "緊急の顧客ニーズを優先するためのリアルタイムのトーン検出。" },
+                    { title: "スマートルーティング", description: "意図に基づいて、最も資格のあるエージェントに自動的に通話を転送します。" },
+                    { title: "音声文字変換", description: "記録保持と分析を向上させるための通話の即時文字起こし。" }
+                ],
+                gallery: ["/projects/receptionist-1.png", "/projects/receptionist-2.png", "/projects/receptionist-3.png"],
+                challenge: "大量のコールセンターでは、待ち時間が長く、通話が誤って転送されることが多く、顧客の不満と業務効率の低下を招いていました。",
+                solution: "OpenAIのWhisperとGPT-4を使用して、発信者の意図と感情をリアルタイムで分析する音声AIシステムを開発しました。",
+                results: "優先事項が3倍速く解決されるようになり、初期段階の顧客満足度スコアが大幅に向上しました。"
+            },
             rahigo: {
                 tag: "マーケットプレイス",
                 type: "フルスタック",
                 title: "Rahigo: 車両予約マーケットプレイス",
-                description: "カスタム入札エンジン、パートナー向けオンボーディング、自動価格比較ロジックを備えたマルチベンダー・プラットフォーム。"
+                description: "カスタム入札エンジン、パートナー向けオンボーディング、自動価格比較ロジックを備えたマルチベンダー・プラットフォーム。",
+                id: "rahigo",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["React Native", "Node.js", "MongoDB", "Google Maps API"],
+                features: [
+                    { title: "マルチベンダー入札", description: "複数のパートナーが1つの旅行リクエストに対して最良の価格で入札できるようにします。" },
+                    { title: "リアルタイムルーティング", description: "乗客を最も近くの利用可能なプロのドライバーと一致させるための高度なアルゴリズム。" },
+                    { title: "パートナーダッシュボード", description: "輸送ベンダーが収益と車両を追跡するための包括的な管理ツール。" }
+                ],
+                gallery: ["/projects/rahigo-1.png", "/projects/rahigo-2.png", "/projects/rahigo-3.png"],
+                challenge: "プロの輸送のための信頼ベースのマーケットプレイスを構築するには、パートナーの柔軟性と乗客の信頼性の間の微妙なバランスが必要でした。",
+                solution: "検証済みのパートナーがリアルタイムで競合できるカスタム入札エンジンと、最適なマッチングのためのスマートルーティングアルゴリズムを設計しました。",
+                results: "予約のターンアラウンドタイムを60%短縮し、パートナーのエンゲージメントを高めました。現在、プラットフォームは毎月数百の旅行を処理しています。"
             },
             travel: {
                 tag: "SaaS",
                 type: "自動化",
                 title: "旅行CRM & 予約プラットフォーム",
-                description: "カスタムCRMと統合された、SEO重視の旅行プラットフォーム。見積もり機能やWhatsApp予約自動化を搭載。"
+                description: "カスタムCRMと統合された、SEO重視の旅行プラットフォーム。見積もり機能やWhatsApp予約自動化を搭載。",
+                id: "travel-crm",
+                loom: "https://www.loom.com/embed/placeholder",
+                technologies: ["Next.js", "Prisma", "PostgreSQL", "WhatsApp API"],
+                features: [
+                    { title: "自動見積もり", description: "リアルタイムデータに基づいてプロの旅行見積もりを数秒で生成します。" },
+                    { title: "WhatsApp統合", description: "WhatsAppを介してクライアントに旅程と予約確認を直接送信します。" },
+                    { title: "リード追跡", description: "旅行の問い合わせを効率的に管理および変換するための集中型ダッシュボード。" }
+                ],
+                gallery: ["/projects/travel-1.png", "/projects/travel-2.png", "/projects/travel-3.png"],
+                challenge: "旅行代理店は手作業の事務処理やバラバラな通信チャネルに忙殺され、対応の遅れを招いていました。",
+                solution: "自動見積もりエンジンとWhatsApp統合を導入し、旅程と予約のための唯一の情報源を作成しました。",
+                results: "エージェントは事務作業で週平均15時間を節約し、WhatsAppのコンバージョン率は40%向上しました。"
             },
-            receptionist: {
-                tag: "AIシステム",
-                type: "NLP",
-                title: "AI受付嬢: インテリジェント・コールルーティング",
-                description: "意図と感情に基づいて顧客の電話をインテリジェントに転送するAIバーチャル受付。"
+            caseStudyNav: {
+                overview: "概要",
+                challenge: "課題",
+                solution: "解決策",
+                features: "機能",
+                gallery: "メディアギャラリー",
+                results: "成果と影響",
+                tech: "テックスケック",
+                backToProjects: "プロジェクトに戻る"
             },
             liveDemo: "ライブデモ",
-            github: "GITHUBソース"
+            github: "GITHUBソース",
+            caseStudy: "ケーススタディ"
         },
         cta: {
             title: "次のインテリジェントな",

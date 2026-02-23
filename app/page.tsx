@@ -4,7 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import AgentBanner from "@/components/sections/AgentBanner";
 import AboutSection from "@/components/sections/AboutSection";
 import WorkSection from "@/components/sections/WorkSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
+import FeaturedProject from "@/components/sections/FeaturedProject";
 import CTASection from "@/components/sections/CTASection";
 
 export default async function Home() {
@@ -53,7 +53,7 @@ export default async function Home() {
       <HeroSection t={t} />
       <AgentBanner t={t} language={language} />
       <WorkSection t={t} language={language} />
-      <ProjectsSection t={t} language={language} />
+      <FeaturedProject t={t} language={language} />
       <CTASection t={t} language={language} />
     </main>
   );

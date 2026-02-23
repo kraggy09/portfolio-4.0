@@ -119,7 +119,7 @@ export default async function RootLayout({
         className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} antialiased font-sans`}
       >
         <LanguageProvider initialLanguage={initialLang}>
-          <div className="relative min-h-screen flex flex-col overflow-x-hidden">
+          <div className="relative min-h-screen flex flex-col">
             <CalComEmbed />
             <Navbar />
             <main className="flex-grow">
