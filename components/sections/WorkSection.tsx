@@ -73,11 +73,11 @@ return { status: "SCALED" };`
     };
 
     return (
-        <section id="work" className="py-20 px-6 bg-white min-h-screen flex flex-col justify-center">
+        <section id="work" className="py-20 px-4 md:px-6 bg-white min-h-screen flex flex-col justify-center">
             <div className="container mx-auto">
                 <div className="mb-16">
-                    <p className="text-[11px] font-bold text-accent uppercase tracking-[0.3em] mb-4">Core Competencies</p>
-                    <h2 className="text-5xl md:text-6xl font-bold text-primary">
+                    <p className="text-xs font-bold text-accent uppercase tracking-[0.3em] mb-4">Core Competencies</p>
+                    <h2 className="text-3xl md:text-6xl font-bold text-primary">
                         {t.work.title} <br />
                         <span className="italic text-accent">{t.work.titleAccent}</span>
                     </h2>
@@ -87,7 +87,7 @@ return { status: "SCALED" };`
                     {/* Full Stack Card */}
                     <div className="bento-card md:col-span-2 lg:row-span-2 flex flex-col justify-between group h-[660px] md:h-auto">
                         <div>
-                            <h3 className="text-3xl font-bold text-primary mb-4">{t.work.saas.title}</h3>
+                            <h3 className="text-xl md:text-2xl font-bold text-primary mb-4">{t.work.saas.title}</h3>
                             <p className="text-charcoal text-base leading-relaxed max-w-sm">{t.work.saas.description}</p>
                         </div>
                         <div className="mt-8 relative h-72 bg-surface-light border border-border-subtle rounded-t-[2rem] overflow-hidden shadow-inner transition-transform group-hover:scale-[1.03]">
@@ -119,7 +119,7 @@ return { status: "SCALED" };`
                     <div className="bento-card lg:p-10 md:col-span-2 lg:col-span-1 lg:row-span-2 flex flex-col justify-between group h-full">
                         <div>
                             <div className="flex justify-between items-start mb-10">
-                                <h3 className="text-3xl font-bold text-primary leading-tight">{t.work.aiWeights.title}</h3>
+                                <h3 className="text-xl md:text-2xl font-bold text-primary leading-tight">{t.work.aiWeights.title}</h3>
                                 <div className="w-14 h-14 bg-accent/5 rounded-2xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm border border-accent/10 shrink-0">
                                     <span className="material-symbols-outlined !text-3xl">psychology</span>
                                 </div>
@@ -127,13 +127,13 @@ return { status: "SCALED" };`
 
                             <div className="min-h-[120px] mb-10">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <span className="text-accent font-mono text-[10px] font-bold uppercase tracking-[0.2em]">Step 0{currentStep + 1}</span>
+                                    <span className="text-accent font-mono text-xs font-bold uppercase tracking-[0.2em]">Step 0{currentStep + 1}</span>
                                     <div className="h-[1px] flex-1 bg-slate-100"></div>
                                 </div>
                                 <h4 className="text-xl font-bold text-primary mb-3 transition-opacity duration-300">
                                     {workflowSteps[currentStep].title}
                                 </h4>
-                                <p className="text-charcoal text-[13px] leading-relaxed transition-opacity duration-300">
+                                <p className="text-charcoal text-sm leading-relaxed transition-opacity duration-300">
                                     {workflowSteps[currentStep].description}
                                 </p>
                             </div>
@@ -145,7 +145,7 @@ return { status: "SCALED" };`
                                     <div className="w-1.5 h-1.5 rounded-full bg-slate-500"></div>
                                     <div className="w-1.5 h-1.5 rounded-full bg-slate-500"></div>
                                 </div>
-                                <pre className="font-mono text-[10px] text-slate-300 leading-relaxed whitespace-pre-wrap">
+                                <pre className="font-mono text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">
                                     {codePreviews[currentStep]}
                                 </pre>
                             </div>
@@ -168,7 +168,7 @@ return { status: "SCALED" };`
                                                 }}
                                             ></div>
                                         </div>
-                                        <span className={`text-[9px] font-mono font-bold tracking-[0.2em] transition-colors ${currentStep === idx ? 'text-accent' : 'text-slate-400 group-hover/btn:text-primary'}`}>
+                                        <span className={`text-xs font-mono font-bold tracking-[0.2em] transition-colors ${currentStep === idx ? 'text-accent' : 'text-slate-400 group-hover/btn:text-primary'}`}>
                                             0{idx + 1}
                                         </span>
                                     </button>
@@ -196,7 +196,7 @@ return { status: "SCALED" };`
                             <span className="material-symbols-outlined text-accent !text-3xl">settings_suggest</span>
                         </div>
                         <h3 className="text-xl font-bold text-primary mb-2">AI Automation</h3>
-                        <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em] font-bold">Scaling Efficiency</p>
+                        <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold">Scaling Efficiency</p>
                         <div className="absolute -bottom-8 -right-8 opacity-[0.03] group-hover:scale-110 transition-transform duration-1000 grayscale">
                             <span className="material-symbols-outlined text-[120px]">precision_manufacturing</span>
                         </div>

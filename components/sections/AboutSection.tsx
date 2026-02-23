@@ -13,13 +13,13 @@ export default function AboutSection({ t }: AboutSectionProps) {
             {/* Subtle decorative elements */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
 
-            <div className="max-w-6xl mx-auto px-6 relative z-10">
+            <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div>
                         <span className="text-accent font-mono text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
                             {t.nav.about}
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 leading-tight">
                             {t.about.title}
                         </h2>
                         <div className="space-y-6">
@@ -39,7 +39,7 @@ export default function AboutSection({ t }: AboutSectionProps) {
                                 </div>
                             </div>
                             <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm">
-                                <p className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-1">Current Mood</p>
+                                <p className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-1">Current Mood</p>
                                 <p className="text-primary font-bold">Building something impactful</p>
                             </div>
                         </div>

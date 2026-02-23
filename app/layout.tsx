@@ -119,10 +119,14 @@ export default async function RootLayout({
         className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} antialiased font-sans`}
       >
         <LanguageProvider initialLanguage={initialLang}>
-          <CalComEmbed />
-          <Navbar />
-          {children}
-          <Footer t={t} language={initialLang} />
+          <div className="relative min-h-screen flex flex-col overflow-x-hidden">
+            <CalComEmbed />
+            <Navbar />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer t={t} language={initialLang} />
+          </div>
           <FloatingCTA />
         </LanguageProvider>
       </body>

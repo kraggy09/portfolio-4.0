@@ -50,7 +50,7 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <HeroSection t={t} language={language} />
+      <HeroSection t={t} />
       <AgentBanner t={t} language={language} />
       <WorkSection t={t} language={language} />
       <ProjectsSection t={t} language={language} />

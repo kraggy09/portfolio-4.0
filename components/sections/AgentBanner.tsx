@@ -54,7 +54,7 @@ export default function AgentBanner({ isIntegrated = false, t, language }: Agent
     }, []);
 
     return (
-        <div className={`container mx-auto px-6 ${isIntegrated ? 'mb-0' : 'mb-10'}`}>
+        <div className={`container mx-auto px-4 md:px-6 ${isIntegrated ? 'mb-0' : 'mb-10'}`}>
             <div className="bg-primary/95 backdrop-blur-md text-white rounded-3xl border border-white/10 p-3 md:py-4 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4 shadow-xl relative overflow-hidden group">
                 {/* Visual Engineering Accents */}
                 <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-50"></div>
@@ -73,7 +73,7 @@ export default function AgentBanner({ isIntegrated = false, t, language }: Agent
                     <div className="font-mono tracking-tight">
                         <div className="flex items-center gap-1.5 mb-1.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                            <span className="text-slate-500 text-[9px] uppercase font-bold tracking-widest">
+                            <span className="text-slate-500 text-xs uppercase font-bold tracking-widest">
                                 {t.banner.tag}
                             </span>
                         </div>
@@ -91,7 +91,7 @@ export default function AgentBanner({ isIntegrated = false, t, language }: Agent
                     className="flex items-center gap-3 px-6 py-2.5 bg-white/5 hover:bg-accent border border-white/10 rounded-xl transition-all duration-500 group/btn relative z-10 w-full md:w-auto justify-center overflow-hidden"
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-white/5 to-accent/0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-white relative z-10">
+                    <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-white relative z-10">
                         {displayText}
                     </span>
                     <span className="material-symbols-outlined !text-xs text-accent group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all relative z-10">
