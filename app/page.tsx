@@ -14,31 +14,34 @@ export default async function Home() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kaif Shaikh",
-    "jobTitle": "Full Stack Developer & AI Systems Builder",
-    "url": "https://www.kaifsk.com",
-    "image": "https://www.kaifsk.com/og-image.png",
-    "sameAs": [
-      "https://github.com/kraggy09",
-      "https://linkedin.com/in/mkaifshaikh",
-      "https://twitter.com/kaifshaikh_2002",
-      "https://www.instagram.com/kaifshaikh_2002/"
-    ],
-    "knowsAbout": [
-      "Full Stack Development",
-      "AI Systems Architecture",
-      "Next.js",
-      "SaaS Development",
-      "Marketplace Engineering",
-      "Node.js",
-      "React Native",
-      "Cloud Infrastructure"
-    ],
-    "description": "Kaif Shaikh is a software developer specializing in building scalable SaaS products, AI-integrated marketplaces, and high-performance intelligent systems.",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Rahigo"
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Kaif Shaikh",
+      "jobTitle": "Full Stack Developer & AI Systems Builder",
+      "url": "https://www.kaifsk.com",
+      "image": "https://www.kaifsk.com/og-image.png",
+      "sameAs": [
+        "https://github.com/kraggy09",
+        "https://linkedin.com/in/mkaifshaikh",
+        "https://twitter.com/kaifshaikh_2002",
+        "https://www.instagram.com/kaifshaikh_2002/"
+      ],
+      "knowsAbout": [
+        "Full Stack Development",
+        "AI Systems Architecture",
+        "Next.js",
+        "SaaS Development",
+        "Marketplace Engineering",
+        "Node.js",
+        "React Native",
+        "Cloud Infrastructure"
+      ],
+      "description": "Kaif Shaikh is a software developer specializing in building scalable SaaS products, AI-integrated marketplaces, and high-performance intelligent systems.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Rahigo"
+      }
     }
   };
 
@@ -46,6 +49,7 @@ export default async function Home() {
     <main className="">
       {/* JSON-LD Structured Data for SEO */}
       <script
+        id="schema-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
