@@ -52,7 +52,7 @@ export default function ProjectSidebar({ t, technologies }: ProjectSidebarProps)
         <aside className="lg:col-span-3 hidden lg:block">
             <div className="sticky top-28 space-y-8 font-sans">
                 <div className="relative p-5 rounded-2xl bg-[#111827]/60 backdrop-blur-md border border-white/5 shadow-2xl">
-                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4a5568] mb-5 px-3">
+                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#808ca3] mb-5 px-3">
                         {t.projects.caseStudyNav.overview}
                     </h3>
                     <nav className="space-y-1">
@@ -70,7 +70,7 @@ export default function ProjectSidebar({ t, technologies }: ProjectSidebarProps)
                                     className={`w-1 h-1 rounded-full transition-all duration-300 ${
                                         activeSection === link.id
                                             ? "bg-[#7eb8f7] scale-125"
-                                            : "bg-[#4a5568] scale-0 group-hover:scale-100"
+                                            : "bg-[#808ca3] scale-0 group-hover:scale-100"
                                     }`}
                                 />
                                 {link.label}
@@ -80,7 +80,7 @@ export default function ProjectSidebar({ t, technologies }: ProjectSidebarProps)
                 </div>
 
                 <div className="p-5">
-                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4a5568] mb-4 px-3">
+                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#808ca3] mb-4 px-3">
                         {t.projects.caseStudyNav.tech}
                     </h3>
                     <div className="flex flex-wrap gap-1.5 px-1">

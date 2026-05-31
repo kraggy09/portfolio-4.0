@@ -34,18 +34,23 @@ export const metadata: Metadata = {
     template: "%s |  Kaif Shaikh"
   },
   description:
-    "Official portfolio of Kaif Shaikh. Co-founder & Full-stack Engineer of Rahigo. Expert in building end-to-end full-stack architectures, real-time marketplaces, and scalable SaaS.",
+    "Official portfolio of  Kaif Shaikh. Co-founder & CEO of Rahigo Mobility. Expert in building end-to-end full-stack architectures, real-time marketplaces, and scalable SaaS.",
   keywords: [
     "Kaif Shaikh",
     "Kaif Shaikh",
-    "Full Stack Engineer Kolkata",
+    "Kaif Shaikh Developer",
+    "Full Stack Developer Mumbai",
+    "AI Systems Builder",
+    "Scalable SaaS Architecture",
+    "Next.js Expert",
+    "React Native Developer",
     "Rahigo Founder",
     "Scalable SaaS Architect",
     "Next.js Developer",
     "Node.js developer",
   ],
-  authors: [{ name: "Mohammad Kaif Shaikh", url: "https://www.kaifsk.com" }],
-  creator: "Mohammad Kaif Shaikh",
+  authors: [{ name: " Kaif Shaikh", url: "https://www.kaifsk.com" }],
+  creator: "Kaif Shaikh",
   alternates: {
     canonical: "/",
   },
@@ -55,17 +60,17 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   openGraph: {
-    title: "Mohammad Kaif Shaikh | Full Stack Engineer & Founder",
+    title: " Kaif Shaikh | Full Stack Engineer & Founder",
     description:
-      "Co-founder & Full-stack Engineer of Rahigo. Full-stack developer building robust, production-ready backend and Web applications.",
+      "Co-founder & CEO of Rahigo Mobility. Full-stack developer building robust, production-ready backend and Web applications.",
     url: "https://www.kaifsk.com",
-    siteName: "Mohammad Kaif Shaikh Portfolio",
+    siteName: "Kaif Shaikh Portfolio",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Mohammad Kaif Shaikh Portfolio Preview",
+        alt: "Kaif Shaikh Portfolio Preview",
       },
     ],
     locale: "en_US",
@@ -73,9 +78,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammad Kaif Shaikh | Full Stack Engineer & Founder",
+    title: "Kaif Shaikh | Full Stack Engineer & Founder",
     description:
-      "Co-founder & Full-stack Engineer of Rahigo. Full-stack engineer specializing in robust backends and end-to-end web architectures.",
+      "Co-founder & CEO of Rahigo Mobility. Full-stack engineer specializing in robust backends and end-to-end web architectures.",
     creator: "@kaifshaikh_2002",
     images: ["/og-image.png"],
   },

@@ -45,7 +45,7 @@ export default function BarakahInteractive({ routes }: BarakahInteractiveProps) 
             }`}
           >
             <div className="flex items-center justify-between gap-2 mb-1.5">
-              <span className={`text-[12px] font-mono uppercase tracking-widest ${activeIndex === idx ? "text-[#7eb8f7]" : "text-[#4a5568]"}`}>
+              <span className={`text-[12px] font-mono uppercase tracking-widest ${activeIndex === idx ? "text-[#7eb8f7]" : "text-[#808ca3]"}`}>
                 0{idx + 1}
               </span>
               <span className="px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-[9px] font-mono text-[#8892a4]">
@@ -56,7 +56,7 @@ export default function BarakahInteractive({ routes }: BarakahInteractiveProps) 
             <p className="text-[13.5px] font-medium text-[#e8eaf0] group-hover:text-[#7eb8f7] transition-colors">
               {route.name.split(" ↔ ")[1]}
             </p>
-            <p className="text-[10px] text-[#4a5568] font-mono mt-1">{route.type}</p>
+            <p className="text-[10px] text-[#808ca3] font-mono mt-1">{route.type}</p>
           </button>
         ))}
       </div>
@@ -66,7 +66,7 @@ export default function BarakahInteractive({ routes }: BarakahInteractiveProps) 
         
         {/* Animated Bus Track */}
         <div className="flex items-center justify-between gap-4 px-2 py-1 relative">
-          <div className="text-[10px] font-mono text-[#4a5568] uppercase tracking-widest">KOLKATA</div>
+          <div className="text-[10px] font-mono text-[#808ca3] uppercase tracking-widest">KOLKATA</div>
           
           {/* Track Line with Dotted Border */}
           <div className="flex-grow h-[1px] border-t border-dashed border-white/10 relative">
@@ -92,7 +92,7 @@ export default function BarakahInteractive({ routes }: BarakahInteractiveProps) 
         {/* Insight Breakdown Metrics */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3.5 border-t border-white/5">
           <div className="space-y-1">
-            <span className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568]">Traffic Capture Hack</span>
+            <span className="text-[9px] font-mono uppercase tracking-widest text-[#808ca3]">Traffic Capture Hack</span>
             <p className="text-[13px] text-[#8892a4] leading-[1.6] font-light">
               {routes[activeIndex].insight}
             </p>
@@ -100,11 +100,11 @@ export default function BarakahInteractive({ routes }: BarakahInteractiveProps) 
           
           <div className="flex items-center gap-6 sm:justify-end">
             <div className="space-y-0.5">
-              <span className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568] block">SEO Traffic</span>
+              <span className="text-[9px] font-mono uppercase tracking-widest text-[#808ca3] block">SEO Traffic</span>
               <p className="text-[13px] font-mono text-[#7eb8f7] font-medium">{routes[activeIndex].stat}</p>
             </div>
             <div className="space-y-0.5">
-              <span className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568] block">Validation Metric</span>
+              <span className="text-[9px] font-mono uppercase tracking-widest text-[#808ca3] block">Validation Metric</span>
               <p className="text-[13px] font-mono text-[#7eb8f7] font-medium">{routes[activeIndex].metric}</p>
             </div>
           </div>

@@ -176,7 +176,7 @@ export default function Navbar() {
                         </div>
 
                         {/* Social / Info Footer */}
-                        <div className={`flex justify-between items-center text-[10px] text-[#4a5568] transition-all duration-500 delay-400 ${
+                        <div className={`flex justify-between items-center text-[10px] text-[#808ca3] transition-all duration-500 delay-400 ${
                             isMenuOpen ? "opacity-100" : "opacity-0"
                         }`}>
                             <div className="font-mono tracking-wider">

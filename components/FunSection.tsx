@@ -144,7 +144,7 @@ export default function FunSection({ currentLang }: { currentLang: string }) {
         {/* Text descriptions */}
         <div className="space-y-0.5 max-w-[400px]">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-mono text-[#4a5568] uppercase tracking-wider">
+            <span className="text-[10px] font-mono text-[#808ca3] uppercase tracking-wider">
               {labelText}
             </span>
           </div>

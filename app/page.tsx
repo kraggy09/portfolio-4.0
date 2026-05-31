@@ -7,7 +7,7 @@ import FunSection from "@/components/FunSection";
 // Complete Redesigned Multilingual Translation Object for the portfolio
 const customTranslations = {
   en: {
-    name: "Mohammad Kaif Shaikh",
+    name: "Kaif Shaikh",
     headline: "Full-stack engineer and founder building <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> — a group vehicle rental marketplace in India. Based in Kolkata.",
     bio: "I build backend-heavy products end-to-end, from architecture to production. Currently focused on Rahigo's go-to-market while open to remote full-stack roles at product-focused teams.",
     labels: {
@@ -19,8 +19,8 @@ const customTranslations = {
     },
     work: [
       {
-        logo: "R",
-        role: "Co-founder & Full-stack Engineer",
+        logo: "https://www.rahigo.in/logo.webp",
+        role: "Full-stack Engineer",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
         date: "Jan 2025 → Present",
@@ -42,7 +42,7 @@ const customTranslations = {
         ]
       },
       {
-        logo: "H",
+        logo: "https://www.myhaveit.io/HaveitLogo.svg",
         role: "Founding Full Stack Engineer",
         company: "Haveit",
         companyUrl: "https://www.myhaveit.io",
@@ -58,11 +58,11 @@ const customTranslations = {
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-          { name: "AI Embeddings", icon: "https://cdn.simpleicons.org/openai/7eb8f7" }
+          { name: "AI Embeddings", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M21.3 11.2a4 4 0 0 0-1-3.6 4.1 4.1 0 0 0-3.3-1.6c-.3 0-.6.1-.9.2a4 4 0 0 0-5.7-2.6 4.1 4.1 0 0 0-2.4 2.8 4 4 0 0 0-4 1.8A4.1 4.1 0 0 0 3 11.8a4 4 0 0 0 1 3.6 4.1 4.1 0 0 0 3.3 1.6h.9a4 4 0 0 0 5.7 2.6 4.1 4.1 0 0 0 2.4-2.8 4 4 0 0 0 4-1.8 4.1 4.1 0 0 0 1-3.6zm-8.8 8.1c-.8 0-1.6-.2-2.3-.7l1-.6a1.2 1.2 0 0 1 1.7 0l.9.9v.4zm4-1.8l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.6-1 1 .6a1.2 1.2 0 0 1 0 1.7l.3 1zm1.7-4l-1-.6a1.2 1.2 0 0 1-.6-1.6v-1.2l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.3 1.1zm-3.6-7.8l-1 .6a1.2 1.2 0 0 1-1.7 0l-.9-.9v-.4c.8 0 1.6.2 2.3.7zm-4 1.8l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.6 1-1-.6a1.2 1.2 0 0 1 0-1.7l-.3-1zm-1.7 4l1 .6a1.2 1.2 0 0 1 .6 1.6v1.2l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.3-1.1zM8.5 12a1.7 1.7 0 1 1 3.4 0 1.7 1.7 0 0 1-3.4 0z'/></svg>" }
         ]
       },
       {
-        logo: "IV",
+        logo: "https://www.intervue.io/favicon.ico",
         role: "Software Development Engineer Intern",
         company: "Intervue.io",
         companyUrl: "https://intervue.io",
@@ -145,7 +145,7 @@ const customTranslations = {
     },
     projects: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo",
         desc: "Reverse-auction group vehicle marketplace — live on Android & web",
         url: "https://rahigo.in",
@@ -153,7 +153,7 @@ const customTranslations = {
         caseStudyUrl: "/projects/rahigo"
       },
       {
-        logo: "BLG",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo Blog",
         desc: "Headless CMS using Hashnode + Next.js ISR, custom sitemap & SEO meta tags",
         url: "https://rahigo.in/blog",
@@ -172,19 +172,30 @@ const customTranslations = {
     stack: [
       { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+      { name: "Zustand", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M12 14c-1.66 0-3 1.34-3 3 0 2 2 3.5 3 3.5s3-1.5 3-3.5c0-1.66-1.34-3-3-3zm-4.5-2.5c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm9 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm-11-3.5C4.67 8 4 8.67 4 9.5c0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm13 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5z'/></svg>" },
+      { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
+      { name: "WebSockets", icon: "https://cdn.simpleicons.org/socketdotio/7eb8f7" },
+      { name: "WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
+      { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
       { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
       { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Shadcn UI", icon: "https://cdn.simpleicons.org/shadcnui/7eb8f7" },
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", invert: true },
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
       { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" }
     ],
     contact: "Open to remote full-stack roles at product-focused teams.<br/>Reach me at <a href='mailto:kaifshaikh2013.sk@gmail.com' class='sliding-link'>kaifshaikh2013.sk@gmail.com</a> or on <a href='https://linkedin.com/in/mkaifshaikh' target='_blank' class='sliding-link'>LinkedIn</a>."
   },
   hi: {
-    name: "मोहम्मद कैफ शेख",
+    name: "कैफ शेख",
     headline: "फुल-स्टैक इंजीनियर और फाउंडर, भारत में ग्रुप व्हीकल रेंटल मार्केटप्लेस <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> का निर्माण कर रहे हैं। कोलकाता में स्थित।",
     bio: "मैं आर्किटेक्चर से लेकर प्रोडक्शन तक, एंड-टू-एंड बैकएंड-हैवी प्रोडक्ट्स बनाता हूँ। वर्तमान में Rahigo के गो-टू-मार्केट पर केंद्रित हूँ और प्रोडक्ट-केंद्रित टीमों में रिमोट फुल-स्टैक भूमिकाओं के लिए उपलब्ध हूँ।",
     labels: {
@@ -196,7 +207,7 @@ const customTranslations = {
     },
     work: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         role: "को-फाउंडर और फुल-स्टैक इंजीनियर",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
@@ -219,7 +230,7 @@ const customTranslations = {
         ]
       },
       {
-        logo: "H",
+        logo: "https://www.myhaveit.io/HaveitLogo.svg",
         role: "संस्थापक फुल स्टैक इंजीनियर",
         company: "Haveit",
         companyUrl: "https://www.myhaveit.io",
@@ -235,11 +246,11 @@ const customTranslations = {
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-          { name: "AI Embeddings", icon: "https://cdn.simpleicons.org/openai/7eb8f7" }
+          { name: "AI Embeddings", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M21.3 11.2a4 4 0 0 0-1-3.6 4.1 4.1 0 0 0-3.3-1.6c-.3 0-.6.1-.9.2a4 4 0 0 0-5.7-2.6 4.1 4.1 0 0 0-2.4 2.8 4 4 0 0 0-4 1.8A4.1 4.1 0 0 0 3 11.8a4 4 0 0 0 1 3.6 4.1 4.1 0 0 0 3.3 1.6h.9a4 4 0 0 0 5.7 2.6 4.1 4.1 0 0 0 2.4-2.8 4 4 0 0 0 4-1.8 4.1 4.1 0 0 0 1-3.6zm-8.8 8.1c-.8 0-1.6-.2-2.3-.7l1-.6a1.2 1.2 0 0 1 1.7 0l.9.9v.4zm4-1.8l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.6-1 1 .6a1.2 1.2 0 0 1 0 1.7l.3 1zm1.7-4l-1-.6a1.2 1.2 0 0 1-.6-1.6v-1.2l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.3 1.1zm-3.6-7.8l-1 .6a1.2 1.2 0 0 1-1.7 0l-.9-.9v-.4c.8 0 1.6.2 2.3.7zm-4 1.8l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.6 1-1-.6a1.2 1.2 0 0 1 0-1.7l-.3-1zm-1.7 4l1 .6a1.2 1.2 0 0 1 .6 1.6v1.2l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.3-1.1zM8.5 12a1.7 1.7 0 1 1 3.4 0 1.7 1.7 0 0 1-3.4 0z'/></svg>" }
         ]
       },
       {
-        logo: "IV",
+        logo: "https://www.intervue.io/favicon.ico",
         role: "सॉफ्टवेयर डेवलपमेंट इंजीनियर इंटर्न",
         company: "Intervue.io",
         companyUrl: "https://intervue.io",
@@ -322,7 +333,7 @@ const customTranslations = {
     },
     projects: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo",
         desc: "रिवर्स-नीलामी ग्रुप वाहन मार्केटप्लेस - एंड्रॉइड और वेब पर लाइव",
         url: "https://rahigo.in",
@@ -330,7 +341,7 @@ const customTranslations = {
         caseStudyUrl: "/projects/rahigo"
       },
       {
-        logo: "BLG",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo Blog",
         desc: "हैडलेस सीएमएस Hashnode + Next.js ISR, कस्टम साइटमैप और SEO मेटा टैग का उपयोग कर",
         url: "https://rahigo.in/blog",
@@ -349,19 +360,30 @@ const customTranslations = {
     stack: [
       { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+      { name: "Zustand", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M12 14c-1.66 0-3 1.34-3 3 0 2 2 3.5 3 3.5s3-1.5 3-3.5c0-1.66-1.34-3-3-3zm-4.5-2.5c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm9 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm-11-3.5C4.67 8 4 8.67 4 9.5c0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm13 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5z'/></svg>" },
+      { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
+      { name: "WebSockets", icon: "https://cdn.simpleicons.org/socketdotio/7eb8f7" },
+      { name: "WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
+      { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
       { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
       { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Shadcn UI", icon: "https://cdn.simpleicons.org/shadcnui/7eb8f7" },
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", invert: true },
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
       { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" }
     ],
     contact: "उत्पाद-केंद्रित टीमों में दूरस्थ फुल-स्टैक भूमिकाओं के लिए खुला है।<br/>मुझसे <a href='mailto:kaifshaikh2013.sk@gmail.com' class='sliding-link'>kaifshaikh2013.sk@gmail.com</a> पर या <a href='https://linkedin.com/in/mkaifshaikh' target='_blank' class='sliding-link'>LinkedIn</a> पर संपर्क करें।"
   },
   es: {
-    name: "Mohammad Kaif Shaikh",
+    name: "Kaif Shaikh",
     headline: "Ingeniero full-stack y fundador construyendo <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de alquiler de vehículos grupales en la India. Basado en Calcuta.",
     bio: "Construyo productos backend complejos de extremo a extremo, desde la arquitectura hasta la producción. Actualmente enfocado en el lanzamiento de Rahigo mientras estoy abierto a roles remotos full-stack en equipos enfocados en producto.",
     labels: {
@@ -373,7 +395,7 @@ const customTranslations = {
     },
     work: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         role: "Co-fundador e Ingeniero Full-stack",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
@@ -396,7 +418,7 @@ const customTranslations = {
         ]
       },
       {
-        logo: "H",
+        logo: "https://www.myhaveit.io/HaveitLogo.svg",
         role: "Ingeniero de Software Fundador",
         company: "Haveit",
         companyUrl: "https://www.myhaveit.io",
@@ -412,11 +434,11 @@ const customTranslations = {
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-          { name: "AI Embeddings", icon: "https://cdn.simpleicons.org/openai/7eb8f7" }
+          { name: "AI Embeddings", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M21.3 11.2a4 4 0 0 0-1-3.6 4.1 4.1 0 0 0-3.3-1.6c-.3 0-.6.1-.9.2a4 4 0 0 0-5.7-2.6 4.1 4.1 0 0 0-2.4 2.8 4 4 0 0 0-4 1.8A4.1 4.1 0 0 0 3 11.8a4 4 0 0 0 1 3.6 4.1 4.1 0 0 0 3.3 1.6h.9a4 4 0 0 0 5.7 2.6 4.1 4.1 0 0 0 2.4-2.8 4 4 0 0 0 4-1.8 4.1 4.1 0 0 0 1-3.6zm-8.8 8.1c-.8 0-1.6-.2-2.3-.7l1-.6a1.2 1.2 0 0 1 1.7 0l.9.9v.4zm4-1.8l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.6-1 1 .6a1.2 1.2 0 0 1 0 1.7l.3 1zm1.7-4l-1-.6a1.2 1.2 0 0 1-.6-1.6v-1.2l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.3 1.1zm-3.6-7.8l-1 .6a1.2 1.2 0 0 1-1.7 0l-.9-.9v-.4c.8 0 1.6.2 2.3.7zm-4 1.8l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.6 1-1-.6a1.2 1.2 0 0 1 0-1.7l-.3-1zm-1.7 4l1 .6a1.2 1.2 0 0 1 .6 1.6v1.2l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.3-1.1zM8.5 12a1.7 1.7 0 1 1 3.4 0 1.7 1.7 0 0 1-3.4 0z'/></svg>" }
         ]
       },
       {
-        logo: "IV",
+        logo: "https://www.intervue.io/favicon.ico",
         role: "Ingeniero de Desarrollo de Software Interno",
         company: "Intervue.io",
         companyUrl: "https://intervue.io",
@@ -499,7 +521,7 @@ const customTranslations = {
     },
     projects: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo",
         desc: "Marketplace de alquiler grupal por subasta inversa, en Android y web",
         url: "https://rahigo.in",
@@ -507,7 +529,7 @@ const customTranslations = {
         caseStudyUrl: "/projects/rahigo"
       },
       {
-        logo: "BLG",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo Blog",
         desc: "CMS Headless usando Hashnode + Next.js ISR, sitemap personalizado y SEO",
         url: "https://rahigo.in/blog",
@@ -526,19 +548,30 @@ const customTranslations = {
     stack: [
       { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+      { name: "Zustand", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M12 14c-1.66 0-3 1.34-3 3 0 2 2 3.5 3 3.5s3-1.5 3-3.5c0-1.66-1.34-3-3-3zm-4.5-2.5c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm9 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm-11-3.5C4.67 8 4 8.67 4 9.5c0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm13 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5z'/></svg>" },
+      { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
+      { name: "WebSockets", icon: "https://cdn.simpleicons.org/socketdotio/7eb8f7" },
+      { name: "WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
+      { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
       { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
       { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Shadcn UI", icon: "https://cdn.simpleicons.org/shadcnui/7eb8f7" },
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", invert: true },
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
       { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" }
     ],
     contact: "Abierto a roles remotos full-stack en equipos enfocados en productos.<br/>Contáctame en <a href='mailto:kaifshaikh2013.sk@gmail.com' class='sliding-link'>kaifshaikh2013.sk@gmail.com</a> o en <a href='https://linkedin.com/in/mkaifshaikh' target='_blank' class='sliding-link'>LinkedIn</a>."
   },
   fr: {
-    name: "Mohammad Kaif Shaikh",
+    name: "Kaif Shaikh",
     headline: "Ingénieur full-stack et fondateur créant <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> — un marketplace de location de véhicules de groupe en Inde. Basé à Calcutta.",
     bio: "Je conçois des produits axés sur le backend de bout en bout, de l'architecture à la production. Actuellement concentré sur le go-to-market de Rahigo tout en étant ouvert aux rôles de développeur full-stack à distance au sein d'équipes axées sur le produit.",
     labels: {
@@ -550,7 +583,7 @@ const customTranslations = {
     },
     work: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         role: "Co-fondateur & Ingénieur Full-stack",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
@@ -573,7 +606,7 @@ const customTranslations = {
         ]
       },
       {
-        logo: "H",
+        logo: "https://www.myhaveit.io/HaveitLogo.svg",
         role: "Ingénieur Full Stack Fondateur",
         company: "Haveit",
         companyUrl: "https://www.myhaveit.io",
@@ -589,11 +622,11 @@ const customTranslations = {
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-          { name: "AI Embeddings", icon: "https://cdn.simpleicons.org/openai/7eb8f7" }
+          { name: "AI Embeddings", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M21.3 11.2a4 4 0 0 0-1-3.6 4.1 4.1 0 0 0-3.3-1.6c-.3 0-.6.1-.9.2a4 4 0 0 0-5.7-2.6 4.1 4.1 0 0 0-2.4 2.8 4 4 0 0 0-4 1.8A4.1 4.1 0 0 0 3 11.8a4 4 0 0 0 1 3.6 4.1 4.1 0 0 0 3.3 1.6h.9a4 4 0 0 0 5.7 2.6 4.1 4.1 0 0 0 2.4-2.8 4 4 0 0 0 4-1.8 4.1 4.1 0 0 0 1-3.6zm-8.8 8.1c-.8 0-1.6-.2-2.3-.7l1-.6a1.2 1.2 0 0 1 1.7 0l.9.9v.4zm4-1.8l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.6-1 1 .6a1.2 1.2 0 0 1 0 1.7l.3 1zm1.7-4l-1-.6a1.2 1.2 0 0 1-.6-1.6v-1.2l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.3 1.1zm-3.6-7.8l-1 .6a1.2 1.2 0 0 1-1.7 0l-.9-.9v-.4c.8 0 1.6.2 2.3.7zm-4 1.8l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.6 1-1-.6a1.2 1.2 0 0 1 0-1.7l-.3-1zm-1.7 4l1 .6a1.2 1.2 0 0 1 .6 1.6v1.2l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.3-1.1zM8.5 12a1.7 1.7 0 1 1 3.4 0 1.7 1.7 0 0 1-3.4 0z'/></svg>" }
         ]
       },
       {
-        logo: "IV",
+        logo: "https://www.intervue.io/favicon.ico",
         role: "Stagiaire Ingénieur en Développement Logiciel",
         company: "Intervue.io",
         companyUrl: "https://intervue.io",
@@ -676,7 +709,7 @@ const customTranslations = {
     },
     projects: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo",
         desc: "Enchères inversées pour la location de véhicules - live sur Android & web",
         url: "https://rahigo.in",
@@ -684,7 +717,7 @@ const customTranslations = {
         caseStudyUrl: "/projects/rahigo"
       },
       {
-        logo: "BLG",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo Blog",
         desc: "Headless CMS via Hashnode + Next.js ISR, plan du site et SEO optimisés",
         url: "https://rahigo.in/blog",
@@ -703,19 +736,30 @@ const customTranslations = {
     stack: [
       { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+      { name: "Zustand", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M12 14c-1.66 0-3 1.34-3 3 0 2 2 3.5 3 3.5s3-1.5 3-3.5c0-1.66-1.34-3-3-3zm-4.5-2.5c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm9 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm-11-3.5C4.67 8 4 8.67 4 9.5c0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm13 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5z'/></svg>" },
+      { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
+      { name: "WebSockets", icon: "https://cdn.simpleicons.org/socketdotio/7eb8f7" },
+      { name: "WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
+      { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
       { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
       { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Shadcn UI", icon: "https://cdn.simpleicons.org/shadcnui/7eb8f7" },
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", invert: true },
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
       { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" }
     ],
     contact: "Ouvert aux offres full-stack à distance dans des équipes axées sur le produit.<br/>Contactez-moi sur <a href='mailto:kaifshaikh2013.sk@gmail.com' class='sliding-link'>kaifshaikh2013.sk@gmail.com</a> ou sur <a href='https://linkedin.com/in/mkaifshaikh' target='_blank' class='sliding-link'>LinkedIn</a>."
   },
   ja: {
-    name: "Mohammad Kaif Shaikh",
+    name: "Kaif Shaikh",
     headline: "フルスタックエンジニア兼創業者。インドで団体車両レンタルマーケットプレイス <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> を構築中。コルカタを拠点に活動。",
     bio: "アーキテクチャ設計から本番運用まで、バックエンド主体のプロダクトをエンドツーエンドで開発しています。現在はRahigoの市場参入に注力しており、プロダクト重視のチームでのフルスタックのリモートポジションも探しています。",
     labels: {
@@ -727,7 +771,7 @@ const customTranslations = {
     },
     work: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         role: "共同創業者 兼 フルスタックエンジニア",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
@@ -750,7 +794,7 @@ const customTranslations = {
         ]
       },
       {
-        logo: "H",
+        logo: "https://www.myhaveit.io/HaveitLogo.svg",
         role: "創業フルスタックエンジニア",
         company: "Haveit",
         companyUrl: "https://www.myhaveit.io",
@@ -766,11 +810,11 @@ const customTranslations = {
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-          { name: "AI Embeddings", icon: "https://cdn.simpleicons.org/openai/7eb8f7" }
+          { name: "AI Embeddings", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M21.3 11.2a4 4 0 0 0-1-3.6 4.1 4.1 0 0 0-3.3-1.6c-.3 0-.6.1-.9.2a4 4 0 0 0-5.7-2.6 4.1 4.1 0 0 0-2.4 2.8 4 4 0 0 0-4 1.8A4.1 4.1 0 0 0 3 11.8a4 4 0 0 0 1 3.6 4.1 4.1 0 0 0 3.3 1.6h.9a4 4 0 0 0 5.7 2.6 4.1 4.1 0 0 0 2.4-2.8 4 4 0 0 0 4-1.8 4.1 4.1 0 0 0 1-3.6zm-8.8 8.1c-.8 0-1.6-.2-2.3-.7l1-.6a1.2 1.2 0 0 1 1.7 0l.9.9v.4zm4-1.8l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.6-1 1 .6a1.2 1.2 0 0 1 0 1.7l.3 1zm1.7-4l-1-.6a1.2 1.2 0 0 1-.6-1.6v-1.2l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.3 1.1zm-3.6-7.8l-1 .6a1.2 1.2 0 0 1-1.7 0l-.9-.9v-.4c.8 0 1.6.2 2.3.7zm-4 1.8l1.3.8a1.2 1.2 0 0 1 .6 1.5l-.6 1-1-.6a1.2 1.2 0 0 1 0-1.7l-.3-1zm-1.7 4l1 .6a1.2 1.2 0 0 1 .6 1.6v1.2l-1.3-.8a1.2 1.2 0 0 1-.6-1.5l.3-1.1zM8.5 12a1.7 1.7 0 1 1 3.4 0 1.7 1.7 0 0 1-3.4 0z'/></svg>" }
         ]
       },
       {
-        logo: "IV",
+        logo: "https://www.intervue.io/favicon.ico",
         role: "ソフトウェア開発エンジニア（インターン）",
         company: "Intervue.io",
         companyUrl: "https://intervue.io",
@@ -853,7 +897,7 @@ const customTranslations = {
     },
     projects: [
       {
-        logo: "R",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo",
         desc: "団体車両の逆オークション型マーケットプレイス — Androidおよびウェブで稼働中",
         url: "https://rahigo.in",
@@ -861,7 +905,7 @@ const customTranslations = {
         caseStudyUrl: "/projects/rahigo"
       },
       {
-        logo: "BLG",
+        logo: "https://www.rahigo.in/logo.webp",
         name: "Rahigo Blog",
         desc: "Hashnode + Next.js ISRを使用したヘッドレスCMS、カスタムサイトマップとSEO",
         url: "https://rahigo.in/blog",
@@ -880,13 +924,24 @@ const customTranslations = {
     stack: [
       { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+      { name: "Zustand", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237eb8f7'><path d='M12 14c-1.66 0-3 1.34-3 3 0 2 2 3.5 3 3.5s3-1.5 3-3.5c0-1.66-1.34-3-3-3zm-4.5-2.5c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm9 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm-11-3.5C4.67 8 4 8.67 4 9.5c0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5zm13 0c-.83 0-1.5.67-1.5 1.5 0 1.1 1 2 1.5 2s1.5-.9 1.5-2c0-.83-.67-1.5-1.5-1.5z'/></svg>" },
+      { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
+      { name: "WebSockets", icon: "https://cdn.simpleicons.org/socketdotio/7eb8f7" },
+      { name: "WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
+      { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
       { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
       { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Shadcn UI", icon: "https://cdn.simpleicons.org/shadcnui/7eb8f7" },
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", invert: true },
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
       { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" }
     ],
     contact: "プロダクト指向のチームでのフルスタックのリモートポジションを探しています。<br/>ご連絡は <a href='mailto:kaifshaikh2013.sk@gmail.com' class='sliding-link'>kaifshaikh2013.sk@gmail.com</a> または <a href='https://linkedin.com/in/mkaifshaikh' target='_blank' class='sliding-link'>LinkedIn</a> まで。"
@@ -903,7 +958,7 @@ export default async function Home() {
     "@type": "ProfilePage",
     "mainEntity": {
       "@type": "Person",
-      "name": "Mohammad Kaif Shaikh",
+      "name": "Kaif Shaikh",
       "jobTitle": "Full Stack Engineer & Founder",
       "url": "https://www.kaifsk.com",
       "image": "https://www.kaifsk.com/og-image.png",
@@ -922,7 +977,7 @@ export default async function Home() {
         "AWS",
         "WebSockets"
       ],
-      "description": "Mohammad Kaif Shaikh is a full-stack engineer and founder building Rahigo Mobility — a group vehicle rental marketplace in India.",
+      "description": "Kaif Shaikh is a full-stack engineer and founder building Rahigo Mobility — a group vehicle rental marketplace in India.",
       "worksFor": {
         "@type": "Organization",
         "name": "Rahigo Mobility"
@@ -954,7 +1009,9 @@ export default async function Home() {
             <img src="https://cdn.simpleicons.org/github/7eb8f7" alt="" /> GitHub
           </a>
           <a href="https://linkedin.com/in/mkaifshaikh" target="_blank" rel="noopener noreferrer" className="social-link">
-            <img src="https://cdn.simpleicons.org/linkedin/7eb8f7" alt="" /> LinkedIn
+            <svg viewBox="0 0 24 24" fill="#7eb8f7" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg> LinkedIn
           </a>
           <a href="mailto:kaifshaikh2013.sk@gmail.com" className="social-link">
             <img src="https://cdn.simpleicons.org/gmail/7eb8f7" alt="" /> kaifshaikh2013.sk@gmail.com
@@ -967,7 +1024,7 @@ export default async function Home() {
 
       {/* ─── Stack Section (Climbed Up!) ─── */}
       <section id="stack" className="mb-14 scroll-mt-24">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#4a5568] mb-4">{t.labels.stack}</p>
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-4">{t.labels.stack}</p>
         <div className="flex flex-wrap gap-2">
           {t.stack.map((skill, index) => (
             <span key={index} className="tag-badge px-4 py-2 bg-white/[0.015] text-[#8892a4] border-white/5 rounded-lg shadow-sm hover:scale-[1.02]">
@@ -985,15 +1042,19 @@ export default async function Home() {
 
       {/* ─── Work Section ─── */}
       <section id="work" className="scroll-mt-24">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#4a5568] mb-6">{t.labels.work}</p>
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.work}</p>
 
         <div className="space-y-6">
           {t.work.map((job, index) => (
             <div key={index} className="job-card group">
               <div className="flex items-center gap-3.5 mb-1.5">
                 {job.logo ? (
-                  <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 flex items-center justify-center font-mono text-[10px] font-bold text-[#8892a4] shrink-0 shadow-inner group-hover:border-[#7eb8f7]/30 group-hover:text-[#7eb8f7] transition-all">
-                    {job.logo}
+                  <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 flex items-center justify-center font-mono text-[10px] font-bold text-[#8892a4] shrink-0 shadow-inner group-hover:border-[#7eb8f7]/30 transition-all overflow-hidden">
+                    {job.logo.startsWith("http") ? (
+                      <img src={job.logo} alt={job.company} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    ) : (
+                      <span className="group-hover:text-[#7eb8f7] transition-colors">{job.logo}</span>
+                    )}
                   </div>
                 ) : (
                   <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 shrink-0" />
@@ -1007,10 +1068,10 @@ export default async function Home() {
                     <span>{job.role} — {job.company}</span>
                   )}
                 </span>
-                <span className="text-[12px] text-[#4a5568] font-mono whitespace-nowrap hidden sm:inline">{job.date}</span>
+                <span className="text-[12px] text-[#808ca3] font-mono whitespace-nowrap hidden sm:inline">{job.date}</span>
               </div>
 
-              <div className="text-[13px] text-[#4a5568] mb-3.5 pl-[38px] flex items-center justify-between">
+              <div className="text-[13px] text-[#808ca3] mb-3.5 pl-[38px] flex items-center justify-between">
                 <span>{job.location}</span>
                 <span className="text-[12px] font-mono sm:hidden">{job.date}</span>
               </div>
@@ -1056,7 +1117,7 @@ export default async function Home() {
 
       {/* ─── Dedicated Side Business Section (Catalyst for Rahigo) ─── */}
       <section id="side-business" className="mt-16 scroll-mt-24 pt-10 border-t border-white/5">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#4a5568] mb-6">{t.labels.sideBusiness}</p>
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.sideBusiness}</p>
 
         <div className="p-6 rounded-2xl bg-white/[0.015] border border-white/5 hover:border-[#7eb8f7]/10 transition-all duration-300 relative overflow-hidden group">
           {/* Subtle glowing halo inside the card */}
@@ -1070,7 +1131,7 @@ export default async function Home() {
               </div>
               <div>
                 <h3 className="text-[16px] font-medium text-[#e8eaf0] group-hover:text-[#7eb8f7] transition-colors">{t.sideBusiness.title}</h3>
-                <p className="text-[11px] text-[#4a5568] font-mono tracking-tight">{t.sideBusiness.tagline}</p>
+                <p className="text-[11px] text-[#808ca3] font-mono tracking-tight">{t.sideBusiness.tagline}</p>
               </div>
             </div>
 
@@ -1097,7 +1158,7 @@ export default async function Home() {
               <span className="text-[20px] shrink-0">🚌</span>
               <div>
                 <p className="text-[12.5px] font-mono text-[#e8eaf0] tracking-wide font-medium">{t.sideBusiness.fleetLabel}</p>
-                <p className="text-[10px] text-[#4a5568] uppercase tracking-[0.05em] font-medium">{t.sideBusiness.fleetSub}</p>
+                <p className="text-[10px] text-[#808ca3] uppercase tracking-[0.05em] font-medium">{t.sideBusiness.fleetSub}</p>
               </div>
             </div>
             <span className="text-[10px] font-mono text-[#f59e0b] bg-[#d97706]/10 px-2.5 py-1 rounded-[5px] border border-[#d97706]/20 uppercase tracking-wider shrink-0 font-semibold text-center sm:text-left self-start sm:self-auto">
@@ -1122,7 +1183,7 @@ export default async function Home() {
           {/* Interactive Routes Sub-Section */}
           <div className="pt-6 border-t border-white/5">
             <h4 className="text-[12px] font-medium text-[#e8eaf0] mb-1.5">{t.sideBusiness.trafficTitle}</h4>
-            <p className="text-[11.5px] text-[#4a5568] mb-4 leading-normal">{t.sideBusiness.trafficSubtitle}</p>
+            <p className="text-[11.5px] text-[#808ca3] mb-4 leading-normal">{t.sideBusiness.trafficSubtitle}</p>
 
             {/* Call the visual interactive client element */}
             <BarakahInteractive routes={t.sideBusiness.routes} />
@@ -1132,14 +1193,18 @@ export default async function Home() {
 
       {/* ─── Projects Section ─── */}
       <section id="projects" className="mt-16 scroll-mt-24 pt-10 border-t border-white/5">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#4a5568] mb-6">{t.labels.projects}</p>
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.projects}</p>
 
         <div className="border-t border-white/5 divide-y divide-white/5">
           {t.projects.map((proj, index) => (
             <div key={index} className="project-item group">
               <div className="flex items-start gap-3.5 max-w-[75%]">
-                <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 flex items-center justify-center font-mono text-[9px] font-bold text-[#7eb8f7] shrink-0 mt-0.5 shadow-md">
-                  {proj.logo}
+                <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 flex items-center justify-center font-mono text-[9px] font-bold text-[#7eb8f7] shrink-0 mt-0.5 shadow-md overflow-hidden">
+                  {proj.logo.startsWith("http") ? (
+                    <img src={proj.logo} alt={proj.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  ) : (
+                    <span>{proj.logo}</span>
+                  )}
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
@@ -1147,13 +1212,13 @@ export default async function Home() {
                     {proj.caseStudyUrl && (
                       <Link
                         href={proj.caseStudyUrl}
-                        className="text-[10px] uppercase font-mono tracking-widest text-[#4a5568] hover:text-[#7eb8f7] transition-colors bg-white/5 px-2 py-0.5 rounded-[4px]"
+                        className="text-[10px] uppercase font-mono tracking-widest text-[#808ca3] hover:text-[#7eb8f7] transition-colors bg-white/5 px-2 py-0.5 rounded-[4px]"
                       >
                         case study
                       </Link>
                     )}
                   </div>
-                  <p className="text-[13px] text-[#4a5568] mt-1.5 font-light">{proj.desc}</p>
+                  <p className="text-[13px] text-[#808ca3] mt-1.5 font-light">{proj.desc}</p>
                 </div>
               </div>
 
@@ -1161,7 +1226,7 @@ export default async function Home() {
                 href={proj.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12px] text-[#4a5568] hover:text-[#7eb8f7] transition-all font-mono whitespace-nowrap"
+                className="text-[12px] text-[#808ca3] hover:text-[#7eb8f7] transition-all font-mono whitespace-nowrap"
               >
                 {proj.urlText}
               </a>
@@ -1172,7 +1237,7 @@ export default async function Home() {
 
       {/* ─── Contact Section ─── */}
       <section id="contact" className="mt-16 pt-10 border-t border-white/5 scroll-mt-24">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#4a5568] mb-6">{t.labels.contact}</p>
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.contact}</p>
         <p
           className="text-[15px] text-[#8892a4] leading-[1.9] font-light"
           dangerouslySetInnerHTML={{ __html: t.contact }}

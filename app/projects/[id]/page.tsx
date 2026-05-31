@@ -71,9 +71,9 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
                                         className="absolute inset-0 w-full h-full border-0"
                                     ></iframe>
                                 ) : (
-                                    <div className="absolute inset-0 flex items-center justify-center text-[#4a5568]">
+                                    <div className="absolute inset-0 flex items-center justify-center text-[#808ca3]">
                                         <div className="text-center">
-                                            <span className="material-symbols-outlined !text-4xl mb-2 text-[#4a5568]">video_library</span>
+                                            <span className="material-symbols-outlined !text-4xl mb-2 text-[#808ca3]">video_library</span>
                                             <p className="font-mono uppercase tracking-widest text-[9px]">Video Demo Coming Soon</p>
                                         </div>
                                     </div>
@@ -171,15 +171,15 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
                             <div className="relative pt-6 border-t border-white/5 flex flex-wrap gap-10">
                                 <div className="space-y-0.5">
                                     <p className="text-[22px] font-mono text-[#7eb8f7] font-medium">60%</p>
-                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568]">Efficiency Boost</p>
+                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#808ca3]">Efficiency Boost</p>
                                 </div>
                                 <div className="space-y-0.5">
                                     <p className="text-[22px] font-mono text-[#7eb8f7] font-medium">40%</p>
-                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568]">Conversion Increase</p>
+                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#808ca3]">Conversion Increase</p>
                                 </div>
                                 <div className="space-y-0.5">
                                     <p className="text-[22px] font-mono text-[#7eb8f7] font-medium">24/7</p>
-                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568]">Active Monitoring</p>
+                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#808ca3]">Active Monitoring</p>
                                 </div>
                             </div>
                         </section>
