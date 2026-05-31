@@ -10,13 +10,13 @@ interface FeaturedProjectProps {
 
 export default function FeaturedProject({ t, language }: FeaturedProjectProps) {
     const project = {
-        title: t.projects.rahigo.title,
-        description: t.projects.rahigo.description,
-        tag: t.projects.rahigo.tag,
-        type: t.projects.rahigo.type,
-        image: "/projects/rahigo.png",
+        title: t.projects.invosync.title,
+        description: t.projects.invosync.description,
+        tag: t.projects.invosync.tag,
+        type: t.projects.invosync.type,
+        image: "/projects/invosync.png",
         links: {
-            caseStudy: `/projects/${t.projects.rahigo.id}`,
+            caseStudy: `/projects/${t.projects.invosync.id}`,
             liveDemo: "#",
             github: "#"
         }

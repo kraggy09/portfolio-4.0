@@ -36,60 +36,66 @@ export default function Navbar() {
 
     const navLinks = [
         { href: "/#work", label: t.nav.work },
-        { href: "/#about", label: t.nav.about },
-        { href: "/projects", label: t.nav.projects },
+        { href: "/#projects", label: t.nav.projects },
+        { href: "/#stack", label: "Stack" },
+        { href: "/#contact", label: "Contact" },
     ];
 
     return (
         <>
             <nav
                 id="main-nav"
-                className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-border-subtle flex items-center transition-all duration-500 ease-in-out ${capsule ? "nav-capsule" : "h-20"
-                    }`}
+                className={`fixed top-0 left-0 right-0 z-50 flex items-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    capsule
+                        ? "top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-[680px] bg-black/75 border border-white/10 shadow-2xl backdrop-blur-md rounded-full h-14"
+                        : "h-20 bg-black/85 border-b border-white/5 backdrop-blur-sm"
+                }`}
             >
-                <div className="container mx-auto px-4 md:px-8 flex items-center justify-between relative">
+                <div className="w-full px-5 md:px-8 flex items-center justify-between relative">
                     {/* Logo */}
-                    <div className="flex items-center gap-4 group cursor-default">
-                        <Link href="/" className="flex items-center gap-4">
-                            <div className="w-10 h-10 transition-transform duration-500 group-hover:scale-110">
-                                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+                    <div className="flex items-center gap-3 group cursor-default">
+                        <Link href="/" className="flex items-center gap-3">
+                            <div className="w-7 h-7 relative transition-transform duration-500 group-hover:scale-105">
+                                <div className="absolute inset-0 bg-[#7eb8f7]/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain relative z-10" />
                             </div>
-                            <span className="font-bold tracking-normal text-primary uppercase text-[13px] hidden sm:block font-sans group-hover:text-accent transition-colors">
+                            <span className="font-medium tracking-normal text-[#e8eaf0] text-[13.5px] font-sans group-hover:text-[#7eb8f7] transition-colors">
                                 Kaif Shaikh
                             </span>
                         </Link>
                     </div>
 
                     {/* Main Navigation - Desktop */}
-                    <div className="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-widest text-slate-600">
+                    <div className="hidden sm:flex items-center gap-6 text-[12px] font-medium text-[#8892a4] font-sans">
                         {navLinks.map((link) => (
-                            <Link key={link.href} href={link.href} className="hover:text-accent transition-colors">
+                            <Link key={link.href} href={link.href} className="hover:text-[#7eb8f7] transition-colors relative py-1">
                                 {link.label}
                             </Link>
                         ))}
                     </div>
 
-                    {/* Right Actions - Always Visible */}
-                    <div className="flex items-center gap-4 md:gap-6">
+                    {/* Right Actions */}
+                    <div className="flex items-center gap-3 md:gap-4">
                         {/* Language Selector */}
                         <div className="relative">
                             <button
-                                className="flex items-center gap-1.5 md:gap-2 text-[10px] md:text-[11px] font-bold uppercase hover:text-accent transition-colors"
+                                className="flex items-center gap-1 text-[11px] font-medium text-[#8892a4] uppercase hover:text-[#7eb8f7] transition-colors"
                                 onClick={() => setLangOpen(!langOpen)}
                                 aria-label="Select language"
                             >
-                                <span className="material-symbols-outlined !text-lg">
+                                <span className="material-symbols-outlined !text-base">
                                     language
                                 </span>
-                                <span>{language}</span>
+                                <span className="font-mono text-[10px]">{language}</span>
                             </button>
                             {langOpen && (
-                                <div className="absolute top-full right-0 mt-4 w-32 bg-white border border-border-subtle rounded-2xl shadow-xl overflow-hidden py-2 z-[60]">
+                                <div className="absolute top-full right-0 mt-3 w-28 bg-[#0a0a0a] border border-white/10 rounded-xl shadow-2xl overflow-hidden py-1 z-[60] backdrop-blur-lg">
                                     {languages.map((lang) => (
                                         <button
                                             key={lang.code}
-                                            className={`w-full text-left px-4 py-2 text-[10px] font-bold hover:bg-surface-light ${language === lang.code ? "text-accent bg-accent/5" : ""
-                                                }`}
+                                            className={`w-full text-left px-3 py-1.5 text-[10px] font-medium transition-all hover:bg-white/5 ${
+                                                language === lang.code ? "text-[#7eb8f7] bg-[#7eb8f7]/5" : "text-[#8892a4]"
+                                            }`}
                                             onClick={() => {
                                                 setLanguage(lang.code);
                                                 setLangOpen(false);
@@ -103,23 +109,27 @@ export default function Navbar() {
                             )}
                         </div>
 
-                        {/* Desktop CTA */}
+                        {/* Desktop CTA (Minimal Calendar icon button) */}
                         <button
                             data-cal-link="kaifsk/30min"
                             data-cal-config='{"layout":"month_view"}'
-                            className="hidden sm:block px-6 py-3 bg-primary text-white text-[11px] font-bold uppercase tracking-widest rounded-full hover:bg-accent transition-all shadow-lg hover:shadow-accent/20 font-sans cursor-pointer"
+                            className="p-2 bg-white/5 border border-white/10 text-[#e8eaf0] rounded-full hover:bg-[#7eb8f7]/10 hover:border-[#7eb8f7]/30 hover:text-[#7eb8f7] transition-all cursor-pointer hidden xs:flex items-center justify-center"
+                            title={t.nav.cta}
                         >
-                            {t.nav.cta}
+                            <span className="material-symbols-outlined !text-[18px]">
+                                calendar_today
+                            </span>
                         </button>
 
                         {/* Mobile Toggle */}
                         <button
-                            className={`lg:hidden w-10 h-10 flex items-center justify-center transition-colors z-[60] ${isMenuOpen ? "text-white" : "text-primary hover:text-accent"
-                                }`}
+                            className={`sm:hidden w-8 h-8 flex items-center justify-center transition-colors z-[60] ${
+                                isMenuOpen ? "text-[#e8eaf0]" : "text-[#8892a4] hover:text-[#7eb8f7]"
+                            }`}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             aria-label="Toggle menu"
                         >
-                            <span className="material-symbols-outlined !text-2xl font-bold">
+                            <span className="material-symbols-outlined !text-[20px] font-bold">
                                 {isMenuOpen ? "close" : "menu"}
                             </span>
                         </button>
@@ -129,45 +139,36 @@ export default function Navbar() {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`fixed inset-0 bg-primary z-[55] lg:hidden flex flex-col transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${isMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-full pointer-events-none"
-                    }`}
+                className={`fixed inset-0 bg-black z-[55] sm:hidden flex flex-col transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-full pointer-events-none"
+                }`}
             >
-                <div className="flex flex-col h-full pt-12 pb-12 px-8">
-                    {/* Header in Menu: Branding + Explicit Close */}
-                    <div className={`flex items-center justify-between mb-12 transition-all duration-700 delay-100 ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}>
-                        <span className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">Menu</span>
-                        <button
-                            onClick={() => setIsMenuOpen(false)}
-                            className="flex items-center gap-2 text-white/60 hover:text-accent transition-colors group"
-                        >
-                            <span className="text-[10px] font-bold uppercase tracking-widest">Close</span>
-                            <span className="material-symbols-outlined !text-xl group-hover:rotate-90 transition-transform duration-300">close</span>
-                        </button>
-                    </div>
-
-                    <div className="flex flex-col gap-8">
+                <div className="flex flex-col h-full pt-20 pb-10 px-6 justify-between">
+                    <div className="flex flex-col gap-6 mt-8">
                         {navLinks.map((link, idx) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`group flex items-center gap-4 text-4xl sm:text-5xl font-bold text-white transition-all duration-700 ${isMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-                                    }`}
-                                style={{ transitionDelay: `${200 + idx * 100}ms` }}
+                                className={`group flex items-center gap-4 text-3xl font-light text-[#e8eaf0] transition-all duration-500 ${
+                                    isMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+                                }`}
+                                style={{ transitionDelay: `${100 + idx * 75}ms` }}
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                <span className="text-accent text-sm font-light opacity-50 group-hover:opacity-100 transition-opacity">0{idx + 1}</span>
-                                <span className="hover:text-accent transition-colors">{link.label}</span>
+                                <span className="text-[#7eb8f7] text-xs font-mono opacity-50">0{idx + 1}</span>
+                                <span className="hover:text-[#7eb8f7] transition-colors">{link.label}</span>
                             </Link>
                         ))}
                     </div>
 
-                    <div className="mt-auto">
-                        <div className={`mb-8 pt-8 border-t border-white/10 transition-all duration-700 delay-500 ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                            }`}>
+                    <div className="space-y-6">
+                        <div className={`pt-6 border-t border-white/5 transition-all duration-500 delay-300 ${
+                            isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+                        }`}>
                             <button
                                 data-cal-link="kaifsk/30min"
                                 data-cal-config='{"layout":"month_view"}'
-                                className="w-full px-8 py-5 bg-white text-primary text-xs font-bold uppercase tracking-[0.2em] rounded-2xl hover:bg-accent hover:text-white transition-all shadow-2xl"
+                                className="w-full py-4 bg-[#7eb8f7]/10 border border-[#7eb8f7]/20 text-[#7eb8f7] text-xs font-medium tracking-[0.1em] uppercase rounded-xl hover:bg-[#7eb8f7]/20 transition-all shadow-xl"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {t.nav.cta}
@@ -175,14 +176,15 @@ export default function Navbar() {
                         </div>
 
                         {/* Social / Info Footer */}
-                        <div className={`flex justify-between items-center transition-all duration-700 delay-600 ${isMenuOpen ? "opacity-100" : "opacity-0"
-                            }`}>
-                            <div className="text-white/50 text-[10px] font-medium tracking-wider">
+                        <div className={`flex justify-between items-center text-[10px] text-[#4a5568] transition-all duration-500 delay-400 ${
+                            isMenuOpen ? "opacity-100" : "opacity-0"
+                        }`}>
+                            <div className="font-mono tracking-wider">
                                 © {new Date().getFullYear()} KAIF SHAIKH
                             </div>
-                            <div className="flex gap-4">
-                                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-                                <span className="text-white/80 text-[10px] font-bold uppercase tracking-widest">Available for work</span>
+                            <div className="flex gap-2 items-center">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#7eb8f7] animate-pulse"></span>
+                                <span className="uppercase tracking-widest font-mono text-[9px] text-[#8892a4]">Available for work</span>
                             </div>
                         </div>
                     </div>

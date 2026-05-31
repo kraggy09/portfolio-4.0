@@ -4,6 +4,7 @@ export const translations = {
             work: "Work",
             about: "About",
             projects: "Projects",
+            experience: "Experience",
             contact: "Contact",
             cta: "Book my cal"
         },
@@ -17,7 +18,7 @@ export const translations = {
         },
         about: {
             title: "About Me",
-            content: "Building things has always been my way of understanding the world. I don't just write code; I look for the 'why' behind every feature to make sure we’re building something that truly matters. I’m a firm believer that technology should be a quiet helper, not a source of frustration. When I’m away from my keyboard, I’m usually either hunting for the best street food in Mumbai or tinkering with a DIY project at home."
+            content: "Building things has always been my way of understanding the world. I don't just write code; I look for the 'why' behind every feature to make sure we’re building something that truly matters. I’m a firm believer that technology should be a quiet helper, not a source of frustration. When I’m away from my keyboard, I’m usually either hunting for the best street food in Kolkata or tinkering with a DIY project at home."
         },
         banner: {
             tag: "SYSTEM_INTERCEPT: READY",
@@ -50,6 +51,32 @@ export const translations = {
                 tag: "ROBUST & SECURE"
             }
         },
+        experience: {
+            title: "Professional",
+            titleAccent: "Experience",
+            viewMore: "View Full History",
+            haveit: {
+                role: "Founding Full Stack Engineer",
+                company: "Haveit",
+                date: "Dec 2024 - Dec 2025",
+                location: "Remote",
+                description: "Architected and built Haveit 2.0 event planning platform from scratch. Developed AI recommendation engine with embeddings-based retrieval."
+            },
+            intervue: {
+                role: "SDE Intern",
+                company: "Intervue.io",
+                date: "Apr 2024 - Dec 2024",
+                location: "Bengaluru",
+                description: "Led migration from Twilio to LiveKit Cloud, reducing costs by 65%. Engineered and optimized full-stack features."
+            },
+            simco: {
+                role: "Software Engineer Intern",
+                company: "Simco Consultancy",
+                date: "Jan 2024 - Mar 2024",
+                location: "Kolkata",
+                description: "Automated workflows and enhanced web application features. Reduced report generation time by 40%."
+            }
+        },
         projects: {
             title: "Some things",
             titleAccent: "I've built",
@@ -77,7 +104,7 @@ export const translations = {
                 title: "Rahigo",
                 description: "A better way to book professional transport. I built this multi-vendor marketplace to handle complex bidding and real-time partner routing, making it easy for users to find the best ride without the usual back-and-forth.",
                 id: "rahigo",
-                loom: "https://www.loom.com/embed/placeholder",
+                loom: "https://www.loom.com/embed/539a545e751d4a079abc1d726ab7a256",
                 technologies: ["React Native", "Node.js", "MongoDB", "Google Maps API"],
                 features: [
                     { title: "Multi-Vendor Bidding", description: "Allows multiple partners to bid on a single trip request for the best price." },
@@ -107,6 +134,25 @@ export const translations = {
                 solution: "Implemented an automated estimation engine and WhatsApp integration, creating a single source of truth for itineraries and bookings.",
                 results: "Agents saved an average of 15 hours per week on administrative tasks, and WhatsApp conversion rates improved by 40%."
             },
+            invosync: {
+                tag: "Enterprise SaaS",
+                type: "Real-time Billing",
+                title: "InvoSync",
+                description: "A high-concurrency, real-time data synchronization engine for enterprise billing. Engineered for sub-second latency and absolute data integrity using a distributed event-driven architecture.",
+                id: "invosync",
+                loom: "",
+                technologies: ["Next.js 15", "React 19", "Node.js", "Redis", "MongoDB", "Socket.io", "Zustand"],
+                features: [
+                    { title: "Distributed State Sync", description: "Seamless real-time updates across multiple server nodes and client instances via Redis Pub/Sub." },
+                    { title: "Atomic Invoicing", description: "Multi-document MongoDB transactions ensuring absolute consistency in stock levels and financial records." },
+                    { title: "Optimized Inventory", description: "Version-controlled stock updates that handle multi-user collisions gracefully." },
+                    { title: "Performant Search", description: "Server-side Projection-based search capable of handling 30,000+ products with <100ms latency." }
+                ],
+                gallery: ["/projects/invosync.png", "/projects/invosync-1.png", "/projects/invosync-2.png", "/projects/invosync-3.png"],
+                challenge: "Standard WebSockets fail at scale, and billing errors in high-volume retail are expensive. Managing state across multiple concurrent tabs without lag or data corruption is a significant engineering hurdle.",
+                solution: "Implemented Socket.io Redis Adapter for distributed messaging, Mongoose Transactions for atomic operations, and Zustand with shallow selectors for high-frequency state management.",
+                results: "Achieved sub-100ms sync latency, ensured zero financial data errors during stress testing, and improved billing throughput by 60% compared to legacy systems."
+            },
             caseStudyNav: {
                 overview: "Overview",
                 challenge: "The Challenge",
@@ -130,7 +176,7 @@ export const translations = {
         footer: {
             copyright: "© 2026 KAIF SHAIKH",
             status: "Available for Projects",
-            location: "Mumbai, India"
+            location: "Kolkata, India"
         }
     },
     hi: {
@@ -138,6 +184,7 @@ export const translations = {
             work: "काम",
             about: "बारे में",
             projects: "प्रोजेक्ट्स",
+            experience: "अनुभव",
             contact: "संपर्क",
             cta: "मेरी कॉल बुक करें"
         },
@@ -182,6 +229,32 @@ export const translations = {
                 title: "बैकएंड और सिस्टम",
                 description: "मजबूत और सुरक्षित",
                 tag: "मजबूत और सुरक्षित"
+            }
+        },
+        experience: {
+            title: "व्यावसायिक",
+            titleAccent: "अनुभव",
+            viewMore: "पूरा इतिहास देखें",
+            haveit: {
+                role: "Founding Full Stack Engineer",
+                company: "Haveit",
+                date: "Dec 2024 - Dec 2025",
+                location: "Remote",
+                description: "Architected and built Haveit 2.0 event planning platform from scratch. Developed AI recommendation engine with embeddings-based retrieval."
+            },
+            intervue: {
+                role: "SDE Intern",
+                company: "Intervue.io",
+                date: "Apr 2024 - Dec 2024",
+                location: "Bengaluru",
+                description: "Led migration from Twilio to LiveKit Cloud, reducing costs by 65%. Engineered and optimized full-stack features."
+            },
+            simco: {
+                role: "Software Engineer Intern",
+                company: "Simco Consultancy",
+                date: "Jan 2024 - Mar 2024",
+                location: "Kolkata",
+                description: "Automated workflows and enhanced web application features. Reduced report generation time by 40%."
             }
         },
         projects: {
@@ -241,6 +314,25 @@ export const translations = {
                 solution: "एक स्वचालित अनुमान इंजन और व्हाट्सएप एकीकरण लागू किया, जिससे यात्रा कार्यक्रमों और बुकिंग के लिए सच्चाई का एक स्रोत बना।",
                 results: "एजेंटों ने प्रशासनिक कार्यों पर प्रति सप्ताह औसतन 15 घंटे बचाए, और व्हाट्सएप रूपांतरण दरों में 40% सुधार हुआ।"
             },
+            invosync: {
+                tag: "एंटरप्राइज SaaS",
+                type: "रीयल-टाइम बिलिंग",
+                title: "InvoSync",
+                description: "एंटरप्राइज बिलिंग के लिए एक हाई-कनकरेंसी, रीयल-टाइम डेटा सिंक्रोनाइज़ेशन इंजन। इसे वितरित इवेंट-ड्रिवन आर्किटेक्चर का उपयोग करके सब-सेकंड लेटेंसी और पूर्ण डेटा अखंडता के लिए इंजीनियर किया गया है।",
+                id: "invosync",
+                loom: "",
+                technologies: ["Next.js 15", "React 19", "Node.js", "Redis", "MongoDB", "Socket.io", "Zustand"],
+                features: [
+                    { title: "वितरित स्टेट सिंक", description: "Redis Pub/Sub के माध्यम से कई सर्वर नोड्स और क्लाइंट इंस्टेंस में निर्बाध रीयल-टाइम अपडेट।" },
+                    { title: "एटॉमिक इनवॉयसिंग", description: "मल्टी-डॉक्यूमेंट MongoDB ट्रांजेक्शन स्टॉक स्तरों और वित्तीय रिकॉर्ड में पूर्ण स्थिरता सुनिश्चित करते हैं।" },
+                    { title: "अनुकूलित इन्वेंट्री", description: "वर्जन-नियंत्रित स्टॉक अपडेट जो मल्टी-यूजर टकरावों को शालीनता से संभालते हैं।" },
+                    { title: "प्रदर्शनकारी खोज", description: "सर्वर-साइड प्रोजेक्शन-आधारित खोज जो <100ms लेटेंसी के साथ 30,000+ उत्पादों को संभालने में सक्षम है।" }
+                ],
+                gallery: ["/projects/invosync.png", "/projects/invosync-1.png", "/projects/invosync-2.png", "/projects/invosync-3.png"],
+                challenge: "मानक वेबसॉकेट स्केल पर विफल हो जाते हैं, और उच्च-मात्रा वाले रिटेल में बिलिंग त्रुटियां महंगी होती हैं। लैग या डेटा भ्रष्टाचार के बिना कई समवर्ती टैब में स्टेट प्रबंधित करना एक महत्वपूर्ण इंजीनियरिंग बाधा है।",
+                solution: "वितरित मैसेजिंग के लिए Socket.io Redis एडेप्टर, एटॉमिक ऑपरेशंस के लिए Mongoose ट्रांजेक्शन, और हाई-फ्रीक्वेंसी स्टेट मैनेजमेंट के लिए Zustand का कार्यान्वयन किया गया।",
+                results: "सब-100ms सिंक लेटेंसी हासिल की, तनाव परीक्षण के दौरान शून्य वित्तीय डेटा त्रुटि सुनिश्चित की, और लीगेसी सिस्टम की तुलना में बिलिंग थ्रूपुट में 60% सुधार किया।"
+            },
             caseStudyNav: {
                 overview: "अवलोकन",
                 challenge: "चुनौती",
@@ -264,7 +356,7 @@ export const translations = {
         footer: {
             copyright: "© 2024 कैफ़ शेख",
             status: "प्रोजेक्ट्स के लिए उपलब्ध",
-            location: "मुंबई, भारत"
+            location: "कोलकाता, भारत"
         }
     },
     es: {
@@ -272,6 +364,7 @@ export const translations = {
             work: "Trabajo",
             about: "Sobre mí",
             projects: "Proyectos",
+            experience: "Experiencia",
             contact: "Contacto",
             cta: "Reserva mi llamada"
         },
@@ -316,6 +409,32 @@ export const translations = {
                 title: "Backend y Sistemas",
                 description: "Robusto y Seguro",
                 tag: "ROBUSTO Y SEGURO"
+            }
+        },
+        experience: {
+            title: "Experiencia",
+            titleAccent: "Profesional",
+            viewMore: "Ver Historial Completo",
+            haveit: {
+                role: "Founding Full Stack Engineer",
+                company: "Haveit",
+                date: "Dec 2024 - Dec 2025",
+                location: "Remote",
+                description: "Architected and built Haveit 2.0 event planning platform from scratch. Developed AI recommendation engine with embeddings-based retrieval."
+            },
+            intervue: {
+                role: "SDE Intern",
+                company: "Intervue.io",
+                date: "Apr 2024 - Dec 2024",
+                location: "Bengaluru",
+                description: "Led migration from Twilio to LiveKit Cloud, reducing costs by 65%. Engineered and optimized full-stack features."
+            },
+            simco: {
+                role: "Software Engineer Intern",
+                company: "Simco Consultancy",
+                date: "Jan 2024 - Mar 2024",
+                location: "Kolkata",
+                description: "Automated workflows and enhanced web application features. Reduced report generation time by 40%."
             }
         },
         projects: {
@@ -375,6 +494,25 @@ export const translations = {
                 solution: "Se implementó un motor de estimación automatizado e integración con WhatsApp, creando una única fuente de verdad para itinerarios y reservas.",
                 results: "Los agentes ahorraron un promedio de 15 horas por semana en tareas administrativas y las tasas de conversión de WhatsApp mejoraron en un 40%."
             },
+            invosync: {
+                tag: "SaaS Empresarial",
+                type: "Facturación en tiempo real",
+                title: "InvoSync",
+                description: "Un motor de sincronización de datos en tiempo real de alta concurrencia para facturación empresarial. Diseñado para una latencia inferior al segundo y una integridad de datos absoluta utilizando una arquitectura distribuida impulsada por eventos.",
+                id: "invosync",
+                loom: "",
+                technologies: ["Next.js 15", "React 19", "Node.js", "Redis", "MongoDB", "Socket.io", "Zustand"],
+                features: [
+                    { title: "Sincronización de estado distribuida", description: "Actualizaciones en tiempo real sin interrupciones en múltiples nodos de servidor e instancias de cliente a través de Redis Pub/Sub." },
+                    { title: "Facturación atómica", description: "Transacciones de MongoDB multiobjeto que garantizan una coherencia absoluta en los niveles de stock y los registros financieros." },
+                    { title: "Inventario optimizado", description: "Actualizaciones de stock controladas por versiones que gestionan las colisiones multiusuario con elegancia." },
+                    { title: "Búsqueda de alto rendimiento", description: "Búsqueda basada en proyecciones en el lado del servidor capaz de manejar más de 30.000 productos con una latencia de <100 ms." }
+                ],
+                gallery: ["/projects/invosync.png", "/projects/invosync-1.png", "/projects/invosync-2.png", "/projects/invosync-3.png"],
+                challenge: "Los WebSockets estándar fallan a escala y los errores de facturación en el comercio minorista de alto volumen son costosos. Gestionar el estado en múltiples pestañas simultáneas sin retrasos ni corrupción de datos es un obstáculo de ingeniería significativo.",
+                solution: "Se implementó el adaptador Redis de Socket.io para la mensajería distribuida, transacciones de Mongoose para operaciones atómicas y Zustand con selectores superficiales para la gestión de estado de alta frecuencia.",
+                results: "Se logró una latencia de sincronización inferior a 100 ms, se garantizaron cero errores de datos financieros durante las pruebas de estrés y se mejoró el rendimiento de facturación en un 60% en comparación con los sistemas heredados."
+            },
             caseStudyNav: {
                 overview: "Visión General",
                 challenge: "El Desafío",
@@ -398,7 +536,7 @@ export const translations = {
         footer: {
             copyright: "© 2024 KAIF SHAIKH",
             status: "Disponible para Proyectos",
-            location: "Mumbai, India"
+            location: "Kolkata, India"
         }
     },
     fr: {
@@ -406,6 +544,7 @@ export const translations = {
             work: "Projets",
             about: "À propos",
             projects: "Réalisations",
+            experience: "Expérience",
             contact: "Contact",
             cta: "Réserver un appel"
         },
@@ -450,6 +589,32 @@ export const translations = {
                 title: "Backend & Systèmes",
                 description: "Robuste & Sécurisé",
                 tag: "ROBUSTE & SÉCURISÉ"
+            }
+        },
+        experience: {
+            title: "Expérience",
+            titleAccent: "Professionnelle",
+            viewMore: "Voir l'Historique Complet",
+            haveit: {
+                role: "Founding Full Stack Engineer",
+                company: "Haveit",
+                date: "Dec 2024 - Dec 2025",
+                location: "Remote",
+                description: "Architected and built Haveit 2.0 event planning platform from scratch. Developed AI recommendation engine with embeddings-based retrieval."
+            },
+            intervue: {
+                role: "SDE Intern",
+                company: "Intervue.io",
+                date: "Apr 2024 - Dec 2024",
+                location: "Bengaluru",
+                description: "Led migration from Twilio to LiveKit Cloud, reducing costs by 65%. Engineered and optimized full-stack features."
+            },
+            simco: {
+                role: "Software Engineer Intern",
+                company: "Simco Consultancy",
+                date: "Jan 2024 - Mar 2024",
+                location: "Kolkata",
+                description: "Automated workflows and enhanced web application features. Reduced report generation time by 40%."
             }
         },
         projects: {
@@ -509,6 +674,25 @@ export const translations = {
                 solution: "Mise en œuvre d'un moteur d'estimation automatisé et d'une intégration WhatsApp, créant une source unique de vérité pour les itinéraires et les réservations.",
                 results: "Les agents ont économisé en moyenne 15 heures par semaine sur les tâches administratives, et les taux de conversion WhatsApp ont progressé de 40 %."
             },
+            invosync: {
+                tag: "SaaS d'Entreprise",
+                type: "Facturation en temps réel",
+                title: "InvoSync",
+                description: "Un moteur de synchronisation de données en temps réel à haute concurrence pour la facturation d'entreprise. Conçu pour une latence inférieure à la seconde et une intégrité absolue des données à l'aide d'une architecture distribuée pilotée par événements.",
+                id: "invosync",
+                loom: "",
+                technologies: ["Next.js 15", "React 19", "Node.js", "Redis", "MongoDB", "Socket.io", "Zustand"],
+                features: [
+                    { title: "Sync d'état distribuée", description: "Mises à jour fluides en temps réel sur plusieurs nœuds de serveur et instances de client via Redis Pub/Sub." },
+                    { title: "Facturation atomique", description: "Transactions MongoDB multi-documents assurant une cohérence absolue des niveaux de stock et des dossiers financiers." },
+                    { title: "Inventaire optimisé", description: "Mises à jour de stock contrôlées par version gérant élégamment les collisions multi-utilisateurs." },
+                    { title: "Recherche performante", description: "Recherche basée sur la projection côté serveur capable de gérer plus de 30 000 produits avec une latence <100ms." }
+                ],
+                gallery: ["/projects/invosync.png", "/projects/invosync-1.png", "/projects/invosync-2.png", "/projects/invosync-3.png"],
+                challenge: "Les WebSockets standard échouent à grande échelle, et les erreurs de facturation dans le commerce de détail à gros volume sont coûteuses. Gérer l'état sur plusieurs onglets simultanés sans décalage ni corruption de données est un défi technique majeur.",
+                solution: "Implémentation de Socket.io Redis Adapter pour la messagerie distribuée, des transactions Mongoose pour les opérations atomiques et de Zustand avec des sélecteurs superficiels pour la gestion d'état à haute fréquence.",
+                results: "Atteinte d'une latence de synchronisation inférieure à 100ms, garantie de zéro erreur de données financières lors des tests de stress et amélioration du débit de facturation de 60 % par rapport aux systèmes hérités."
+            },
             caseStudyNav: {
                 overview: "Aperçu",
                 challenge: "Le Défi",
@@ -532,7 +716,7 @@ export const translations = {
         footer: {
             copyright: "© 2024 KAIF SHAIKH",
             status: "Disponible pour Projets",
-            location: "Mumbai, Inde"
+            location: "Kolkata, Inde"
         }
     },
     ja: {
@@ -540,6 +724,7 @@ export const translations = {
             work: "実績",
             about: "私について",
             projects: "プロジェクト",
+            experience: "経歴",
             contact: "お問い合わせ",
             cta: "予約する"
         },
@@ -584,6 +769,32 @@ export const translations = {
                 title: "バックエンド & システム",
                 description: "堅牢で安全なシステム",
                 tag: "堅牢 & 安全"
+            }
+        },
+        experience: {
+            title: "職務",
+            titleAccent: "経歴",
+            viewMore: "全履歴を見る",
+            haveit: {
+                role: "Founding Full Stack Engineer",
+                company: "Haveit",
+                date: "Dec 2024 - Dec 2025",
+                location: "Remote",
+                description: "Architected and built Haveit 2.0 event planning platform from scratch. Developed AI recommendation engine with embeddings-based retrieval."
+            },
+            intervue: {
+                role: "SDE Intern",
+                company: "Intervue.io",
+                date: "Apr 2024 - Dec 2024",
+                location: "Bengaluru",
+                description: "Led migration from Twilio to LiveKit Cloud, reducing costs by 65%. Engineered and optimized full-stack features."
+            },
+            simco: {
+                role: "Software Engineer Intern",
+                company: "Simco Consultancy",
+                date: "Jan 2024 - Mar 2024",
+                location: "Kolkata",
+                description: "Automated workflows and enhanced web application features. Reduced report generation time by 40%."
             }
         },
         projects: {
@@ -643,6 +854,25 @@ export const translations = {
                 solution: "自動見積もりエンジンとWhatsApp統合を導入し、旅程と予約のための唯一の情報源を作成しました。",
                 results: "エージェントは事務作業で週平均15時間を節約し、WhatsAppのコンバージョン率は40%向上しました。"
             },
+            invosync: {
+                tag: "エンタープライズSaaS",
+                type: "リアルタイム請求",
+                title: "InvoSync",
+                description: "企業向け請求処理用の高並列・リアルタイム・データ同期エンジン。分散イベント駆動型アーキテクチャを使用して、1秒未満のレイテンシと絶対的なデータ整合性を実現するように設計されています。",
+                id: "invosync",
+                loom: "",
+                technologies: ["Next.js 15", "React 19", "Node.js", "Redis", "MongoDB", "Socket.io", "Zustand"],
+                features: [
+                    { title: "分散状態同期", description: "Redis Pub/Subを介して、複数のサーバーノードとクライアントインスタンス間でシームレスなリアルタイム更新を実現します。" },
+                    { title: "アトミックな請求処理", description: "マルチドキュメントMongoDBトランザクションにより、在庫レベルと財務記録の絶対的な一貫性を保証します。" },
+                    { title: "最適化された在庫管理", description: "マルチユーザーの衝突を適切に処理する、バージョン管理された在庫更新システム。" },
+                    { title: "高性能な検索", description: "<100msのレイテンシで30,000件以上の商品を処理可能な、サーバーサイドのプロジェクションベース検索。" }
+                ],
+                gallery: ["/projects/invosync.png", "/projects/invosync-1.png", "/projects/invosync-2.png", "/projects/invosync-3.png"],
+                challenge: "標準的なWebSocketはスケール時に失敗し、大量の小売における請求エラーは多大な損失を招きます。ラグやデータの破損なしに、複数の同時タブで状態を管理することは、エンジニアリング上の大きな課題です。",
+                solution: "分散メッセージングのためのSocket.io Redisアダプター、アトミックな操作のためのMongooseトランザクション、および高頻度な状態管理のためのZustandを実装しました。",
+                results: "100ms未満の同期レイテンシを達成し、ストレステスト中に財務データの誤りをゼロに抑え、従来のシステムと比較して請求処理能力を60%向上させました。"
+            },
             caseStudyNav: {
                 overview: "概要",
                 challenge: "課題",
@@ -666,7 +896,7 @@ export const translations = {
         footer: {
             copyright: "© 2024 KAIF SHAIKH",
             status: "プロジェクト受付中",
-            location: "インド、ムンバイ"
+            location: "インド、コルカタ"
         }
     }
 };

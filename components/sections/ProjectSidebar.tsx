@@ -50,9 +50,9 @@ export default function ProjectSidebar({ t, technologies }: ProjectSidebarProps)
 
     return (
         <aside className="lg:col-span-3 hidden lg:block">
-            <div className="sticky top-32 space-y-10">
-                <div className="relative p-6 rounded-[2rem] bg-slate-50/50 backdrop-blur-sm border border-slate-100">
-                    <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-8 px-4">
+            <div className="sticky top-28 space-y-8 font-sans">
+                <div className="relative p-5 rounded-2xl bg-[#111827]/60 backdrop-blur-md border border-white/5 shadow-2xl">
+                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4a5568] mb-5 px-3">
                         {t.projects.caseStudyNav.overview}
                     </h3>
                     <nav className="space-y-1">
@@ -60,28 +60,34 @@ export default function ProjectSidebar({ t, technologies }: ProjectSidebarProps)
                             <a
                                 key={link.id}
                                 href={`#${link.id}`}
-                                className={`group flex items-center gap-3 px-4 py-3 text-sm font-bold transition-all duration-300 rounded-xl ${activeSection === link.id
-                                    ? "text-primary bg-white shadow-sm"
-                                    : "text-slate-500 hover:text-slate-900 hover:bg-white/50"
-                                    }`}
+                                className={`group flex items-center gap-3 px-3 py-2.5 text-[13px] font-medium transition-all duration-300 rounded-lg ${
+                                    activeSection === link.id
+                                        ? "text-[#7eb8f7] bg-white/[0.03]"
+                                        : "text-[#8892a4] hover:text-[#e8eaf0] hover:bg-white/5"
+                                }`}
                             >
-                                <span className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeSection === link.id ? "bg-primary scale-100" : "bg-slate-300 scale-0 group-hover:scale-100"
-                                    }`} />
+                                <span
+                                    className={`w-1 h-1 rounded-full transition-all duration-300 ${
+                                        activeSection === link.id
+                                            ? "bg-[#7eb8f7] scale-125"
+                                            : "bg-[#4a5568] scale-0 group-hover:scale-100"
+                                    }`}
+                                />
                                 {link.label}
                             </a>
                         ))}
                     </nav>
                 </div>
 
-                <div className="p-6">
-                    <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6 px-4">
+                <div className="p-5">
+                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4a5568] mb-4 px-3">
                         {t.projects.caseStudyNav.tech}
                     </h3>
-                    <div className="flex flex-wrap gap-2 px-2">
+                    <div className="flex flex-wrap gap-1.5 px-1">
                         {technologies.map((tech) => (
                             <span
                                 key={tech}
-                                className="px-3 py-1.5 bg-white border border-slate-100 rounded-lg text-[10px] font-bold text-slate-500 uppercase tracking-tight shadow-sm hover:border-primary/20 transition-colors"
+                                className="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded-md text-[10px] font-mono text-[#8892a4] uppercase tracking-wide hover:border-[#7eb8f7]/30 hover:text-[#7eb8f7] transition-all cursor-default"
                             >
                                 {tech}
                             </span>

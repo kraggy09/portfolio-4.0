@@ -20,6 +20,7 @@ async function processBids(offerId) {
   return sorted[0]; // The best match for the user
 }`,
             links: [
+                { label: t.projects.caseStudy, url: `/projects/${t.projects.rahigo.id}` },
                 { label: t.projects.liveDemo, url: "#" },
                 { label: t.projects.github, url: "#" }
             ],
@@ -37,6 +38,7 @@ function calculateTrip(route) {
   return { cost, eta: distance / avgSpeed };
 }`,
             links: [
+                { label: t.projects.caseStudy, url: `/projects/${t.projects.travel.id}` },
                 { label: t.projects.liveDemo, url: "#" },
                 { label: t.projects.github, url: "#" }
             ],
@@ -54,6 +56,7 @@ async function routeCall(audioStream) {
   return operator.transfer(intent.department);
 }`,
             links: [
+                { label: t.projects.caseStudy, url: `/projects/${t.projects.receptionist.id}` },
                 { label: t.projects.liveDemo, url: "#" },
                 { label: t.projects.github, url: "#" }
             ],

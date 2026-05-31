@@ -16,7 +16,7 @@ export default function AllProjects({ t, language }: AllProjectsProps) {
             type: t.projects.rahigo.type,
             image: "/projects/rahigo.png",
             links: {
-                caseStudy: "#",
+                caseStudy: `/projects/${t.projects.rahigo.id}`,
                 liveDemo: "#",
                 github: "#"
             }
@@ -28,7 +28,7 @@ export default function AllProjects({ t, language }: AllProjectsProps) {
             type: t.projects.travel.type,
             image: "/projects/travel.png",
             links: {
-                caseStudy: "#",
+                caseStudy: `/projects/${t.projects.travel.id}`,
                 liveDemo: "#",
                 github: "#"
             }

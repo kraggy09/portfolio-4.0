@@ -18,9 +18,10 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
 
     // Find the project in the dictionary
     const projectsData = [
+        t.projects.receptionist,
         t.projects.rahigo,
         t.projects.travel,
-        t.projects.receptionist
+        t.projects.invosync
     ];
 
     const project = projectsData.find(p => p.id === resolvedParams.id);
@@ -30,50 +31,50 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
     }
 
     return (
-        <main className="min-h-screen bg-white pt-24 pb-20">
-            <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <main className="min-h-screen bg-[#0b0f1a] text-[#e8eaf0] pt-24 pb-20 font-sans premium-glow-container animate-fade-in-up">
+            <div className="max-w-6xl mx-auto px-6 lg:px-12">
                 {/* Back Link */}
                 <Link
-                    href="/projects"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 hover:text-primary transition-colors mb-12 group"
+                    href="/#projects"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#8892a4] hover:text-[#7eb8f7] transition-all mb-10 group"
                 >
-                    <span className="material-symbols-outlined !text-xl group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    <span className="material-symbols-outlined !text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
                     {t.projects.caseStudyNav.backToProjects}
                 </Link>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
                     {/* Sticky Sidebar (Desktop) */}
                     <ProjectSidebar t={t} technologies={project.technologies} />
 
                     {/* Main Content Area */}
-                    <div className="lg:col-span-9 space-y-24">
+                    <div className="lg:col-span-9 space-y-16">
                         {/* Header & Intro */}
-                        <section id="about" className="space-y-8">
+                        <section id="about" className="space-y-6">
                             <div className="space-y-4">
-                                <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary/5 px-3 py-1 rounded-full">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono font-medium uppercase tracking-widest text-[#7eb8f7] bg-[#7eb8f7]/10 border border-[#7eb8f7]/25 w-max">
                                     {project.tag} • {project.type}
                                 </span>
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1]">
+                                <h1 className="text-3xl md:text-5xl font-light text-[#e8eaf0] leading-[1.2]">
                                     {project.title}
                                 </h1>
-                                <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl">
+                                <p className="text-[16px] text-[#8892a4] leading-[1.75] font-light max-w-3xl">
                                     {project.description}
                                 </p>
                             </div>
 
                             {/* Video Showcase (Loom Embed) */}
-                            <div className="relative aspect-video rounded-[2rem] overflow-hidden bg-slate-100 border border-slate-200 shadow-2xl">
-                                {project.loom ? (
+                            <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#111827] border border-white/5 shadow-2xl">
+                                {project.loom && !project.loom.includes("placeholder") ? (
                                     <iframe
                                         src={project.loom}
                                         allowFullScreen
-                                        className="absolute inset-0 w-full h-full"
+                                        className="absolute inset-0 w-full h-full border-0"
                                     ></iframe>
                                 ) : (
-                                    <div className="absolute inset-0 flex items-center justify-center text-slate-400">
+                                    <div className="absolute inset-0 flex items-center justify-center text-[#4a5568]">
                                         <div className="text-center">
-                                            <span className="material-symbols-outlined !text-6xl mb-4 text-slate-300">video_library</span>
-                                            <p className="font-bold uppercase tracking-widest text-xs">Video Demo Coming Soon</p>
+                                            <span className="material-symbols-outlined !text-4xl mb-2 text-[#4a5568]">video_library</span>
+                                            <p className="font-mono uppercase tracking-widest text-[9px]">Video Demo Coming Soon</p>
                                         </div>
                                     </div>
                                 )}
@@ -81,45 +82,45 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
                         </section>
 
                         {/* Challenge & Solution */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-slate-100">
-                            <section id="challenge" className="space-y-6">
-                                <h2 className="text-2xl font-black text-slate-900 flex items-center gap-3">
-                                    <span className="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-600 flex items-center justify-center">
-                                        <span className="material-symbols-outlined !text-xl">warning</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10 border-t border-white/5">
+                            <section id="challenge" className="space-y-4">
+                                <h2 className="text-[18px] font-medium text-[#e8eaf0] flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded bg-orange-500/10 text-orange-400 flex items-center justify-center shrink-0">
+                                        <span className="material-symbols-outlined !text-sm">warning</span>
                                     </span>
                                     {t.projects.caseStudyNav.challenge}
                                 </h2>
-                                <p className="text-slate-600 leading-relaxed lg:text-lg">
+                                <p className="text-[#8892a4] text-[14px] leading-[1.75] font-light">
                                     {project.challenge}
                                 </p>
                             </section>
 
-                            <section id="solution" className="space-y-6">
-                                <h2 className="text-2xl font-black text-slate-900 flex items-center gap-3">
-                                    <span className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
-                                        <span className="material-symbols-outlined !text-xl">lightbulb</span>
+                            <section id="solution" className="space-y-4">
+                                <h2 className="text-[18px] font-medium text-[#e8eaf0] flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                                        <span className="material-symbols-outlined !text-sm">lightbulb</span>
                                     </span>
                                     {t.projects.caseStudyNav.solution}
                                 </h2>
-                                <p className="text-slate-600 leading-relaxed lg:text-lg">
+                                <p className="text-[#8892a4] text-[14px] leading-[1.75] font-light">
                                     {project.solution}
                                 </p>
                             </section>
                         </div>
 
                         {/* Features Breakdown */}
-                        <section id="features" className="space-y-12">
-                            <h2 className="text-3xl font-black text-slate-900 border-b border-slate-100 pb-6">
+                        <section id="features" className="space-y-8 pt-10 border-t border-white/5">
+                            <h2 className="text-[20px] font-medium text-[#e8eaf0]">
                                 {t.projects.caseStudyNav.features}
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {project.features.map((feature, idx) => (
-                                    <div key={idx} className="p-8 rounded-3xl bg-slate-50 border border-slate-100 space-y-4 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 group">
-                                        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                                            <span className="text-lg font-bold">{idx + 1}</span>
+                                    <div key={idx} className="p-6 rounded-2xl bg-white/[0.015] border border-white/5 hover:border-[#7eb8f7]/20 transition-all duration-300 group">
+                                        <div className="w-8 h-8 rounded-lg bg-[#7eb8f7]/10 flex items-center justify-center text-[#7eb8f7] font-mono text-[12px] font-medium mb-4 group-hover:scale-105 transition-transform">
+                                            {idx + 1}
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
-                                        <p className="text-slate-600 leading-relaxed text-sm">
+                                        <h3 className="text-[15px] font-medium text-[#e8eaf0] mb-2">{feature.title}</h3>
+                                        <p className="text-[#8892a4] text-[13px] leading-[1.7] font-light">
                                             {feature.description}
                                         </p>
                                     </div>
@@ -128,72 +129,71 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
                         </section>
 
                         {/* Bento / Pinterest-style Media Gallery */}
-                        <section id="media" className="space-y-12">
-                            <h2 className="text-3xl font-black text-slate-900 border-b border-slate-100 pb-6">
+                        <section id="media" className="space-y-8 pt-10 border-t border-white/5">
+                            <h2 className="text-[20px] font-medium text-[#e8eaf0]">
                                 {t.projects.caseStudyNav.gallery}
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-[240px]">
                                 {project.gallery.map((img, idx) => (
                                     <div
                                         key={idx}
-                                        className={`relative overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm group ${idx === 0 ? "md:col-span-2 lg:row-span-2 lg:h-full" :
-                                            idx === 1 ? "lg:row-span-1" :
-                                                "lg:col-span-1"
-                                            }`}
+                                        className={`relative overflow-hidden rounded-2xl border border-white/5 shadow-sm group ${
+                                            idx === 0 ? "md:col-span-2 lg:row-span-2 lg:h-full" : ""
+                                        }`}
                                     >
                                         <img
                                             src={img}
                                             alt={`${project.title} screenshot ${idx + 1}`}
-                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f1a]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                     </div>
                                 ))}
                             </div>
                         </section>
 
                         {/* Results & Impact */}
-                        <section id="results" className="p-12 rounded-[3rem] bg-slate-900 text-white space-y-10 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/20 transition-colors duration-700"></div>
+                        <section id="results" className="p-8 md:p-10 rounded-2xl bg-white/[0.015] border border-white/5 text-white space-y-8 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-[#7eb8f7]/5 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-[#7eb8f7]/10 transition-colors duration-700 pointer-events-none"></div>
 
-                            <div className="relative space-y-6">
-                                <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                            <div className="relative space-y-4">
+                                <span className="text-[9px] font-mono tracking-widest uppercase text-[#7eb8f7] bg-[#7eb8f7]/10 px-2 py-0.5 rounded border border-[#7eb8f7]/25 w-max block">
                                     Final Outcome
                                 </span>
-                                <h2 className="text-3xl md:text-4xl font-black leading-tight">
+                                <h2 className="text-[20px] font-light leading-tight text-[#e8eaf0]">
                                     {t.projects.caseStudyNav.results}
                                 </h2>
-                                <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
+                                <p className="text-[14px] text-[#8892a4] leading-[1.75] font-light max-w-2xl">
                                     {project.results}
                                 </p>
                             </div>
 
-                            <div className="relative pt-10 border-t border-white/10 flex flex-wrap gap-12">
-                                <div className="space-y-1">
-                                    <p className="text-3xl font-black text-primary">60%</p>
-                                    <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Efficiency Boost</p>
+                            <div className="relative pt-6 border-t border-white/5 flex flex-wrap gap-10">
+                                <div className="space-y-0.5">
+                                    <p className="text-[22px] font-mono text-[#7eb8f7] font-medium">60%</p>
+                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568]">Efficiency Boost</p>
                                 </div>
-                                <div className="space-y-1">
-                                    <p className="text-3xl font-black text-primary">40%</p>
-                                    <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Conversion Increase</p>
+                                <div className="space-y-0.5">
+                                    <p className="text-[22px] font-mono text-[#7eb8f7] font-medium">40%</p>
+                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568]">Conversion Increase</p>
                                 </div>
-                                <div className="space-y-1">
-                                    <p className="text-3xl font-black text-primary">24/7</p>
-                                    <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Active Monitoring</p>
+                                <div className="space-y-0.5">
+                                    <p className="text-[22px] font-mono text-[#7eb8f7] font-medium">24/7</p>
+                                    <p className="text-[9px] font-mono uppercase tracking-widest text-[#4a5568]">Active Monitoring</p>
                                 </div>
                             </div>
                         </section>
 
                         {/* Tech Stack Mobile (Visible only on mobile) */}
-                        <section id="tech" className="space-y-8">
-                            <h2 className="text-2xl font-black text-slate-900 lg:hidden">
+                        <section id="tech" className="space-y-6 pt-10 border-t border-white/5 lg:hidden">
+                            <h2 className="text-[18px] font-medium text-[#e8eaf0]">
                                 {t.projects.caseStudyNav.tech}
                             </h2>
-                            <div className="flex flex-wrap gap-3 lg:hidden">
+                            <div className="flex flex-wrap gap-1.5">
                                 {project.technologies.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-xs font-bold text-slate-600 uppercase tracking-tight"
+                                        className="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded-md text-[10px] font-mono text-[#8892a4] uppercase tracking-wide"
                                     >
                                         {tech}
                                     </span>

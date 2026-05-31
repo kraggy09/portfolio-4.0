@@ -6,26 +6,23 @@ import Footer from "@/components/Footer";
 import CalComEmbed from "@/components/CalComEmbed";
 import { LanguageProvider } from "@/context/i18n/LanguageContext";
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-serif",
-  subsets: ["latin"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
+const dmMono = DM_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0f172a",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -33,24 +30,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kaifsk.com"),
   title: {
-    default: "Kaif Shaikh | Full Stack Developer & AI Systems Builder",
-    template: "%s | Kaif Shaikh"
+    default: " Kaif Shaikh | Full Stack Engineer & Founder",
+    template: "%s |  Kaif Shaikh"
   },
   description:
-    "Official portfolio of Kaif Shaikh. Expert in building scalable SaaS products, AI-integrated marketplaces, and high-performance intelligent systems with Next.js and Node.js.",
+    "Official portfolio of Kaif Shaikh. Co-founder & Full-stack Engineer of Rahigo. Expert in building end-to-end full-stack architectures, real-time marketplaces, and scalable SaaS.",
   keywords: [
     "Kaif Shaikh",
-    "Kaif Shaikh Developer",
-    "Full Stack Developer Mumbai",
-    "AI Systems Builder",
-    "Scalable SaaS Architecture",
-    "Next.js Expert",
-    "React Native Developer",
+    "Kaif Shaikh",
+    "Full Stack Engineer Kolkata",
     "Rahigo Founder",
-    "Software Engineering Portfolio",
+    "Scalable SaaS Architect",
+    "Next.js Developer",
+    "Node.js developer",
   ],
-  authors: [{ name: "Kaif Shaikh", url: "https://www.kaifsk.com" }],
-  creator: "Kaif Shaikh",
+  authors: [{ name: "Mohammad Kaif Shaikh", url: "https://www.kaifsk.com" }],
+  creator: "Mohammad Kaif Shaikh",
   alternates: {
     canonical: "/",
   },
@@ -60,17 +55,17 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   openGraph: {
-    title: "Kaif Shaikh | Full Stack Developer & AI Systems Builder",
+    title: "Mohammad Kaif Shaikh | Full Stack Engineer & Founder",
     description:
-      "Building scalable digital products that combine full-stack engineering with intelligent automation.",
+      "Co-founder & Full-stack Engineer of Rahigo. Full-stack developer building robust, production-ready backend and Web applications.",
     url: "https://www.kaifsk.com",
-    siteName: "Kaif Shaikh Portfolio",
+    siteName: "Mohammad Kaif Shaikh Portfolio",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kaif Shaikh Portfolio Preview",
+        alt: "Mohammad Kaif Shaikh Portfolio Preview",
       },
     ],
     locale: "en_US",
@@ -78,9 +73,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kaif Shaikh | Full Stack Developer & AI Systems Builder",
+    title: "Mohammad Kaif Shaikh | Full Stack Engineer & Founder",
     description:
-      "Full-stack engineer specializing in AI-integrated workflows and scalable SaaS platforms.",
+      "Co-founder & Full-stack Engineer of Rahigo. Full-stack engineer specializing in robust backends and end-to-end web architectures.",
     creator: "@kaifshaikh_2002",
     images: ["/og-image.png"],
   },
@@ -90,13 +85,12 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
-
 
 export default async function RootLayout({
   children,
@@ -108,7 +102,7 @@ export default async function RootLayout({
   const t = translations[initialLang] || translations.en;
 
   return (
-    <html lang={initialLang} className="scroll-smooth">
+    <html lang={initialLang} className="scroll-smooth bg-black">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -116,13 +110,13 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} antialiased font-sans`}
+        className={`${dmSans.variable} ${dmMono.variable} antialiased font-sans bg-black text-[#e8eaf0] selection:bg-[#7eb8f7]/20 selection:text-[#7eb8f7]`}
       >
         <LanguageProvider initialLanguage={initialLang}>
           <div className="relative min-h-screen flex flex-col">
             <CalComEmbed />
             <Navbar />
-            <main className="flex-grow">
+            <main className="flex-grow pt-24">
               {children}
             </main>
             <Footer t={t} language={initialLang} />
