@@ -107,15 +107,31 @@ export default async function RootLayout({
   const t = translations[initialLang] || translations.en;
 
   return (
-    <html lang={initialLang} className="scroll-smooth bg-black">
+    <html lang={initialLang} className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedTheme = localStorage.getItem('portfolio-theme');
+                  if (savedTheme === 'light') {
+                    document.documentElement.classList.add('light');
+                  } else {
+                    document.documentElement.classList.remove('light');
+                  }
+                } catch (e) {}
+              })();
+            `
+          }}
+        />
       </head>
       <body
-        className={`${dmSans.variable} ${dmMono.variable} antialiased font-sans bg-black text-[#e8eaf0] selection:bg-[#7eb8f7]/20 selection:text-[#7eb8f7]`}
+        className={`${dmSans.variable} ${dmMono.variable} antialiased font-sans bg-bg text-text selection:bg-accent/20 selection:text-accent`}
       >
         <LanguageProvider initialLanguage={initialLang}>
           <div className="relative min-h-screen flex flex-col">

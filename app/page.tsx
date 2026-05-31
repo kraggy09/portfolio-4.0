@@ -2,14 +2,15 @@ import { cookies } from "next/headers";
 import { Language } from "@/context/i18n/dictionary";
 import Link from "next/link";
 import BarakahInteractive from "@/components/BarakahInteractive";
-import FunSection from "@/components/FunSection";
+import HeaderStatus from "@/components/HeaderStatus";
 
 // Complete Redesigned Multilingual Translation Object for the portfolio
 const customTranslations = {
   en: {
     name: "Kaif Shaikh",
-    headline: "Full-stack engineer and founder building <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> — a group vehicle rental marketplace in India. Based in Kolkata.",
-    bio: "I build backend-heavy products end-to-end, from architecture to production. Currently focused on Rahigo's go-to-market while open to remote full-stack roles at product-focused teams.",
+    headline: "Full-stack engineer based in Kolkata. I build things end-to-end and ship them — from a blank architecture doc to production.",
+    bio: "Currently building <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, a group vehicle rental marketplace born out of 9 months of actually running a travel agency and seeing every broken part of the industry up close. Open to remote full-stack roles at product-focused teams.",
+    cookingSince: "Cooking since 2021 👨‍🍳",
     labels: {
       work: "Work Experience",
       sideBusiness: "Side Business / Catalyst",
@@ -26,11 +27,11 @@ const customTranslations = {
         date: "Jan 2025 → Present",
         location: "rahigo.in · Kolkata, India",
         bullets: [
-          "<strong>Two-Sided Marketplace</strong>: Built a two-sided marketplace from scratch — a customer app where users post trip requirements and a partner app where verified operators submit live competing quotes. Both shipped to Google Play Store.",
-          "<strong>Real-Time Bidding</strong>: Designed a WebSocket-based real-time bidding system where multiple operators receive trip requests simultaneously and compete with quotes until the customer confirms.",
-          "<strong>Telemetry & Masking</strong>: Built phone number masking using Exotel — operators and passengers can call each other without either side seeing the real number until departure day.",
-          "<strong>Verification Safeguards</strong>: Enforced a vehicle photo verification system with automated 6-month expiry, blocking operators from quoting if their vehicle photos are outdated.",
-          "<strong>Emergency Failover</strong>: Engineered a breakdown replacement guarantee flow — if a vehicle fails on trip day, the system flags the booking for emergency operator reassignment."
+          "<strong>Two-Sided Marketplace</strong>: Built two production React Native apps — a customer app to post trip requirements and a partner app for verified operators to submit competing quotes — alongside a Next.js web platform with SSG route pages targeting high-intent search traffic.",
+          "<strong>Real-Time Bidding Engine</strong>: Designed a WebSocket system where a shared room is created per trip request, allocating operators and the customer together so quotes appear live against a dynamically calculated reference price.",
+          "<strong>AWS Infrastructure</strong>: Deployed on AWS with a CI/CD pipeline, Lambda functions and SQS queues for async processing, and S3 for vehicle photo and document storage.",
+          "<strong>Verification & Trust Layer</strong>: Enforced automated 6-month vehicle photo expiry blocking outdated operators from quoting. Integrated Exotel for phone number masking — neither party sees the other's real number until departure day.",
+          "<strong>Notifications & Failover</strong>: Alerting operators the moment a matching request is posted, with a breakdown replacement flow that automatically reassigns bookings if a vehicle fails on trip day."
         ],
         tags: [
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
@@ -49,9 +50,11 @@ const customTranslations = {
         date: "Dec 2024 → Dec 2025",
         location: "Remote / Kolkata",
         bullets: [
-          "<strong>Architecture & Launch</strong>: Sole engineer who architected and launched the full platform — event planning marketplace connecting customers with venues, caterers, and 5+ vendor categories built on Node.js, Express, Redis, MongoDB and React.",
-          "<strong>AI Recommendation</strong>: Built an AI vendor recommendation engine using vector embeddings and custom ranking logic that matches vendor suggestions to customer budgets dynamically.",
-          "<strong>Vendor Control Center</strong>: Built vendor dashboards with live rate cards, add-on management, and automated matching filters."
+          "<strong>Architecture & Launch</strong>: Sole founding engineer who architected and launched the full platform — an event planning marketplace connecting customers with venues, caterers, and 5+ vendor categories, built on Node.js, Express, Redis, MongoDB, and Next.js.",
+          "<strong>AI Recommendation Pipeline</strong>: Built end-to-end AI vendor matching using LangGraph, LangChain, and vector embeddings with a React Flow–based visual editor to create and manage AI flows — cutting deployment time significantly.",
+          "<strong>Partner Onboarding</strong>: Redesigned the complete partner registration flow, reducing onboarding time from an hour to under 5 minutes.",
+          "<strong>Infrastructure & Performance</strong>: Migrated cloud storage to Backblaze achieving 5x cost reduction, optimised media assets cutting load times by 60%, and re-architected frontend with Next.js delivering 50% faster page loads.",
+          "<strong>Team Leadership</strong>: Led a team of 4 engineers across frontend, backend, AI, and deployment workflows."
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -69,9 +72,10 @@ const customTranslations = {
         date: "Apr 2024 → Dec 2024",
         location: "Bengaluru, India",
         bullets: [
-          "<strong>Video Infrastructure Migration</strong>: Migrated video infrastructure from Twilio to LiveKit, cutting costs by $2,000/month — 65% reduction — while handling 200+ daily live technical interviews with lower latency.",
-          "<strong>AI Interview Engineering</strong>: Built and optimised full-stack features across the AI interview assessment workflow, reducing development cycle time by 35%.",
-          "<strong>ML Pipeline Optimization</strong>: Rebuilt internal ML training pipelines, cutting model training time from 3 days to 8 hours."
+          "<strong>Video Infrastructure Migration</strong>: Migrated video infrastructure from Twilio to LiveKit, cutting costs by $2,000/month (65% reduction) while handling 200+ daily live interviews with lower latency.",
+          "<strong>Conversational AI Interviews</strong>: Built and optimised AI interview flows using ElevenLabs, Deepgram, and OpenAI — ensuring secure, low-latency audio pipelines across the full assessment workflow.",
+          "<strong>Prompt Flow Graph Editor</strong>: Built an interactive drag-and-drop editor to visualise and manipulate AI prompt pipelines — supporting node/edge creation, editing, and real-time cost estimation per node, replacing manual configuration.",
+          "<strong>Full-Stack Feature Development</strong>: Contributed across the stack — live coding environments, cheating detection, profile-to-domain mapping, interview cancellation flows, and pricing workflows that improved user engagement and reduced drop-offs."
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -81,7 +85,7 @@ const customTranslations = {
         ]
       },
       {
-        logo: "S",
+        logo: "https://www.simcoconsultancy.com/favicon.ico",
         role: "Software Engineer Intern",
         company: "Simco Consultancy",
         date: "Jan 2024 → Mar 2024",
@@ -106,13 +110,13 @@ const customTranslations = {
       fleetBadge: "Owned Fleet",
       url: "https://barakahtravels.in",
       urlText: "barakahtravels.in ↗",
-      tagline: "Outstation Travel Logistics · Kolkata, India (2023 → Present)",
+      tagline: "Co-owner & Operator · Kolkata, India · 2023 – Present",
       verifiedLabel: "Verify Website ↗",
-      pitch: "I didn't start with a startup idea. I started with a travel agency.<br/><br/>Running Barakah Travels in Kolkata, I personally bought a 26-seater Force Traveller and handled hundreds of outstation trips — Digha, Mandarmani, Gangasagar. And every single booking was a mess. Customers had no way to compare prices. Operators quoted whatever they felt like. There was no accountability if a vehicle broke down. No trust, no transparency, just phone calls and luck.<br/><br/>After 9 months of living inside that chaos — tracking real bookings, real prices, real complaints — I had enough data and enough frustration to know exactly what needed to be built. That became Rahigo.",
+      pitch: "I didn't start with a startup idea — I started with a travel agency. Personally co-owned a 26-seater Force Traveller and ran hundreds of outstation trips across Digha, Mandarmani, and Gangasagar. Every booking was a mess. Customers had no way to compare prices. Operators quoted whatever they felt like. No accountability if a vehicle broke down. Just phone calls and luck.<br/><br/>After 9 months of living inside that chaos — tracking real bookings, real prices, real complaints — I had enough data and enough frustration to know exactly what needed to be built. That became Rahigo.",
       bullets: [
-        "<strong>Route Optimization</strong>: Deployed SEO landing pages for high-intent route searches — live on <a href='https://www.barakahtravels.in/sitemap.xml' target='_blank' class='sliding-link font-medium'>sitemap.xml ↗</a>",
-        "<strong>Demand Validation</strong>: Tracked organic booking intent across routes to validate real demand before building anything",
-        "<strong>Supply Mapping</strong>: Onboarded 40+ fleet operators and mapped 9 months of regional pricing data — now the foundation of Rahigo's bidding algorithm"
+        "<strong>Fleet & Operations</strong>: Personally managed trip logistics, vendor coordination, and customer handling across 100+ outstation bookings.",
+        "<strong>Supply Network</strong>: Onboarded 40+ fleet operators and mapped 9 months of regional pricing data — now the foundation of Rahigo's dynamic bidding algorithm.",
+        "<strong>Demand Validation</strong>: Built SEO landing pages for high-intent route searches capturing 2.4k organic visits/month, validating real market demand before writing a single line of product code."
       ],
       trafficTitle: "Route Intent & Traffic Dashboard",
       trafficSubtitle: "Interactive preview of SEO intent-mapping landing pages built to capture organic traffic:",
@@ -196,8 +200,9 @@ const customTranslations = {
   },
   hi: {
     name: "कैफ शेख",
-    headline: "फुल-स्टैक इंजीनियर और फाउंडर, भारत में ग्रुप व्हीकल रेंटल मार्केटप्लेस <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> का निर्माण कर रहे हैं। कोलकाता में स्थित।",
-    bio: "मैं आर्किटेक्चर से लेकर प्रोडक्शन तक, एंड-टू-एंड बैकएंड-हैवी प्रोडक्ट्स बनाता हूँ। वर्तमान में Rahigo के गो-टू-मार्केट पर केंद्रित हूँ और प्रोडक्ट-केंद्रित टीमों में रिमोट फुल-स्टैक भूमिकाओं के लिए उपलब्ध हूँ।",
+    headline: "कोलकाता में स्थित फुल-स्टैक इंजीनियर। मैं चीजों को एंड-टू-एंड बनाता हूँ और उन्हें शिप करता हूँ — एक खाली आर्किटेक्चर दस्तावेज़ से लेकर उत्पादन तक।",
+    bio: "वर्तमान में मैं <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> का निर्माण कर रहा हूँ, जो एक ग्रुप व्हीकल रेंटल मार्केटप्लेस है। यह 9 महीने तक वास्तव में एक ट्रैवल एजेंसी चलाने और उद्योग के हर टूटे हुए हिस्से को करीब से देखने से पैदा हुआ है। प्रोडक्ट-केंद्रित टीमों में रिमोट फुल-स्टैक भूमिकाओं के लिए उपलब्ध हूँ।",
+    cookingSince: "2021 से कुकिंग 👨‍🍳",
     labels: {
       work: "कार्य अनुभव",
       sideBusiness: "साइड बिजनेस / उत्प्रेरक",
@@ -208,17 +213,17 @@ const customTranslations = {
     work: [
       {
         logo: "https://www.rahigo.in/logo.webp",
-        role: "को-फाउंडर और फुल-स्टैक इंजीनियर",
+        role: "फुल-स्टैक इंजीनियर",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
         date: "जनवरी २०२५ → वर्तमान",
         location: "rahigo.in · कोलकाता, भारत",
         bullets: [
-          "<strong>शून्य से दो-तरफा मार्केटप्लेस</strong>: शून्य से दो-तरफा मार्केटप्लेस बनाया — एक ग्राहक ऐप जहां उपयोगकर्ता यात्रा आवश्यकताओं को पोस्ट करते हैं और एक पार्टनर ऐप जहां सत्यापित ऑपरेटर लाइव कोट्स जमा करते हैं। दोनों Google Play Store पर उपलब्ध हैं।",
-          "<strong>रीयल-टाइम बिडिंग</strong>: एक वेबसॉकेट्स आधारित रीयल-टाइम बिडिंग सिस्टम डिज़ाइन किया जहां कई ऑपरेटरों को एक साथ यात्रा अनुरोध प्राप्त होते हैं और वे ग्राहक द्वारा पुष्टि किए जाने तक कोट्स के साथ प्रतिस्पर्धा करते हैं।",
-          "<strong>नंबर मास्किंग</strong>: Exotel का उपयोग करके फोन नंबर मास्किंग का निर्माण किया — ऑपरेटर और यात्री प्रस्थान के दिन तक असली नंबर देखे बिना एक-दूसरे को कॉल कर सकते हैं।",
-          "<strong>सत्यापन सुरक्षा</strong>: स्वचालित 6-महीने की समाप्ति के साथ एक वाहन फोटो सत्यापन प्रणाली लागू की, यदि ऑपरेटरों के वाहन की तस्वीरें पुरानी हैं तो उन्हें बोली लगाने से रोक दिया जाता है।",
-          "<strong>इमरजेंसी फेलओवर</strong>: एक ब्रेकडाउन रिप्लेसमेंट गारंटी फ्लो इंजीनियर किया — यदि यात्रा के दिन वाहन विफल हो जाता है, तो सिस्टम आपातकालीन ऑपरेटर पुनर्मूल्यांकन के लिए बुकिंग को फ़्लैग करता है।"
+          "<strong>दो-तरफा मार्केटप्लेस</strong>: दो प्रोडक्शन रिएक्ट नेटिव ऐप्स बनाए — यात्रा आवश्यकताओं को पोस्ट करने के लिए एक ग्राहक ऐप और सत्यापित ऑपरेटरों द्वारा प्रतिस्पर्धी कोट्स जमा करने के लिए एक पार्टनर ऐप — साथ ही उच्च-इरादे वाले खोज ट्रैफ़िक को लक्षित करने वाले SSG रूट पेजों के साथ एक Next.js वेब प्लेटफ़ॉर्म।",
+          "<strong>रीयल-टाइम बिडिंग इंजन</strong>: एक वेबसॉकेट सिस्टम डिज़ाइन किया जहां प्रति यात्रा अनुरोध एक साझा कमरा बनाया जाता है, जिसमें ऑपरेटरों और ग्राहक को एक साथ रखा जाता है ताकि कोट्स एक गतिशील रूप से गणना किए गए संदर्भ मूल्य के खिलाफ लाइव दिखाई दें।",
+          "<strong>AWS इन्फ्रास्ट्रक्चर</strong>: CI/CD पाइपलाइन के साथ AWS पर तैनात किया गया, एसिंक प्रोसेसिंग के लिए लैम्ब्डा फ़ंक्शंस और SQS कतारें, और वाहन फोटो और दस्तावेज़ भंडारण के लिए S3 का उपयोग किया गया।",
+          "<strong>सत्यापन और ट्रस्ट लेयर</strong>: स्वचालित 6-महीने की वाहन फोटो समाप्ति लागू की जो ऑपरेटरों को पुराने असेट्स पर बोली लगाने से रोकती है। फोन नंबर मास्किंग के लिए Exotel को एकीकृत किया — प्रस्थान के दिन तक कोई भी पक्ष दूसरे का असली नंबर नहीं देख सकता।",
+          "<strong>सूचनाएं और फेलओवर</strong>: मैचिंग अनुरोध पोस्ट होते ही ऑपरेटरों को अलर्ट करना, एक ब्रेकडाउन रिप्लेसमेंट फ्लो के साथ जो यात्रा के दिन वाहन विफल होने पर बुकिंग को स्वचालित रूप से पुनर्वितरित करता है।"
         ],
         tags: [
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
@@ -237,9 +242,11 @@ const customTranslations = {
         date: "दिसंबर २०२४ → दिसंबर २०२५",
         location: "रिमोट / कोलकाता",
         bullets: [
-          "<strong>आर्किटेक्चर और लॉन्च</strong>: एकमात्र इंजीनियर जिसने पूरे प्लेटफॉर्म को आर्किटेक्ट और लॉन्च किया — इवेंट प्लानिंग मार्केटप्लेस जो ग्राहकों को वेन्यू, कैटरर्स और 5+ श्रेणियों से जोड़ता है। इसे Node.js, Express, Redis, MongoDB और React पर बनाया गया है।",
-          "<strong>एआई अनुशंसा</strong>: वेक्टर एम्बेडिंग और कस्टम रैंकिंग लॉजिक का उपयोग करके एक AI विक्रेता अनुशंसा इंजन बनाया जो ग्राहकों के बजट से मेल खाने वाले विक्रेता सुझाव प्रदान करता है।",
-          "<strong>विक्रेता नियंत्रण केंद्र</strong>: लाइव रेट कार्ड, ऐड-ऑन प्रबंधन और स्वचालित मिलान फ़िल्टर के साथ विक्रेता डैशबोर्ड बनाए।"
+          "<strong>आर्किटेक्चर और लॉन्च</strong>: एकमात्र संस्थापक इंजीनियर जिसने पूरे प्लेटफॉर्म को आर्किटेक्ट और लॉन्च किया — इवेंट प्लानिंग मार्केटप्लेस जो ग्राहकों को वेन्यू, कैटरर्स और 5+ श्रेणियों से जोड़ता है। इसे Node.js, Express, Redis, MongoDB और Next.js पर बनाया गया है।",
+          "<strong>एआई अनुशंसा पाइपलाइन</strong>: LangGraph, LangChain और वेक्टर एम्बेडिंग का उपयोग करके एंड-टू-एंड AI विक्रेता मिलान का निर्माण किया, जिसमें AI प्रवाह बनाने और प्रबंधित करने के लिए React Flow-आधारित विज़ुअल एडिटर शामिल है — जिससे तैनाती समय काफी कम हो गया।",
+          "<strong>पार्टनर ऑनबोर्डिंग</strong>: संपूर्ण पार्टनर पंजीकरण प्रवाह को फिर से डिज़ाइन किया, जिससे ऑनबोर्डिंग समय एक घंटे से घटकर 5 मिनट से भी कम हो गया।",
+          "<strong>इन्फ्रास्ट्रक्चर और प्रदर्शन</strong>: क्लाउड स्टोरेज को Backblaze में स्थानांतरित किया, जिससे 5 गुना लागत में कमी आई, मीडिया परिसंपत्तियों को अनुकूलित करके लोड समय को 60% कम किया, और Next.js के साथ फ्रंटएंड को फिर से तैयार करके 50% तेज़ पेज लोड प्रदान किया।",
+          "<strong>टीम नेतृत्व</strong>: फ्रंटएंड, बैकएंड, एआई और परिनियोजन वर्कफ़्लो में 4 इंजीनियरों की टीम का नेतृत्व किया।"
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -257,9 +264,10 @@ const customTranslations = {
         date: "अप्रैल २०२४ → दिसंबर २०२४",
         location: "बेंगलुरु, भारत",
         bullets: [
-          "<strong>लागत अनुकूलन</strong>: वीडियो इंफ्रास्ट्रक्चर को Twilio से LiveKit में स्थानांतरित किया, जिससे कम विलंबता के साथ 200+ दैनिक लाइव तकनीकी साक्षात्कारों को संभालते हुए लागत में $2,000/माह (65% की कमी) की बचत हुई।",
-          "<strong>एआई साक्षात्कार इंजीनियरिंग</strong>: AI साक्षात्कार मूल्यांकन वर्कफ़्लो पर फुल-स्टैक फीचर्स का विकास और अनुकूलन किया, जिससे विकास चक्र का समय 35% कम हो गया।",
-          "<strong>एमएल पाइपलाइन अनुकूलन</strong>: आंतरिक एमएल प्रशिक्षण पाइपलाइनों को फिर से बनाया, जिससे मॉडल प्रशिक्षण समय 3 दिनों से घटकर 8 घंटे रह गया।"
+          "<strong>वीडियो इन्फ्रास्ट्रक्चर माइग्रेशन</strong>: वीडियो इन्फ्रास्ट्रक्चर को Twilio से LiveKit में स्थानांतरित किया, जिससे कम विलंबता (lower latency) के साथ 200+ दैनिक लाइव साक्षात्कारों को संभालते हुए लागत में $2,000/माह (65% की कमी) की कटौती हुई।",
+          "<strong>संवादी AI साक्षात्कार</strong>: ElevenLabs, Deepgram और OpenAI का उपयोग करके AI साक्षात्कार प्रवाह का निर्माण और अनुकूलन किया — पूरे मूल्यांकन वर्कफ़्लो में सुरक्षित, कम-विलंबता वाले ऑडियो पाइपलाइनों को सुनिश्चित किया।",
+          "<strong>प्रॉम्प्ट फ्लो ग्राफ एडिटर</strong>: AI प्रॉम्प्ट पाइपलाइनों को विज़ुअलाइज़ और हेरफेर करने के लिए एक इंटरैक्टिव ड्रैग-एंड-ड्रॉप एडिटर बनाया — नोड/एज निर्माण, संपादन और प्रति नोड रीयल-टाइम लागत अनुमान का समर्थन करना, मैन्युअल कॉन्फ़िगरेशन को बदलना।",
+          "<strong>फुल-स्टैक फ़ीचर डेवलपमेंट</strong>: पूरे स्टैक में योगदान दिया — लाइव कोडिंग वातावरण, धोखाधड़ी का पता लगाना, प्रोफ़ाइल-टू-डोमेन मैपिंग, साक्षात्कार रद्दीकरण प्रवाह और मूल्य निर्धारण वर्कफ़्लो जिसने उपयोगकर्ता जुड़ाव में सुधार किया और ड्रॉप-ऑफ को कम किया।"
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -294,13 +302,13 @@ const customTranslations = {
       fleetBadge: "स्वामित्व बेड़ा",
       url: "https://barakahtravels.in",
       urlText: "barakahtravels.in ↗",
-      tagline: "आउटस्टेशन ट्रैवल लॉजिस्टिक्स · कोलकाता, भारत (२०२३ → २०२४)",
+      tagline: "सह-स्वामी और संचालक · कोलकाता, भारत · २०२३ – वर्तमान",
       verifiedLabel: "वेबसाइट सत्यापित करें ↗",
-      pitch: "मैंने एक स्टार्टअप विचार के साथ शुरुआत नहीं की। मैंने एक ट्रैवल एजेंसी के साथ शुरुआत की।<br/><br/>कोलकाता में बरकाह ट्रैवल्स चलाते हुए, मैंने व्यक्तिगत रूप से एक २६-सीटर फोर्स ट्रैवलर खरीदा और सैकड़ों आउटस्टेशन यात्राओं — दीघा, मंदारमनी, गंगासागर को संभाला। और हर एक बुकिंग एक गड़बड़ थी। ग्राहकों के पास कीमतों की तुलना करने का कोई तरीका नहीं था। ऑपरेटर जो मन में आता था, वह भाव बताते थे। यदि वाहन खराब हो गया तो कोई जवाबदेही नहीं थी। कोई विश्वास नहीं, कोई पारदर्शिता नहीं, बस फोन कॉल और किस्मत।<br/><br/>उस अराजकता के भीतर 9 महीने रहने के बाद — वास्तविक बुकिंग, वास्तविक कीमतों, वास्तविक शिकायतों को ट्रैक करने के बाद — मेरे पास यह जानने के लिए पर्याप्त डेटा और पर्याप्त हताशा थी कि वास्तव में क्या बनाया जाना चाहिए। वह राहिगो (Rahigo) बना।",
+      pitch: "मैंने एक स्टार्टअप विचार के साथ शुरुआत नहीं की थी — मैंने एक ट्रैवल एजेंसी के साथ शुरुआत की थी। व्यक्तिगत रूप से एक २६-सीटर फोर्स ट्रैवलर का सह-स्वामित्व लिया और दीघा, मंदारमनी और गंगासागर में सैकड़ों आउटस्टेशन यात्राएं चलाईं। हर बुकिंग एक गड़बड़ थी। ग्राहकों के पास कीमतों की तुलना करने का कोई तरीका नहीं था। ऑपरेटर जो मन में आता था, वह भाव बताते थे। यदि कोई वाहन खराब हो जाता था तो कोई जवाबदेही नहीं थी। बस फोन कॉल और किस्मत।<br/><br/>उस अराजकता के भीतर 9 महीने रहने के बाद — वास्तविक बुकिंग, वास्तविक कीमतों और वास्तविक शिकायतों को ट्रैक करने के बाद — मेरे पास यह जानने के लिए पर्याप्त डेटा और पर्याप्त हताशा थी कि वास्तव में क्या बनाया जाना चाहिए। वह राहिगो (Rahigo) बना।",
       bullets: [
-        "<strong>मार्ग अनुकूलन</strong>: उच्च-इरादे वाले मार्ग खोजों के लिए SEO लैंडिंग पृष्ठ तैनात किए — <a href='https://www.barakahtravels.in/sitemap.xml' target='_blank' class='sliding-link font-medium'>sitemap.xml ↗</a> पर लाइव",
-        "<strong>मांग इरादा सत्यापन</strong>: कुछ भी बनाने से पहले वास्तविक मांग को सत्यापित करने के लिए विभिन्न मार्गों पर ऑर्गेनिक बुकिंग इरादे को ट्रैक किया",
-        "<strong>आपूर्ति मानचित्रण</strong>: 40+ बेड़े ऑपरेटरों को ऑनबोर्ड किया और 9 महीने के क्षेत्रीय मूल्य निर्धारण डेटा को मैप किया — जो अब राहिगो के बिडिंग एल्गोरिदम की नींव है"
+        "<strong>बेड़ा और संचालन</strong>: व्यक्तिगत रूप से 100+ आउटस्टेशन बुकिंगों में यात्रा रसद (trip logistics), विक्रेता समन्वय और ग्राहक हैंडलिंग का प्रबंधन किया।",
+        "<strong>आपूर्ति नेटवर्क</strong>: 40+ बेड़े ऑपरेटरों को ऑनबोर्ड किया और 9 महीने के क्षेत्रीय मूल्य निर्धारण डेटा को मैप किया — जो अब राहिगो के गतिशील बोली एल्गोरिदम की नींव है।",
+        "<strong>मांग सत्यापन</strong>: उत्पाद कोड की एक भी पंक्ति लिखने से पहले वास्तविक बाजार मांग को सत्यापित करते हुए, प्रति माह 2.4k ऑर्गेनिक विज़िट प्राप्त करने वाले उच्च-इरादे वाले मार्ग खोजों के लिए SEO लैंडिंग पृष्ठ बनाए।"
       ],
       trafficTitle: "रूट इंटेंट और ट्रैफ़िक डैशबोर्ड",
       trafficSubtitle: "ऑर्गेनिक ट्रैफ़िक कैप्चर करने के लिए बनाए गए SEO लैंडिंग पेजों का इंटरैक्टिव पूर्वावलोकन:",
@@ -384,8 +392,9 @@ const customTranslations = {
   },
   es: {
     name: "Kaif Shaikh",
-    headline: "Ingeniero full-stack y fundador construyendo <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de alquiler de vehículos grupales en la India. Basado en Calcuta.",
-    bio: "Construyo productos backend complejos de extremo a extremo, desde la arquitectura hasta la producción. Actualmente enfocado en el lanzamiento de Rahigo mientras estoy abierto a roles remotos full-stack en equipos enfocados en producto.",
+    headline: "Ingeniero full-stack con sede en Calcuta. Construyo cosas de extremo a extremo y las entrego, desde un documento de arquitectura en blanco hasta producción.",
+    bio: "Actualmente construyendo <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de alquiler de vehículos grupales nacido de 9 meses de dirigir realmente una agencia de viajes y ver de cerca cada parte rota de la industria. Abierto a roles remotos full-stack en equipos enfocados en producto.",
+    cookingSince: "Cocinando desde 2021 👨‍🍳",
     labels: {
       work: "Experiencia Laboral",
       sideBusiness: "Negocio Paralelo / Catalizador",
@@ -396,17 +405,17 @@ const customTranslations = {
     work: [
       {
         logo: "https://www.rahigo.in/logo.webp",
-        role: "Co-fundador e Ingeniero Full-stack",
+        role: "Ingeniero Full-stack",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
         date: "Ene 2025 → Presente",
         location: "rahigo.in · Calcuta, India",
         bullets: [
-          "<strong>Mercado Bilateral</strong>: Construí un mercado bilateral desde cero: una aplicación para clientes donde los usuarios publican requisitos de viaje y una aplicación para socios donde los operadores verificados envían cotizaciones competitivas en vivo. Ambas lanzadas en Google Play Store.",
-          "<strong>Ofertas en Tiempo Real</strong>: Diseñé un sistema de ofertas en tiempo real basado en WebSockets donde múltiples operadores reciben solicitudes de viaje simultáneamente y compiten hasta que el cliente confirma.",
-          "<strong>Enmascaramiento de Números</strong>: Implementé el enmascaramiento de números utilizando Exotel: los operadores y pasajeros pueden llamarse entre sí sin ver el número real hasta el día de la salida.",
-          "<strong>Verificación de Vehículos</strong>: Establecí un sistema de verificación fotográfica de vehículos con vencimiento automático de 6 meses, bloqueando a los operadores si las fotos del vehículo están desactualizadas.",
-          "<strong>Garantía de Fallo</strong>: Ingenié un flujo de garantía de reemplazo por avería: si un vehículo falla el día del viaje, el sistema marca la reserva para una reasignación de emergencia."
+          "<strong>Mercado Bilateral</strong>: Creé dos aplicaciones de producción en React Native (una aplicación de cliente para publicar requisitos de viaje y una aplicación de socio para que los operadores verificados envíen cotizaciones competitivas) junto con una plataforma web en Next.js con páginas de ruta basadas en SSG orientadas al tráfico de búsqueda de alta intención.",
+          "<strong>Motor de Pujas en Tiempo Real</strong>: Diseñé un sistema de WebSockets donde se crea una sala compartida por solicitud de viaje, asignando a los operadores y al cliente juntos para que las cotizaciones aparezcan en vivo contra un precio de referencia calculado dinámicamente.",
+          "<strong>Infraestructura AWS</strong>: Desplegado en AWS con una tubería de CI/CD, funciones Lambda y colas SQS para procesamiento asíncrono, y S3 para almacenamiento de fotos de vehículos y documentos.",
+          "<strong>Capa de Verificación y Confianza</strong>: Se impuso el vencimiento automático de fotos de vehículos de 6 meses, bloqueando a los operadores desactualizados de cotizar. Integración de Exotel para el enmascaramiento de números de teléfono: ninguna de las partes ve el número real de la otra hasta el día de la salida.",
+          "<strong>Notificaciones y Failover</strong>: Alerta a los operadores en el momento en que se publica una solicitud coincidente, con un flujo de reemplazo por avería que reasigna automáticamente las reservas si un vehículo falla el día del viaje."
         ],
         tags: [
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
@@ -425,9 +434,11 @@ const customTranslations = {
         date: "Dic 2024 → Dic 2025",
         location: "Remoto / Calcuta",
         bullets: [
-          "<strong>Arquitectura y Lanzamiento</strong>: Único ingeniero que diseñó y lanzó la plataforma completa: un marketplace de planificación de eventos que conecta a clientes con locales, catering y más de 5 categorías construido sobre Node.js, Express, Redis, MongoDB y React.",
-          "<strong>Recomendación por IA</strong>: Desarrollé un motor de recomendación de proveedores de IA que utiliza incrustaciones vectoriales y lógica de clasificación personalizada para emparejar sugerencias con presupuestos dinámicamente.",
-          "<strong>Paneles de Proveedores</strong>: Creé paneles de control para proveedores con tarifas en tiempo real, gestión de complementos y filtros de coincidencia automatizados."
+          "<strong>Arquitectura y Lanzamiento</strong>: Único ingeniero fundador que diseñó y lanzó la plataforma completa: un marketplace de planificación de eventos que conecta a clientes con locales, catering y más de 5 categorías de proveedores, construido sobre Node.js, Express, Redis, MongoDB y Next.js.",
+          "<strong>Canalización de Recomendación por IA</strong>: Creé un sistema de emparejamiento de proveedores de IA de extremo a extremo utilizando LangGraph, LangChain e incrustaciones vectoriales con un editor visual basado en React Flow para crear y administrar flujos de IA, reduciendo significativamente el tiempo de despliegue.",
+          "<strong>Onboarding de Socios</strong>: Rediseñé por completo el flujo de registro de socios, reduciendo el tiempo de incorporación de una hora a menos de 5 minutos.",
+          "<strong>Infraestructura y Rendimiento</strong>: Migré el almacenamiento en la nube a Backblaze logrando una reducción de costos de 5 veces, optimicé los recursos multimedia reduciendo los tiempos de carga en un 60% y reestructuré el frontend con Next.js logrando cargas de página un 50% más rápidas.",
+          "<strong>Liderazgo de Equipo</strong>: Lideré un equipo de 4 ingenieros en los flujos de trabajo de frontend, backend, IA y despliegue."
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -445,9 +456,10 @@ const customTranslations = {
         date: "Abr 2024 → Dic 2024",
         location: "Bengaluru, India",
         bullets: [
-          "<strong>Migración de Infraestructura de Video</strong>: Migré la infraestructura de video de Twilio a LiveKit, reduciendo los costos en $2,000 al mes (un 65% de reducción) mientras se gestionan más de 200 entrevistas técnicas en vivo diarias con menor latencia.",
-          "<strong>Evaluación por IA</strong>: Construí y optimicé funciones de pila completa en el flujo de trabajo de evaluación de entrevistas con IA, reduciendo el ciclo de desarrollo en un 35%.",
-          "<strong>Optimización de Entrenamiento ML</strong>: Reconstruí los pipelines de entrenamiento de ML internos, reduciendo el tiempo de entrenamiento del modelo de 3 días a solo 8 horas."
+          "<strong>Migración de Infraestructura de Video</strong>: Migré la infraestructura de video de Twilio a LiveKit, reduciendo los costos en $2,000/mes (reducción del 65%) mientras se manejan más de 200 entrevistas en vivo diarias con menor latencia.",
+          "<strong>Entrevistas de IA Conversacional</strong>: Construí y optimicé flujos de entrevistas de IA utilizando ElevenLabs, Deepgram y OpenAI, garantizando canalizaciones de audio seguras y de baja latencia en todo el flujo de trabajo de evaluación.",
+          "<strong>Editor de Gráficos de Flujo de Prompts</strong>: Desarrollé un editor interactivo de arrastrar y soltar para visualizar y manipular canalizaciones de prompts de IA, que admite la creación y edición de nodos/bordes y la estimación de costos en tiempo real por nodo, reemplazando la configuración manual.",
+          "<strong>Desarrollo de Funciones Full-Stack</strong>: Contribuí en todo el stack: entornos de codificación en vivo, detección de trampas, mapeo de perfil a dominio, flujos de cancelación de entrevistas y flujos de trabajo de precios que mejoraron la retención de usuarios y redujeron los abandonos."
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -482,13 +494,13 @@ const customTranslations = {
       fleetBadge: "Flota Propia",
       url: "https://barakahtravels.in",
       urlText: "barakahtravels.in ↗",
-      tagline: "Logística de viajes de larga distancia · Calcuta, India (2023 → 2024)",
+      tagline: "Copropietario y Operador · Calcuta, India · 2023 – Presente",
       verifiedLabel: "Verificar Sitio Web ↗",
-      pitch: "No empecé con la idea de una startup. Empecé con una agencia de viajes.<br/><br/>Al dirigir Barakah Travels en Calcuta, compré personalmente una Force Traveller de 26 asientos y gestioné cientos de viajes de larga distancia: Digha, Mandarmani, Gangasagar. Y cada reserva era un caos. Los clientes no tenían forma de comparar precios. Los operadores cotizaban lo que querían. No había responsabilidad si un vehículo se averiaba. Sin confianza ni transparencia, solo llamadas telefónicas y suerte.<br/><br/>Tras 9 meses viviendo dentro de ese caos, rastreando reservas reales, precios reales y quejas reales, acumulé suficientes datos y frustración como para saber exactamente qué se debía construir. Eso se convirtió en Rahigo.",
+      pitch: "No empecé con la idea de una startup, empecé con una agencia de viajes. Copropietario personal de una Force Traveller de 26 asientos y realicé cientos de viajes de larga distancia en Digha, Mandarmani y Gangasagar. Cada reserva era un caos. Los clientes no tenían forma de comparar precios. Los operadores cotizaban lo que querían. No había responsabilidad si un vehículo se averiaba. Solo llamadas telefónicas y suerte.<br/><br/>Tras 9 meses viviendo dentro de ese caos (rastreando reservas reales, precios reales y quejas reales), acumulé suficientes datos y frustración como para saber exactamente qué se debía construir. Eso se convirtió en Rahigo.",
       bullets: [
-        "<strong>Optimización de Rutas</strong>: Desplegué páginas de destino SEO para búsquedas de rutas de alta intención, en vivo en <a href='https://www.barakahtravels.in/sitemap.xml' target='_blank' class='sliding-link font-medium'>sitemap.xml ↗</a>",
-        "<strong>Validación de Demanda</strong>: Realicé un seguimiento de la intención de reserva orgánica en todas las rutas para validar la demanda real antes de construir nada",
-        "<strong>Mapeo de Suministro</strong>: Incorporé a más de 40 operadores de flotas y mapeé 9 meses de datos de precios regionales, ahora la base del algoritmo de subastas de Rahigo"
+        "<strong>Flota y Operaciones</strong>: Gestioné personalmente la logística de viajes, la coordinación de proveedores y la atención al cliente en más de 100 reservas de larga distancia.",
+        "<strong>Red de Suministro</strong>: Incorporé a más de 40 operadores de flotas y mapeé 9 meses de datos de precios regionales, ahora la base del algoritmo de subasta dinámica de Rahigo.",
+        "<strong>Validación de Demanda</strong>: Creé páginas de destino de SEO para búsquedas de rutas de alta intención que capturaron 2.4k visitas orgánicas al mes, validando la demanda real del mercado antes de escribir una sola línea de código del producto."
       ],
       trafficTitle: "Panel de Tráfico e Intención de Ruta",
       trafficSubtitle: "Vista previa interactiva de las páginas de destino de mapeo de intención de SEO creadas para capturar tráfico orgánico:",
@@ -572,8 +584,9 @@ const customTranslations = {
   },
   fr: {
     name: "Kaif Shaikh",
-    headline: "Ingénieur full-stack et fondateur créant <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> — un marketplace de location de véhicules de groupe en Inde. Basé à Calcutta.",
-    bio: "Je conçois des produits axés sur le backend de bout en bout, de l'architecture à la production. Actuellement concentré sur le go-to-market de Rahigo tout en étant ouvert aux rôles de développeur full-stack à distance au sein d'équipes axées sur le produit.",
+    headline: "Ingénieur full-stack basé à Calcutta. Je conçois des projets de bout en bout et les déploie — d'un document d'architecture vierge jusqu'à la mise en production.",
+    bio: "Je construis actuellement <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de location de véhicules de groupe né de 9 mois passés à diriger une agence de voyages et à observer de près tous les dysfonctionnements du secteur. Disponible pour des opportunités de développeur full-stack à distance au sein d'équipes axées sur le produit.",
+    cookingSince: "En cuisine depuis 2021 👨‍🍳",
     labels: {
       work: "Expérience Professionnelle",
       sideBusiness: "Activité Secondaire / Catalyseur",
@@ -584,17 +597,17 @@ const customTranslations = {
     work: [
       {
         logo: "https://www.rahigo.in/logo.webp",
-        role: "Co-fondateur & Ingénieur Full-stack",
+        role: "Ingénieur Full-stack",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
         date: "Jan 2025 → Présent",
         location: "rahigo.in · Calcutta, Inde",
         bullets: [
-          "<strong>Marché Bilateral</strong>: Développement de A à Z d'une place de marché biface : une application client pour publier des demandes de trajet et une application partenaire pour soumettre des devis en direct. Les deux sont publiées sur le Google Play Store.",
-          "<strong>Enchères en Temps Réel</strong>: Conception d'un système d'enchères en temps réel basé sur les WebSockets, permettant à plusieurs opérateurs de recevoir simultanément les demandes et de se concurrencer par devis interposés.",
-          "<strong>Masquage de Numéro</strong>: Intégration du masquage de numéros via Exotel : conducteurs et passagers s'appellent directement sans voir les vrais numéros avant le jour du départ.",
-          "<strong>Photos de Sécurité</strong>: Mise en place d'un système de vérification des photos de véhicules avec expiration automatique à 6 mois, bloquant les devis des partenaires non conformes.",
-          "<strong>Garantie de Remplacement</strong>: Modélisation d'une garantie de remplacement en cas de panne : si un véhicule fait défaut le jour J, le système réattribue automatiquement la réservation en urgence."
+          "<strong>Marché Bilatéral</strong>: Développement de deux applications React Native en production — une application client pour publier les besoins de trajet et une application partenaire pour que les opérateurs vérifiés soumettent des devis compétitifs — ainsi qu'une plateforme web Next.js avec des pages d'itinéraires basées sur le SSG ciblant le trafic de recherche à forte intention d'achat.",
+          "<strong>Moteur d'Enchères en Temps Réel</strong>: Conception d'un système WebSocket où un salon partagé est créé par demande de trajet, réunissant les opérateurs et le client pour que les devis s'affichent en direct par rapport à un prix de référence calculé dynamiquement.",
+          "<strong>Infrastructure AWS</strong>: Déploiement sur AWS avec un pipeline de CI/CD, des fonctions Lambda et des files d'attente SQS pour le traitement asynchrone, et S3 pour le stockage des photos de véhicules et des documents.",
+          "<strong>Couche de Vérification et de Confiance</strong>: Application de l'expiration automatique des photos de véhicules de 6 mois, empêchant les opérateurs obsolètes de faire des offres. Intégration d'Exotel pour le masquage des numéros de téléphone — aucune des deux parties ne voit le vrai numéro de l'autre avant le jour du départ.",
+          "<strong>Notifications et Failover</strong>: Alerte des opérateurs dès qu'une demande correspondante est publiée, avec un flux de remplacement en cas de panne qui réassigne automatiquement les réservations si un véhicule fait défaut le jour du trajet."
         ],
         tags: [
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
@@ -613,9 +626,11 @@ const customTranslations = {
         date: "Déc 2024 → Déc 2025",
         location: "À distance / Calcutta",
         bullets: [
-          "<strong>Architecture & Lancement</strong>: Seul ingénieur à avoir architecturé et lancé l'intégralité de la plateforme : marketplace d'événementiel reliant clients, salles, traiteurs et 5+ catégories de services avec Node.js, Express, Redis, MongoDB et React.",
-          "<strong>Recommandation par IA</strong>: Développement d'un moteur de recommandation de prestataires par IA reposant sur des plongements vectoriels (embeddings) et un classement dynamique basé sur le budget client.",
-          "<strong>Panneaux de Prestataires</strong>: Création de tableaux de bord prestataires avec grilles tarifaires en temps réel, gestion d'options additionnelles et filtres de recherche automatisés."
+          "<strong>Architecture & Launch</strong>: Unique ingénieur fondateur ayant conçu et lancé l'intégralité de la plateforme — une place de marché d'événementiel reliant clients, salles, traiteurs et 5+ catégories de prestataires, avec Node.js, Express, Redis, MongoDB et Next.js.",
+          "<strong>Pipeline de Recommandation par IA</strong>: Conception d'un système de mise en relation de prestataires par IA de bout en bout avec LangGraph, LangChain et des plongements vectoriels, complété par un éditeur visuel basé sur React Flow pour créer et gérer les flux d'IA — réduisant considérablement le temps de déploiement.",
+          "<strong>Onboarding de Partenaires</strong>: Refonte complète du parcours d'inscription des partenaires, ramenant le temps d'intégration d'une heure à moins de 5 minutes.",
+          "<strong>Infrastructure & Performance</strong>: Migration du stockage cloud vers Backblaze permettant une réduction des coûts par 5, optimisation des ressources médias réduisant le temps de chargement de 60 %, et restructuration du frontend avec Next.js pour des pages 50 % plus rapides à charger.",
+          "<strong>Team Leadership</strong>: Direction d'une équipe de 4 ingénieurs travaillant sur le frontend, le backend, l'IA et les processus de déploiement."
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -633,9 +648,10 @@ const customTranslations = {
         date: "Avr 2024 → Déc 2024",
         location: "Bengaluru, Inde",
         bullets: [
-          "<strong>Migration d'Infrastructure Vidéo</strong>: Migration de l'infrastructure vidéo de Twilio vers LiveKit, réduisant les coûts de 2 000 $/mois (65 % d'économie) tout en assurant 200+ entretiens techniques par jour à faible latence.",
-          "<strong>Évaluation par IA</strong>: Développement et optimisation de fonctionnalités full-stack sur le parcours d'évaluation par IA, raccourcissant le cycle de développement de 35 %.",
-          "<strong>Pipeline ML Accéléré</strong>: Reconstruction des pipelines internes d'entraînement ML, ramenant le temps d'entraînement des modèles de 3 jours à 8 heures."
+          "<strong>Migration de l'Infrastructure Vidéo</strong>: Migration de l'infrastructure vidéo de Twilio vers LiveKit, réduisant les coûts de 2 000 $/mois (réduction de 65 %) tout en gérant plus de 200 entretiens en direct par jour avec une latence réduite.",
+          "<strong>Entretiens d'IA Conversationnelle</strong>: Création et optimisation des flux d'entretiens d'IA à l'aide d'ElevenLabs, Deepgram et OpenAI — garantissant des pipelines audio sécurisés et à faible latence sur l'ensemble du flux de travail d'évaluation.",
+          "<strong>Éditeur de Graphe de Flux de Prompts</strong>: Développement d'un éditeur interactif en glisser-déposer pour visualiser et manipuler les pipelines de prompts d'IA — prenant en charge la création/édition de nœuds et de liaisons, et l'estimation des coûts en temps réel par nœud, remplaçant la configuration manuelle.",
+          "<strong>Développement de Fonctionnalités Full-Stack</strong>: Contribution sur l'ensemble de la stack — environnements de codage en direct, détection de triche, mappage profil-domaine, flux d'annulation d'entretien et workflows de tarification qui ont amélioré l'engagement utilisateur et réduit les abandons."
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -670,13 +686,13 @@ const customTranslations = {
       fleetBadge: "Flotte Propre",
       url: "https://barakahtravels.in",
       urlText: "barakahtravels.in ↗",
-      tagline: "Logistique de Transport de Passagers · Calcutta, Inde (2023 → 2024)",
+      tagline: "Copropriétaire & Exploitant · Calcutta, Inde · 2023 – Présent",
       verifiedLabel: "Vérifier le Site Web ↗",
-      pitch: "Je n'ai pas commencé par une idée de startup. J'ai commencé par une agence de voyage.<br/><br/>En dirigeant Barakah Travels à Calcutta, j'ai personnellement acheté un Force Traveller de 26 places et géré des centaines de trajets longue distance — Digha, Mandarmani, Gangasagar. Et chaque réservation était un désastre. Les clients n'avaient aucun moyen de comparer les prix. Les transporteurs fixaient leurs tarifs à la tête du client. Aucune responsabilité en cas de panne de véhicule. Pas de confiance, pas de transparence, juste des appels téléphoniques et de la chance.<br/><br/>Après 9 mois à vivre dans ce chaos — à suivre les réservations réelles, les prix réels et les plaintes réelles — j'avais assez de données et de frustration pour savoir exactement ce qui devait être construit. C'est devenu Rahigo.",
+      pitch: "Je n'ai pas commencé avec une idée de startup — j'ai commencé avec une agence de voyage. Copropriétaire d'un Force Traveller de 26 places, j'ai géré des centaines de trajets longue distance vers Digha, Mandarmani et Gangasagar. Chaque réservation était un désastre. Les clients n'avaient aucun moyen de comparer les prix. Les transporteurs fixaient leurs tarifs à la tête du client. Aucune responsabilité en cas de panne. Juste des appels et de la chance.<br/><br/>Après 9 mois à vivre dans ce chaos — à suivre les réservations réelles, les prix réels et les plaintes réelles — j'avais accumulé assez de données et de frustration pour savoir exactement ce qui devait être construit. C'est devenu Rahigo.",
       bullets: [
-        "<strong>Optimisation des Itinéraires</strong>: Déploiement de landing pages SEO pour les recherches d'itinéraires à forte intention d'achat — live sur <a href='https://www.barakahtravels.in/sitemap.xml' target='_blank' class='sliding-link font-medium'>sitemap.xml ↗</a>",
-        "<strong>Validation de Demande</strong>: Analyse de l'intention de réservation organique sur les itinéraires pour valider la demande réelle avant de développer quoi que ce soit",
-        "<strong>Modélisation de l'Offre</strong>: Intégration de 40+ exploitants de flottes et cartographie de 9 mois de données de tarification régionale — aujourd'hui la base de l'algorithme d'enchères de Rahigo"
+        "<strong>Flotte & Opérations</strong>: Gestion personnelle de la logistique des trajets, de la coordination des prestataires et de la relation client sur plus de 100 réservations longue distance.",
+        "<strong>Réseau d'Offre</strong>: Intégration de 40+ exploitant de flottes et cartographie de 9 mois de données tarifaires régionales — aujourd'hui la base de l'algorithme d'enchères dynamiques de Rahigo.",
+        "<strong>Validation de Demande</strong>: Création de landing pages SEO pour les recherches d'itinéraires à forte intention, capturant 2,4k visites organiques par mois pour valider la demande réelle avant d'écrire la moindre ligne de code."
       ],
       trafficTitle: "Tableau de Bord des Intentions de Trajet",
       trafficSubtitle: "Aperçu interactif des pages de destination SEO créées pour capturer le trafic organique :",
@@ -760,8 +776,9 @@ const customTranslations = {
   },
   ja: {
     name: "Kaif Shaikh",
-    headline: "フルスタックエンジニア兼創業者。インドで団体車両レンタルマーケットプレイス <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> を構築中。コルカタを拠点に活動。",
-    bio: "アーキテクチャ設計から本番運用まで、バックエンド主体のプロダクトをエンドツーエンドで開発しています。現在はRahigoの市場参入に注力しており、プロダクト重視のチームでのフルスタックのリモートポジションも探しています。",
+    headline: "コルカタを拠点とするフルスタックエンジニア。白紙のアーキテクチャ設計書から本番デプロイまで、プロダクトをエンドツーエンドで自立して開発・ローンチします。",
+    bio: "現在は、団体車両レンタルマーケットプレイスである <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> を開発中。実際に9ヶ月間旅行代理店を運営し、業界のあらゆる課題や非効率を間近で見てきた経験から誕生しました。プロダクト重視のチームでのフルスタックのリモートポジションを探しています。",
+    cookingSince: "2021年からクッキング中 👨‍🍳",
     labels: {
       work: "職務経歴",
       sideBusiness: "サイドビジネス / 起業の契機",
@@ -772,17 +789,17 @@ const customTranslations = {
     work: [
       {
         logo: "https://www.rahigo.in/logo.webp",
-        role: "共同創業者 兼 フルスタックエンジニア",
+        role: "フルスタックエンジニア",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
         date: "2025年1月 → 現在",
         location: "rahigo.in · コルカタ、インド",
         bullets: [
-          "<strong>2面型マーケットプレイスの構築</strong>: 顧客用の旅行要件投稿アプリと、検証済みバス会社がライブ見積もりを提案するパートナーアプリからなる2面型マーケットプレイスを完全新規構築。両アプリともGoogle Playストアにデプロイ完了。",
-          "<strong>リアルタイム入札システム</strong>: WebSocketsを採用したリアルタイム入札システムを設計。複数のバス運行会社が旅行要求を同時に受信し、顧客が確定するまで価格を競い合う仕組みを構築。",
-          "<strong>電話番号マスキング</strong>: Exotelを用いた電話番号マスキングを実装。出発当日まで運行会社と乗客の双方が実際の電話番号を知ることなく、安全に通話できるインフラを構築。",
-          "<strong>車両画像の検証システム</strong>: 車両画像の自動6ヶ月期限切れ検証システムを導入。運行会社が期限切れの実車画像を登録している場合、新規の入札提案への参加をシステム側で自動ブロック。",
-          "<strong>故障時緊急代替手配</strong>: 故障時緊急手配の保証フローを設計。旅行当日に車両トラブルが発生した場合、システムが即座に検知し緊急代替バスの手配処理をトリガーする仕組みを構築。"
+          "<strong>2面型マーケットプレイス</strong>: 顧客用の旅行要件投稿アプリと、検証済み運行会社が競合見積もりを提出するパートナーアプリの2つの本番React Nativeアプリを開発。同時に、高インテントな検索トラフィックをターゲットにしたSSGルートページを備えたNext.jsウェブプラットフォームを構築。",
+          "<strong>リアルタイム入札エンジン</strong>: 旅行リクエストごとに共有ルームを作成し、運行会社と顧客を割り当てて見積もりが動的に計算された基準価格に対してリアルタイムで表示されるWebSocketシステムを設計。",
+          "<strong>AWSインフラ</strong>: CI/CDパイプラインを備えたAWSにデプロイ。非同期処理用のLambda関数とSQSキュー、および車両写真や文書の保管にS3を採用。",
+          "<strong>検証および信頼レイヤー</strong>: 車両画像の自動6ヶ月期限切れ検証システムを強制し、古い車両での入札を自動ブロック。Exotelを用いた電話番号マスキングを統合し、出発当日まで双方の実際の電話番号を非表示に。",
+          "<strong>通知および代替手配</strong>: マッチングするリクエストが投稿された瞬間に運行会社に通知し、旅行当日に車両トラブルが発生した場合に自動で予約を再割り当てする故障代替フローを構築。"
         ],
         tags: [
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
@@ -801,9 +818,11 @@ const customTranslations = {
         date: "2024年12月 → 2025年12月",
         location: "リモート / コルカタ",
         bullets: [
-          "<strong>アーキテクチャ設計とローンチ</strong>: 唯一のエンジニアとして、Node.js, Express, Redis, MongoDB, Reactを用いたイベント計画プラットフォーム（式場、ケータリング、その他5以上のカテゴリ）を設計・ローンチ。",
-          "<strong>AIによる推薦機能</strong>: ベクトル埋め込み（embeddings）とカスタムランキングアルゴリズムを使用したAIベンダー推薦エンジンを構築し、予算に応じた最適な提案を動的に実行。",
-          "<strong>ベンダーコントロールセンター</strong>: リアルタイム価格表、オプションのアドオン管理、自動マッチングフィルターを完備したベンダー専用ダッシュボードを実装。"
+          "<strong>設計およびローンチ</strong>: 唯一の創業者兼エンジニアとしてプラットフォーム全体を設計・ローンチ。Node.js, Express, Redis, MongoDB, Next.jsを採用し、顧客と式場, ケータリング, および5つ以上のカテゴリの運行業者を結ぶイベント計画マーケットプレイスを構築。",
+          "<strong>AI推薦パイプライン</strong>: LangGraph, LangChain, ベクトル埋め込みを用いたエンドツーエンドのAIベンダーマッチングを構築。React Flowベースのビジュアルエディタを実装してAIフローの作成・管理を可能にし、開発・デプロイ期間を大幅に短縮。",
+          "<strong>パートナーオンボーディング</strong>: パートナー企業の登録フローを全面的に再設計し、オンボーディングにかかる時間を従来の1時間から5分未満へ短縮。",
+          "<strong>インフラとパフォーマンス</strong>: クラウドストレージをBackblazeへ移行し、保管コストを5分の1に削減。メディアアセットを最適化してロード時間を60%削減し、Next.jsでフロントエンドを再構築することでページ表示速度を50%向上。",
+          "<strong>チームリーダーシップ</strong>: フロントエンド、バックエンド、AI、デプロイワークフローにわたる4名のエンジニアチームを牽引。"
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -821,9 +840,10 @@ const customTranslations = {
         date: "2024年4月 → 2024年12月",
         location: "ベンガルール、インド",
         bullets: [
-          "<strong>ビデオ配信インフラ移行</strong>: ビデオ通信インフラをTwilioからLiveKitへ移行。1日200回以上の実ライブ面接で、低遅延接続を維持したまま通信コストを月額2,000ドル（65%）削減。",
-          "<strong>AI面接システム設計</strong>: AI面接評価ワークフローにおけるフルスタック機能の実装とパフォーマンス最適化を主導し、新機能開発リードタイムを35%切削。",
-          "<strong>MLパイプライン最適化</strong>: 機械学習のデータパイプラインを再設計し、モデルの学習時間を従来の3日間から8時間へ大幅に削減。"
+          "<strong>ビデオインフラの移行</strong>: ビデオインフラをTwilioからLiveKitへ移行し、より低遅延で1日あたり200回以上のライブ面接を処理しながら、コストを月額2,000ドル（65%削減）削減。",
+          "<strong>対話型AI面接</strong>: ElevenLabs、Deepgram、OpenAIを活用してAI面接フローを構築・最適化し、評価ワークフロー全体で安全かつ低遅延なオーディオパイプラインを確保。",
+          "<strong>プロンプトフロー・グラフエディタ</strong>: AIプロンプトパイプラインを可視化・操作するためのインタラクティブなドラッグ＆ドロップエディタを構築。手動設定に代わり、ノードやエッジの作成・編集、およびノードごとのリアルタイムなコスト見積もりをサポート。",
+          "<strong>フルスタック機能開発</strong>: ライブコーディング環境、不正検知、プロファイルからドメインへのマッピング、面接キャンセル処理、価格設定フローなど、スタック全体にわたる開発に貢献し、ユーザーエンゲージメントの向上と離脱率の低下を実現。"
         ],
         tags: [
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -858,13 +878,13 @@ const customTranslations = {
       fleetBadge: "自社保有車両",
       url: "https://barakahtravels.in",
       urlText: "barakahtravels.in ↗",
-      tagline: "郊外旅行ロジスティクス運営 · コルカタ、インド (2023年 → 2024年)",
+      tagline: "共同経営者 兼 運行管理者 · コルカタ、インド · 2023年 – 現在",
       verifiedLabel: "サイトを開いて検証する ↗",
-      pitch: "私は最初からスタートアップを起業しようとしたのではありません。旅行代理店の運営から始めました。<br/><br/>コルカタで旅行代理店「Barakah Travels」を運営する中、私は自ら26人乗りの「Force Traveller」車両を購入して運行し、ディガ、マンダルマニ、Gangasagarなどの郊外向け旅行予約を個人で数百件も直接担当しました。しかし、当時はすべての予約プロセスが崩壊していました。顧客にはバスの価格を比較する手段がなく、運行会社は気分で運賃を提示し、走行中に車両が故障しても責任を追及する仕組みがありませんでした。信頼も透明性もなく、電話と幸運だけに頼る取引でした。<br/><br/>その混乱の真ん中で9ヶ月間、実際の予約データ、実際の価格、実際のクレームと向き合い続けた結果、市場に何が作られるべきかを定義する十分なデータと強い問題意識が蓄積されました。これがのちに「Rahigo」の創業へと繋がったのです。",
+      pitch: "私は最初からスタートアップを起業しようとしたのではありません。旅行代理店の運営から始めました。個人で26人乗りの「Force Traveller」車両を共同所有し、ディガ、マンダルマニ、Gangasagarなどの郊外ルートで何百回もの旅行を運行しました。しかし、当時はすべての予約プロセスが崩壊していました。顧客には価格を比較する手段がなく、運行会社は気分で運賃を提示し、走行中に車両が故障しても責任を追及する仕組みがありませんでした。電話と幸運だけに頼る取引でした。<br/><br/>その混乱の真ん中で9ヶ月間、実際の予約データ、実際の価格、実際のクレームと向き合い続けた結果、市場に何が作られるべきかを定義する十分なデータと強い問題意識が蓄積されました。これがのちに「Rahigo」の創業へと繋がったのです。",
       bullets: [
-        "<strong>ルート最適化</strong>：検索インテントの高いルートに特化したSEOランディングページ群を構築 — <a href='https://www.barakahtravels.in/sitemap.xml' target='_blank' class='sliding-link font-medium'>sitemap.xml ↗</a> から本番確認可能",
-        "<strong>需要インテント検証</strong>：プロダクトを作る前に、各路線のオーガニックな予約需要の流入経路を追跡して真の需要を綿密に検証",
-        "<strong>供給データマッピング</strong>：40社以上のバス運行会社を網羅し、9ヶ月間にわたる地域運賃データを収集 — 現在のRahigoのリアルタイム入札アルゴリズムの基礎データを定義"
+        "<strong>運行＆オペレーション</strong>: 100件以上の郊外旅行予約において、運行ロジスティクス、運行会社コーディネート、および顧客対応を直接統括。",
+        "<strong>供給ネットワーク</strong>: 40社以上のバス運行会社を網羅し、9ヶ月間にわたる地域運賃データを収集 — 現在のRahigoのリアルタイム動的入札アルゴリズムの基礎データを定義。",
+        "<strong>需要検証</strong>: 検索インテントの高いルートに特化したSEOランディングページ群を構築し、月間2,400件のオーガニック流入を獲得。プロダクトコードを1行も書く前に、真の市場需要を綿密に検証。"
       ],
       trafficTitle: "ルート意図＆トラフィックダッシュボード",
       trafficSubtitle: "オーガニックトラフィック獲得のために展開したSEO意図マッピングLP of インタラクティブ表示：",
@@ -986,7 +1006,7 @@ export default async function Home() {
   };
 
   return (
-    <main className="max-w-[680px] mx-auto px-6 py-12 md:py-16 premium-glow-container font-sans text-[#e8eaf0] bg-transparent animate-fade-in-up">
+    <main className="max-w-[680px] mx-auto px-6 py-12 md:py-16 premium-glow-container font-sans text-text bg-transparent animate-fade-in-up">
       {/* JSON-LD Structured Data for SEO */}
       <script
         id="schema-jsonld"
@@ -996,39 +1016,51 @@ export default async function Home() {
 
       {/* ─── Header Section ─── */}
       <header className="mb-8">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="relative shrink-0 w-16 h-16 sm:w-20 sm:h-20">
-            {/* Glowing aura around avatar */}
-            <div className="absolute inset-0 bg-[#7eb8f7]/15 blur-lg rounded-2xl animate-pulse"></div>
-            <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQHW1OmdZ0oFLw/profile-displayphoto-shrink_400_400/B56ZbYjuIQGgAg-/0/1747389965554?e=1781740800&v=beta&t=WTICIQxDegERXq_1RB6E8bka0SATJcVqoPxLtYmCOOg"
-              alt={t.name}
-              className="w-full h-full rounded-2xl border-2 border-[#7eb8f7]/20 relative z-10 object-cover shadow-2xl hover:border-[#7eb8f7]/40 transition-colors duration-300"
-            />
-          </div>
-          <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              {/* Sleek light-blue verification rosette checkmark exactly like Twitter/LinkedIn */}
-
-              <h2 className="text-[26px] sm:text-[30px] font-bold tracking-tight text-[#e8eaf0] leading-none">
-                {t.name}
-              </h2>
-              <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 filter drop-shadow-[0_0_8px_rgba(126,184,247,0.35)]" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.99-3.818-3.99-.48 0-.941.1-1.356.275C14.77 2.57 13.5 1.7 12 1.7s-2.77.87-3.416 2.085c-.415-.175-.876-.275-1.356-.275C5.128 3.51 3.42 5.29 3.42 7.5c0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.58.875 2.95 2.148 3.6-.154.435-.238.905-.238 1.4 0 2.21 1.71 3.99 3.818 3.99.48 0 .941-.1 1.356-.275C9.23 21.43 10.5 22.3 12 22.3s2.77-.87 3.416-2.085c.415.175.876.275 1.356.275 2.108 0 3.818-1.78 3.818-3.99 0-.495-.084-.965-.238-1.4 1.273-.65 2.148-2.02 2.148-3.6z" fill="#7eb8f7" />
-                <path d="M9.78 16.67l-3.3-3.3 1.41-1.42 1.89 1.89 5.56-5.56 1.41 1.41-6.97 6.98z" fill="#000000" stroke="#000000" strokeWidth="0.5" />
-              </svg>
+        <div className="flex items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-4">
+            <div className="relative shrink-0 w-16 h-16 sm:w-20 sm:h-20">
+              {/* Glowing aura around avatar */}
+              <div className="absolute inset-0 bg-accent/15 blur-lg rounded-2xl animate-pulse"></div>
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5603AQHW1OmdZ0oFLw/profile-displayphoto-shrink_400_400/B56ZbYjuIQGgAg-/0/1747389965554?e=1781740800&v=beta&t=WTICIQxDegERXq_1RB6E8bka0SATJcVqoPxLtYmCOOg"
+                alt={t.name}
+                className="w-full h-full rounded-2xl border-2 border-accent/20 relative z-10 object-cover shadow-2xl hover:border-accent/40 transition-colors duration-300"
+              />
             </div>
-            <p className="text-[12px] sm:text-[13px] font-mono text-[#808ca3] uppercase tracking-widest font-medium pl-0.5">
-              {"Full Stack Developer"}
-            </p>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                {/* Sleek light-blue verification rosette checkmark exactly like Twitter/LinkedIn */}
+                <h2 className="text-[26px] sm:text-[30px] font-bold tracking-tight text-text leading-none">
+                  {t.name}
+                </h2>
+                <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 filter drop-shadow-[0_0_8px_rgba(126,184,247,0.35)]" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.99-3.818-3.99-.48 0-.941.1-1.356.275C14.77 2.57 13.5 1.7 12 1.7s-2.77.87-3.416 2.085c-.415-.175-.876-.275-1.356-.275C5.128 3.51 3.42 5.29 3.42 7.5c0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.58.875 2.95 2.148 3.6-.154.435-.238.905-.238 1.4 0 2.21 1.71 3.99 3.818 3.99.48 0 .941-.1 1.356-.275C9.23 21.43 10.5 22.3 12 22.3s2.77-.87 3.416-2.085c.415.175.876.275 1.356.275 2.108 0 3.818-1.78 3.818-3.99 0-.495-.084-.965-.238-1.4 1.273-.65 2.148-2.02 2.148-3.6z" fill="#7eb8f7" />
+                  <path d="M9.78 16.67l-3.3-3.3 1.41-1.42 1.89 1.89 5.56-5.56 1.41 1.41-6.97 6.98z" fill="#000000" stroke="#000000" strokeWidth="0.5" />
+                </svg>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 pl-0.5">
+                <p className="text-[12px] sm:text-[13px] font-mono text-dim uppercase tracking-widest font-medium">
+                  {"Full Stack Developer"}
+                </p>
+                {t.cookingSince && (
+                  <>
+                    <span className="text-dim/40 text-[10px] hidden sm:inline">•</span>
+                    <span className="inline-flex items-center px-1.5 py-0.5 rounded-md text-[9px] sm:text-[10px] font-mono font-medium text-accent bg-accent/5 border border-accent/15">
+                      {t.cookingSince}
+                    </span>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
+          <HeaderStatus />
         </div>
 
         <h1
-          className="text-[22px] font-light leading-[1.5] text-[#e8eaf0] mb-4"
+          className="text-[22px] font-light leading-[1.5] text-text mb-4"
           dangerouslySetInnerHTML={{ __html: t.headline }}
         />
-        <p className="text-[15px] text-[#8892a4] leading-[1.75] mb-6">{t.bio}</p>
+        <p className="text-[15px] text-muted leading-[1.75] mb-6" dangerouslySetInnerHTML={{ __html: t.bio }} />
 
         {/* Links row */}
         <nav className="flex flex-wrap gap-x-5 gap-y-3 mt-4 items-center">
@@ -1036,7 +1068,7 @@ export default async function Home() {
             href="https://drive.google.com/file/d/1ZVP2XaCL7j4u41tUt7wmhNYjl2a1s0Pw/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-mono font-medium text-[#7eb8f7] bg-[#7eb8f7]/5 border border-[#7eb8f7]/15 hover:bg-[#7eb8f7]/15 transition-all shadow-md group animate-pulse-slow"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-mono font-medium text-accent bg-accent/5 border border-accent/15 hover:bg-accent/15 transition-all shadow-md group animate-pulse-slow"
           >
             <span className="material-symbols-outlined !text-[13px] group-hover:translate-y-0.5 transition-transform">description</span>
             Resume / CV
@@ -1060,10 +1092,10 @@ export default async function Home() {
 
       {/* ─── Stack Section (Climbed Up!) ─── */}
       <section id="stack" className="mb-14 scroll-mt-24">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-4">{t.labels.stack}</p>
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-dim mb-4">{t.labels.stack}</p>
         <div className="flex flex-wrap gap-2">
           {t.stack.map((skill, index) => (
-            <span key={index} className="tag-badge px-4 py-2 bg-white/[0.015] text-[#8892a4] border-white/5 rounded-lg shadow-sm hover:scale-[1.02]">
+            <span key={index} className="tag-badge px-4 py-2 bg-tag-bg text-muted border-tag-border rounded-lg shadow-sm hover:scale-[1.02]">
               <img
                 src={skill.icon}
                 alt={skill.name}
@@ -1078,24 +1110,24 @@ export default async function Home() {
 
       {/* ─── Work Section ─── */}
       <section id="work" className="scroll-mt-24">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.work}</p>
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-dim mb-6">{t.labels.work}</p>
 
         <div className="space-y-6">
           {t.work.map((job, index) => (
             <div key={index} className="job-card group">
               <div className="flex items-center gap-3.5 mb-1.5">
                 {job.logo ? (
-                  <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 flex items-center justify-center font-mono text-[10px] font-bold text-[#8892a4] shrink-0 shadow-inner group-hover:border-[#7eb8f7]/30 transition-all overflow-hidden">
+                  <div className="w-[24px] h-[24px] rounded-[5px] bg-bg3 border border-border flex items-center justify-center font-mono text-[10px] font-bold text-muted shrink-0 shadow-inner group-hover:border-accent/30 transition-all overflow-hidden">
                     {job.logo.startsWith("http") ? (
                       <img src={job.logo} alt={job.company} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                     ) : (
-                      <span className="group-hover:text-[#7eb8f7] transition-colors">{job.logo}</span>
+                      <span className="group-hover:text-accent transition-colors">{job.logo}</span>
                     )}
                   </div>
                 ) : (
-                  <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 shrink-0" />
+                  <div className="w-[24px] h-[24px] rounded-[5px] bg-bg3 border border-border shrink-0" />
                 )}
-                <span className="text-[15px] font-medium text-[#e8eaf0] flex-grow group-hover:text-[#7eb8f7] transition-colors">
+                <span className="text-[15px] font-medium text-text flex-grow group-hover:text-accent transition-colors">
                   {job.companyUrl ? (
                     <a href={job.companyUrl} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-2">
                       {job.role} — {job.company}
@@ -1104,20 +1136,20 @@ export default async function Home() {
                     <span>{job.role} — {job.company}</span>
                   )}
                 </span>
-                <span className="text-[12px] text-[#808ca3] font-mono whitespace-nowrap hidden sm:inline">{job.date}</span>
+                <span className="text-[12px] text-dim font-mono whitespace-nowrap hidden sm:inline">{job.date}</span>
               </div>
 
-              <div className="text-[13px] text-[#808ca3] mb-3.5 pl-[38px] flex items-center justify-between">
+              <div className="text-[13px] text-dim mb-3.5 pl-[38px] flex items-center justify-between">
                 <span>{job.location}</span>
                 <span className="text-[12px] font-mono sm:hidden">{job.date}</span>
               </div>
 
               {/* Bullet Points with exact resume info */}
               {job.bullets && job.bullets.length > 0 && (
-                <ul className="mb-4 pl-[8px] sm:pl-[38px] space-y-2.5 text-[13.5px] text-[#8892a4] font-light leading-[1.7]">
+                <ul className="mb-4 pl-[8px] sm:pl-[38px] space-y-2.5 text-[13.5px] text-muted font-light leading-[1.7]">
                   {job.bullets.map((bullet: string, idx: number) => (
                     <li key={idx} className="relative flex items-start gap-3 group/li">
-                      <span className="material-symbols-outlined !text-[12px] text-[#7eb8f7]/60 shrink-0 mt-[6px] group-hover/li:text-[#7eb8f7] transition-colors font-semibold">
+                      <span className="material-symbols-outlined !text-[12px] text-accent/60 shrink-0 mt-[6px] group-hover/li:text-accent transition-colors font-semibold">
                         arrow_forward
                       </span>
                       <span dangerouslySetInnerHTML={{ __html: bullet }} />
@@ -1146,28 +1178,25 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ─── Interactive Telemetry Fun Sandbox Section ─── */}
-      <section className="mt-16">
-        <FunSection currentLang={language} />
-      </section>
+
 
       {/* ─── Dedicated Side Business Section (Catalyst for Rahigo) ─── */}
-      <section id="side-business" className="mt-16 scroll-mt-24 pt-10 border-t border-white/5">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.sideBusiness}</p>
+      <section id="side-business" className="mt-16 scroll-mt-24 pt-10 border-t border-border">
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-dim mb-6">{t.labels.sideBusiness}</p>
 
-        <div className="p-6 rounded-2xl bg-white/[0.015] border border-white/5 hover:border-[#7eb8f7]/10 transition-all duration-300 relative overflow-hidden group">
+        <div className="p-6 rounded-2xl bg-tag-bg border border-border hover:border-accent/10 transition-all duration-300 relative overflow-hidden group">
           {/* Subtle glowing halo inside the card */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#7eb8f7]/5 blur-2xl rounded-full group-hover:bg-[#7eb8f7]/10 transition-colors pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-2xl rounded-full group-hover:bg-accent/10 transition-colors pointer-events-none"></div>
 
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
             <div className="flex items-center gap-3">
               {/* Special dedicated logo box */}
-              <div className="w-[32px] h-[32px] rounded-lg bg-[#7eb8f7]/10 border border-[#7eb8f7]/20 flex items-center justify-center font-mono text-[13px] font-bold text-[#7eb8f7] shrink-0">
+              <div className="w-[32px] h-[32px] rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center font-mono text-[13px] font-bold text-accent shrink-0">
                 BT
               </div>
               <div>
-                <h3 className="text-[16px] font-medium text-[#e8eaf0] group-hover:text-[#7eb8f7] transition-colors">{t.sideBusiness.title}</h3>
-                <p className="text-[11px] text-[#808ca3] font-mono tracking-tight">{t.sideBusiness.tagline}</p>
+                <h3 className="text-[16px] font-medium text-text group-hover:text-accent transition-colors">{t.sideBusiness.title}</h3>
+                <p className="text-[11px] text-dim font-mono tracking-tight">{t.sideBusiness.tagline}</p>
               </div>
             </div>
 
@@ -1176,7 +1205,7 @@ export default async function Home() {
               href={t.sideBusiness.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[11px] font-mono text-[#7eb8f7] bg-[#7eb8f7]/5 border border-[#7eb8f7]/15 hover:bg-[#7eb8f7]/15 transition-all shadow-md group/btn shrink-0"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[11px] font-mono text-accent bg-accent/5 border border-accent/15 hover:bg-accent/15 transition-all shadow-md group/btn shrink-0"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               {t.sideBusiness.verifiedLabel}
@@ -1184,17 +1213,17 @@ export default async function Home() {
           </div>
 
           <p
-            className="text-[14px] text-[#8892a4] leading-[1.8] font-light mb-5"
+            className="text-[14px] text-muted leading-[1.8] font-light mb-5"
             dangerouslySetInnerHTML={{ __html: t.sideBusiness.pitch }}
           />
 
           {/* Visual Force Traveller highlight bar */}
-          <div className="mt-2 mb-6 px-4 py-3 rounded-xl bg-white/[0.01] border-l-2 border-[#d97706]/40 border-y border-r border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-inner">
+          <div className="mt-2 mb-6 px-4 py-3 rounded-xl bg-tag-bg/50 border-l-2 border-[#d97706]/40 border-y border-r border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-inner">
             <div className="flex items-center gap-3">
               <span className="text-[20px] shrink-0">🚌</span>
               <div>
-                <p className="text-[12.5px] font-mono text-[#e8eaf0] tracking-wide font-medium">{t.sideBusiness.fleetLabel}</p>
-                <p className="text-[10px] text-[#808ca3] uppercase tracking-[0.05em] font-medium">{t.sideBusiness.fleetSub}</p>
+                <p className="text-[12.5px] font-mono text-text tracking-wide font-medium">{t.sideBusiness.fleetLabel}</p>
+                <p className="text-[10px] text-dim uppercase tracking-[0.05em] font-medium">{t.sideBusiness.fleetSub}</p>
               </div>
             </div>
             <span className="text-[10px] font-mono text-[#f59e0b] bg-[#d97706]/10 px-2.5 py-1 rounded-[5px] border border-[#d97706]/20 uppercase tracking-wider shrink-0 font-semibold text-center sm:text-left self-start sm:self-auto">
@@ -1204,10 +1233,10 @@ export default async function Home() {
 
           {/* Sitemap Verification Bullet Points */}
           {t.sideBusiness.bullets && t.sideBusiness.bullets.length > 0 && (
-            <ul className="mb-6 pl-[8px] sm:pl-[38px] space-y-3 text-[13.5px] text-[#8892a4] font-light leading-[1.7]">
+            <ul className="mb-6 pl-[8px] sm:pl-[38px] space-y-3 text-[13.5px] text-muted font-light leading-[1.7]">
               {t.sideBusiness.bullets.map((bullet: string, idx: number) => (
                 <li key={idx} className="relative flex items-start gap-3.5 group/li">
-                  <span className="material-symbols-outlined !text-[14px] text-[#7eb8f7] shrink-0 mt-[4px] group-hover/li:translate-x-0.5 transition-transform duration-300">
+                  <span className="material-symbols-outlined !text-[14px] text-accent shrink-0 mt-[4px] group-hover/li:translate-x-0.5 transition-transform duration-300">
                     chevron_right
                   </span>
                   <span dangerouslySetInnerHTML={{ __html: bullet }} />
@@ -1217,9 +1246,9 @@ export default async function Home() {
           )}
 
           {/* Interactive Routes Sub-Section */}
-          <div className="pt-6 border-t border-white/5">
-            <h4 className="text-[12px] font-medium text-[#e8eaf0] mb-1.5">{t.sideBusiness.trafficTitle}</h4>
-            <p className="text-[11.5px] text-[#808ca3] mb-4 leading-normal">{t.sideBusiness.trafficSubtitle}</p>
+          <div className="pt-6 border-t border-border">
+            <h4 className="text-[12px] font-medium text-text mb-1.5">{t.sideBusiness.trafficTitle}</h4>
+            <p className="text-[11.5px] text-dim mb-4 leading-normal">{t.sideBusiness.trafficSubtitle}</p>
 
             {/* Call the visual interactive client element */}
             <BarakahInteractive routes={t.sideBusiness.routes} />
@@ -1228,14 +1257,14 @@ export default async function Home() {
       </section>
 
       {/* ─── Projects Section ─── */}
-      <section id="projects" className="mt-16 scroll-mt-24 pt-10 border-t border-white/5">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.projects}</p>
+      <section id="projects" className="mt-16 scroll-mt-24 pt-10 border-t border-border">
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-dim mb-6">{t.labels.projects}</p>
 
-        <div className="border-t border-white/5 divide-y divide-white/5">
+        <div className="border-t border-border divide-y divide-border">
           {t.projects.map((proj, index) => (
             <div key={index} className="project-item group">
               <div className="flex items-start gap-3.5 max-w-[75%]">
-                <div className="w-[24px] h-[24px] rounded-[5px] bg-[#0e0e10] border border-white/5 flex items-center justify-center font-mono text-[9px] font-bold text-[#7eb8f7] shrink-0 mt-0.5 shadow-md overflow-hidden">
+                <div className="w-[24px] h-[24px] rounded-[5px] bg-bg3 border border-border flex items-center justify-center font-mono text-[9px] font-bold text-accent shrink-0 mt-0.5 shadow-md overflow-hidden">
                   {proj.logo.startsWith("http") ? (
                     <img src={proj.logo} alt={proj.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   ) : (
@@ -1244,17 +1273,17 @@ export default async function Home() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[15px] font-medium text-[#e8eaf0] group-hover:text-[#7eb8f7] transition-colors">{proj.name}</span>
+                    <span className="text-[15px] font-medium text-text group-hover:text-accent transition-colors">{proj.name}</span>
                     {proj.caseStudyUrl && (
                       <Link
                         href={proj.caseStudyUrl}
-                        className="text-[10px] uppercase font-mono tracking-widest text-[#808ca3] hover:text-[#7eb8f7] transition-colors bg-white/5 px-2 py-0.5 rounded-[4px]"
+                        className="text-[10px] uppercase font-mono tracking-widest text-dim hover:text-accent transition-colors bg-tag-bg px-2 py-0.5 rounded-[4px]"
                       >
                         case study
                       </Link>
                     )}
                   </div>
-                  <p className="text-[13px] text-[#808ca3] mt-1.5 font-light">{proj.desc}</p>
+                  <p className="text-[13px] text-dim mt-1.5 font-light">{proj.desc}</p>
                 </div>
               </div>
 
@@ -1262,7 +1291,7 @@ export default async function Home() {
                 href={proj.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12px] text-[#808ca3] hover:text-[#7eb8f7] transition-all font-mono whitespace-nowrap"
+                className="text-[12px] text-dim hover:text-accent transition-all font-mono whitespace-nowrap"
               >
                 {proj.urlText}
               </a>
@@ -1272,10 +1301,10 @@ export default async function Home() {
       </section>
 
       {/* ─── Contact Section ─── */}
-      <section id="contact" className="mt-16 pt-10 border-t border-white/5 scroll-mt-24">
-        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#808ca3] mb-6">{t.labels.contact}</p>
+      <section id="contact" className="mt-16 pt-10 border-t border-border scroll-mt-24">
+        <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-dim mb-6">{t.labels.contact}</p>
         <p
-          className="text-[15px] text-[#8892a4] leading-[1.9] font-light"
+          className="text-[15px] text-muted leading-[1.9] font-light"
           dangerouslySetInnerHTML={{ __html: t.contact }}
         />
       </section>

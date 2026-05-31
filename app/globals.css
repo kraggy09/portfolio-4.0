@@ -1,18 +1,65 @@
 @import "tailwindcss";
 
+/* ─── Theme Variables ─── */
+:root {
+  --bg-color: #000000;
+  --bg2-color: #050505;
+  --bg3-color: #0e0e10;
+  --text-color: #e8eaf0;
+  --muted-color: #8892a4;
+  --dim-color: #808ca3;
+  --accent-color: #7eb8f7;
+  --accent-hover: #a5d3ff;
+  --border-color: rgba(255, 255, 255, 0.04);
+  --tag-bg: rgba(255, 255, 255, 0.02);
+  --tag-border: rgba(255, 255, 255, 0.05);
+
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --spotlight: rgba(126, 184, 247, 0.09);
+  --scroll-track: #000000;
+  --scroll-thumb: #0e0e10;
+  --card-bg: rgba(255, 255, 255, 0.015);
+  --card-bg-hover: rgba(255, 255, 255, 0.028);
+  --card-border: rgba(255, 255, 255, 0.035);
+  --card-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+}
+
+.light {
+  --bg-color: #fafafa;       /* Premium off-white paper canvas background */
+  --bg2-color: #ffffff;      /* Pure white for elevated structural elements like top navigation */
+  --bg3-color: #e4e4e7;      /* Solid zinc grey for nested elements, logos, and dividers */
+  --text-color: #18181b;     /* Deep rich ink primary text for supreme legibility */
+  --muted-color: #52525b;    /* Readable medium stone gray for descriptions and bullets */
+  --dim-color: #71717a;      /* Soft stone gray for subtle metadata and dates */
+  --accent-color: #1e3a8a;   /* Premium deep cobalt blue for hyper-visible links and accents */
+  --accent-hover: #2563eb;   /* Interactive cobalt blue hover */
+  --border-color: rgba(24, 24, 27, 0.08); /* Clean container outlines */
+  --tag-bg: #f4f4f5;         /* Soft grey tag pill backgrounds */
+  --tag-border: rgba(24, 24, 27, 0.06);   /* Pill outline borders */
+
+  --grid-line: rgba(24, 24, 27, 0.035);   /* Subtly mapped layout grid lines */
+  --spotlight: rgba(30, 58, 138, 0.03);   /* Top-down cobalt aura spotlight */
+  --scroll-track: #f4f4f5;
+  --scroll-thumb: #d4d4d8;
+  --card-bg: #f4f4f5;                      /* Elegant soft grey card bases instead of stark white boxes */
+  --card-bg-hover: #e4e4e7;                /* Darker grey hover state for tangible interactive feedback */
+  --card-border: rgba(24, 24, 27, 0.05);   /* Card perimeter outlines */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
 /* ─── Tailwind v4 Theme Tokens ─── */
 @theme inline {
-  --color-bg: #000000;
-  --color-bg2: #050505;
-  --color-bg3: #0e0e10;
-  --color-text: #e8eaf0;
-  --color-muted: #8892a4;
-  --color-dim: #808ca3;
-  --color-accent: #7eb8f7;
-  --color-accent-hover: #a5d3ff;
-  --color-border: rgba(255, 255, 255, 0.04);
-  --color-tag-bg: rgba(255, 255, 255, 0.02);
-  --color-tag-border: rgba(255, 255, 255, 0.05);
+  --color-bg: var(--bg-color);
+  --color-bg2: var(--bg2-color);
+  --color-bg3: var(--bg3-color);
+  --color-text: var(--text-color);
+  --color-muted: var(--muted-color);
+  --color-dim: var(--dim-color);
+  --color-accent: var(--accent-color);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border-color);
+  --color-tag-bg: var(--tag-bg);
+  --color-tag-border: var(--tag-border);
 
   --font-sans: var(--font-sans), "DM Sans", sans-serif;
   --font-mono: var(--font-mono), "DM Mono", monospace;
@@ -24,7 +71,7 @@
 /* ─── Base Styles ─── */
 @layer base {
   html {
-    background-color: #000000;
+    background-color: var(--bg-color);
     color: var(--color-text);
     font-family: var(--font-sans);
     font-size: 15px;
@@ -33,12 +80,12 @@
   }
 
   body {
-    background-color: #000000;
+    background-color: var(--bg-color);
     /* Cred-like beautiful square box grid with top spotlight and a fixed grid pattern */
     background-image:
-      radial-gradient(circle at 50% 0%, rgba(126, 184, 247, 0.09) 0%, transparent 45%),
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      radial-gradient(circle at 50% 0%, var(--spotlight) 0%, transparent 45%),
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 100% 100%, 36px 36px, 36px 36px;
     background-attachment: scroll, fixed, fixed;
     color: var(--color-text);
@@ -55,16 +102,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #000000;
+    background: var(--scroll-track);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #0e0e10;
+    background: var(--scroll-thumb);
     border-radius: 99px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #7eb8f7;
+    background: var(--color-accent);
   }
 }
 
@@ -162,19 +209,19 @@
   margin-left: 0;
   margin-right: 0;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.015);
-  border: 1px solid rgba(255, 255, 255, 0.035);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .job-card:hover {
-  background: rgba(255, 255, 255, 0.028);
+  background: var(--card-bg-hover);
   border-color: rgba(126, 184, 247, 0.2);
   box-shadow:
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
-    0 10px 30px -10px rgba(0, 0, 0, 0.5),
-    0 0 25px rgba(126, 184, 247, 0.06);
+    var(--card-shadow),
+    0 10px 30px -10px rgba(0, 0, 0, 0.15),
+    0 0 25px rgba(126, 184, 247, 0.04);
   transform: translateY(-2px) scale(1.005);
 }
 
@@ -187,14 +234,14 @@
   margin-right: 0;
   border-radius: 12px;
   border: 1px solid transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-color);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-item:hover {
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--card-bg-hover);
   border-color: rgba(126, 184, 247, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(126, 184, 247, 0.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(126, 184, 247, 0.02);
 }
 
 /* Dev Tag Badges */
