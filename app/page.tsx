@@ -996,7 +996,34 @@ export default async function Home() {
 
       {/* ─── Header Section ─── */}
       <header className="mb-8">
-        <p className="text-[15px] font-medium text-[#8892a4] mb-5 tracking-wide">{t.name}</p>
+        <div className="flex items-center gap-4 mb-6">
+          <div className="relative shrink-0 w-16 h-16 sm:w-20 sm:h-20">
+            {/* Glowing aura around avatar */}
+            <div className="absolute inset-0 bg-[#7eb8f7]/15 blur-lg rounded-2xl animate-pulse"></div>
+            <img
+              src="https://media.licdn.com/dms/image/v2/D5603AQHW1OmdZ0oFLw/profile-displayphoto-shrink_400_400/B56ZbYjuIQGgAg-/0/1747389965554?e=1781740800&v=beta&t=WTICIQxDegERXq_1RB6E8bka0SATJcVqoPxLtYmCOOg"
+              alt={t.name}
+              className="w-full h-full rounded-2xl border-2 border-[#7eb8f7]/20 relative z-10 object-cover shadow-2xl hover:border-[#7eb8f7]/40 transition-colors duration-300"
+            />
+          </div>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              {/* Sleek light-blue verification rosette checkmark exactly like Twitter/LinkedIn */}
+
+              <h2 className="text-[26px] sm:text-[30px] font-bold tracking-tight text-[#e8eaf0] leading-none">
+                {t.name}
+              </h2>
+              <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 filter drop-shadow-[0_0_8px_rgba(126,184,247,0.35)]" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.99-3.818-3.99-.48 0-.941.1-1.356.275C14.77 2.57 13.5 1.7 12 1.7s-2.77.87-3.416 2.085c-.415-.175-.876-.275-1.356-.275C5.128 3.51 3.42 5.29 3.42 7.5c0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.58.875 2.95 2.148 3.6-.154.435-.238.905-.238 1.4 0 2.21 1.71 3.99 3.818 3.99.48 0 .941-.1 1.356-.275C9.23 21.43 10.5 22.3 12 22.3s2.77-.87 3.416-2.085c.415.175.876.275 1.356.275 2.108 0 3.818-1.78 3.818-3.99 0-.495-.084-.965-.238-1.4 1.273-.65 2.148-2.02 2.148-3.6z" fill="#7eb8f7" />
+                <path d="M9.78 16.67l-3.3-3.3 1.41-1.42 1.89 1.89 5.56-5.56 1.41 1.41-6.97 6.98z" fill="#000000" stroke="#000000" strokeWidth="0.5" />
+              </svg>
+            </div>
+            <p className="text-[12px] sm:text-[13px] font-mono text-[#808ca3] uppercase tracking-widest font-medium pl-0.5">
+              {"Full Stack Developer"}
+            </p>
+          </div>
+        </div>
+
         <h1
           className="text-[22px] font-light leading-[1.5] text-[#e8eaf0] mb-4"
           dangerouslySetInnerHTML={{ __html: t.headline }}
@@ -1004,7 +1031,16 @@ export default async function Home() {
         <p className="text-[15px] text-[#8892a4] leading-[1.75] mb-6">{t.bio}</p>
 
         {/* Links row */}
-        <nav className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
+        <nav className="flex flex-wrap gap-x-5 gap-y-3 mt-4 items-center">
+          <a
+            href="https://drive.google.com/file/d/1ZVP2XaCL7j4u41tUt7wmhNYjl2a1s0Pw/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-mono font-medium text-[#7eb8f7] bg-[#7eb8f7]/5 border border-[#7eb8f7]/15 hover:bg-[#7eb8f7]/15 transition-all shadow-md group animate-pulse-slow"
+          >
+            <span className="material-symbols-outlined !text-[13px] group-hover:translate-y-0.5 transition-transform">description</span>
+            Resume / CV
+          </a>
           <a href="https://github.com/kraggy09" target="_blank" rel="noopener noreferrer" className="social-link">
             <img src="https://cdn.simpleicons.org/github/7eb8f7" alt="" /> GitHub
           </a>
