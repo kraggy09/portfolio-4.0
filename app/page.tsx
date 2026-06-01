@@ -23,7 +23,7 @@ const customTranslations = {
         role: "Full-stack Engineer",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
-        date: "Jan 2025 → Present",
+        date: "Jan 2026 → Present",
         location: "rahigo.in · Kolkata, India",
         bullets: [
           "<strong>Two-Sided Marketplace</strong>: Built two production React Native apps — a customer app to post trip requirements and a partner app for verified operators to submit competing quotes — alongside a Next.js web platform with SSG route pages targeting high-intent search traffic.",
@@ -197,7 +197,7 @@ const customTranslations = {
         role: "फुल-स्टैक इंजीनियर",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
-        date: "जनवरी २०२५ → वर्तमान",
+        date: "जनवरी २०२६ → वर्तमान",
         location: "rahigo.in · कोलकाता, भारत",
         bullets: [
           "<strong>दो-तरफा मार्केटप्लेस</strong>: दो प्रोडक्शन रिएक्ट नेटिव ऐप्स बनाए — यात्रा आवश्यकताओं को पोस्ट करने के लिए एक ग्राहक ऐप और सत्यापित ऑपरेटरों द्वारा प्रतिस्पर्धी कोट्स जमा करने के लिए एक पार्टनर ऐप — साथ ही उच्च-इरादे वाले खोज ट्रैफ़िक को लक्षित करने वाले SSG रूट पेजों के साथ एक Next.js वेब प्लेटफ़ॉर्म।",
@@ -371,7 +371,7 @@ const customTranslations = {
         role: "Ingeniero Full-stack",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
-        date: "Ene 2025 → Presente",
+        date: "Ene 2026 → Presente",
         location: "rahigo.in · Calcuta, India",
         bullets: [
           "<strong>Mercado Bilateral</strong>: Creé dos aplicaciones de producción en React Native (una aplicación de cliente para publicar requisitos de viaje y una aplicación de socio para que los operadores verificados envíen cotizaciones competitivas) junto con una plataforma web en Next.js con páginas de ruta basadas en SSG orientadas al tráfico de búsqueda de alta intención.",
@@ -545,7 +545,7 @@ const customTranslations = {
         role: "Ingénieur Full-stack",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
-        date: "Jan 2025 → Présent",
+        date: "Jan 2026 → Présent",
         location: "rahigo.in · Calcutta, Inde",
         bullets: [
           "<strong>Marché Bilatéral</strong>: Développement de deux applications React Native en production — une application client pour publier les besoins de trajet et une application partenaire pour que les opérateurs vérifiés soumettent des devis compétitifs — ainsi qu'une plateforme web Next.js avec des pages d'itinéraires basées sur le SSG ciblant le trafic de recherche à forte intention d'achat.",
@@ -719,7 +719,7 @@ const customTranslations = {
         role: "フルスタックエンジニア",
         company: "Rahigo Mobility",
         companyUrl: "https://rahigo.in",
-        date: "2025年1月 → 現在",
+        date: "2026年1月 → 現在",
         location: "rahigo.in · コルカタ、インド",
         bullets: [
           "<strong>2面型マーケットプレイス</strong>: 顧客用の旅行要件投稿アプリと、検証済み運行会社が競合見積もりを提出するパートナーアプリの2つの本番React Nativeアプリを開発。同時に、高インテントな検索トラフィックをターゲットにしたSSGルートページを備えたNext.jsウェブプラットフォームを構築。",
