@@ -1,7 +1,6 @@
 import { cookies } from "next/headers";
 import { Language } from "@/context/i18n/dictionary";
 import Link from "next/link";
-import BarakahInteractive from "@/components/BarakahInteractive";
 import HeaderStatus from "@/components/HeaderStatus";
 
 // Complete Redesigned Multilingual Translation Object for the portfolio
@@ -9,7 +8,7 @@ const customTranslations = {
   en: {
     name: "Kaif Shaikh",
     headline: "Full-stack engineer based in Kolkata. I build things end-to-end and ship them — from a blank architecture doc to production.",
-    bio: "Currently building <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, a group vehicle rental marketplace born out of 9 months of actually running a travel agency and seeing every broken part of the industry up close. Open to remote full-stack roles at product-focused teams.",
+    bio: "Currently building <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, a group vehicle rental marketplace born out of 1 year of actually running a travel agency and seeing every broken part of the industry up close. Open to remote full-stack roles at product-focused teams.",
     cookingSince: "Cooking since 2021 👨‍🍳",
     labels: {
       work: "Work Experience",
@@ -83,24 +82,6 @@ const customTranslations = {
           { name: "LiveKit WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
         ]
-      },
-      {
-        logo: "https://www.simcoconsultancy.com/favicon.ico",
-        role: "Software Engineer Intern",
-        company: "Simco Consultancy",
-        date: "Jan 2024 → Mar 2024",
-        location: "Kolkata, India",
-        bullets: [
-          "<strong>Latency Optimization</strong>: Diagnosed and resolved API latency bottlenecks on Render, improving response times by 30% across core user flows.",
-          "<strong>Workflow Automation</strong>: Automated client reporting workflows using Google Apps Script and App Sheets, saving 20+ hours of manual work weekly and cutting report generation time by 40%.",
-          "<strong>Competitive Web Scrapers</strong>: Built headless Puppeteer scrapers to pull and analyse competitor market data."
-        ],
-        tags: [
-          { name: "Apps Script", icon: "https://cdn.simpleicons.org/google/7eb8f7" },
-          { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
-          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-          { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
-        ]
       }
     ],
     sideBusiness: {
@@ -112,10 +93,10 @@ const customTranslations = {
       urlText: "barakahtravels.in ↗",
       tagline: "Co-owner & Operator · Kolkata, India · 2023 – Present",
       verifiedLabel: "Verify Website ↗",
-      pitch: "I didn't start with a startup idea — I started with a travel agency. Personally co-owned a 26-seater Force Traveller and ran hundreds of outstation trips across Digha, Mandarmani, and Gangasagar. Every booking was a mess. Customers had no way to compare prices. Operators quoted whatever they felt like. No accountability if a vehicle broke down. Just phone calls and luck.<br/><br/>After 9 months of living inside that chaos — tracking real bookings, real prices, real complaints — I had enough data and enough frustration to know exactly what needed to be built. That became Rahigo.",
+      pitch: "I didn't start with a startup idea — I started with a travel agency. Personally co-owned a 26-seater Force Traveller and ran hundreds of outstation trips across Digha, Mandarmani, and Gangasagar. Every booking was a mess. Customers had no way to compare prices. Operators quoted whatever they felt like. No accountability if a vehicle broke down. Just phone calls and luck.<br/><br/>After 1 year of living inside that chaos — tracking real bookings, real prices, real complaints — I had enough data and enough frustration to know exactly what needed to be built. That became Rahigo.",
       bullets: [
         "<strong>Fleet & Operations</strong>: Personally managed trip logistics, vendor coordination, and customer handling across 100+ outstation bookings.",
-        "<strong>Supply Network</strong>: Onboarded 40+ fleet operators and mapped 9 months of regional pricing data — now the foundation of Rahigo's dynamic bidding algorithm.",
+        "<strong>Supply Network</strong>: Onboarded 40+ fleet operators and mapped 1 year of regional pricing data — now the foundation of Rahigo's dynamic bidding algorithm.",
         "<strong>Demand Validation</strong>: Built SEO landing pages for high-intent route searches capturing 2.4k organic visits/month, validating real market demand before writing a single line of product code."
       ],
       trafficTitle: "Route Intent & Traffic Dashboard",
@@ -165,12 +146,12 @@ const customTranslations = {
         caseStudyUrl: "/projects/travel-crm"
       },
       {
-        logo: "OS",
-        name: "Open source",
-        desc: "Side projects and experiments on GitHub",
-        url: "https://github.com/kraggy09",
-        urlText: "github.com/kraggy09 ↗",
-        caseStudyUrl: null
+        logo: "IS",
+        name: "InvoSync",
+        desc: "Production billing and inventory system deployed for a retail client. Handles real-time stock sync across terminals, global barcode scanning, multi-tab billing with 30k+ SKUs in memory, and dynamic wholesale/retail pricing brackets. Built on React 19, Zustand, Socket.io, Node.js.",
+        url: "https://www.loom.com/share/539a545e751d4a079abc1d726ab7a256",
+        urlText: "Watch Demo ↗",
+        caseStudyUrl: "/projects/invosync"
       }
     ],
     stack: [
@@ -201,7 +182,7 @@ const customTranslations = {
   hi: {
     name: "कैफ शेख",
     headline: "कोलकाता में स्थित फुल-स्टैक इंजीनियर। मैं चीजों को एंड-टू-एंड बनाता हूँ और उन्हें शिप करता हूँ — एक खाली आर्किटेक्चर दस्तावेज़ से लेकर उत्पादन तक।",
-    bio: "वर्तमान में मैं <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> का निर्माण कर रहा हूँ, जो एक ग्रुप व्हीकल रेंटल मार्केटप्लेस है। यह 9 महीने तक वास्तव में एक ट्रैवल एजेंसी चलाने और उद्योग के हर टूटे हुए हिस्से को करीब से देखने से पैदा हुआ है। प्रोडक्ट-केंद्रित टीमों में रिमोट फुल-स्टैक भूमिकाओं के लिए उपलब्ध हूँ।",
+    bio: "वर्तमान में मैं <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> का निर्माण कर रहा हूँ, जो एक ग्रुप व्हीकल रेंटल मार्केटप्लेस है। यह 1 साल तक वास्तव में एक ट्रैवल एजेंसी चलाने और उद्योग के हर टूटे हुए हिस्से को करीब से देखने से पैदा हुआ है। प्रोडक्ट-केंद्रित टीमों में रिमोट फुल-स्टैक भूमिकाओं के लिए उपलब्ध हूँ।",
     cookingSince: "2021 से कुकिंग 👨‍🍳",
     labels: {
       work: "कार्य अनुभव",
@@ -275,24 +256,6 @@ const customTranslations = {
           { name: "LiveKit WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
         ]
-      },
-      {
-        logo: "S",
-        role: "सॉफ्टवेयर इंजीनियर इंटर्न",
-        company: "Simco Consultancy",
-        date: "जनवरी २०२४ → मार्च २०२४",
-        location: "कोलकाता, भारत",
-        bullets: [
-          "<strong>एपीआई विलंबता अनुकूलन</strong>: Render पर एपीआई विलंबता बाधाओं का निदान और समाधान किया, जिससे कोर उपयोगकर्ता प्रवाह में प्रतिक्रिया समय में 30% सुधार हुआ।",
-          "<strong>कार्यप्रवाह स्वचालन</strong>: Google Apps Script और App Sheets का उपयोग करके क्लाइंट रिपोर्टिंग वर्कफ़्लो को स्वचालित किया, जिससे साप्ताहिक 20+ घंटे की मैन्युअल बचत हुई और रिपोर्ट निर्माण समय 40% कम हुआ।",
-          "<strong>वेब स्क्रेपर्स</strong>: प्रतियोगी बाजार डेटा को खींचने और उनका विश्लेषण करने के लिए हेडलेस Puppeteer स्क्रेपर्स बनाए।"
-        ],
-        tags: [
-          { name: "Apps Script", icon: "https://cdn.simpleicons.org/google/7eb8f7" },
-          { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
-          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-          { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
-        ]
       }
     ],
     sideBusiness: {
@@ -304,10 +267,10 @@ const customTranslations = {
       urlText: "barakahtravels.in ↗",
       tagline: "सह-स्वामी और संचालक · कोलकाता, भारत · २०२३ – वर्तमान",
       verifiedLabel: "वेबसाइट सत्यापित करें ↗",
-      pitch: "मैंने एक स्टार्टअप विचार के साथ शुरुआत नहीं की थी — मैंने एक ट्रैवल एजेंसी के साथ शुरुआत की थी। व्यक्तिगत रूप से एक २६-सीटर फोर्स ट्रैवलर का सह-स्वामित्व लिया और दीघा, मंदारमनी और गंगासागर में सैकड़ों आउटस्टेशन यात्राएं चलाईं। हर बुकिंग एक गड़बड़ थी। ग्राहकों के पास कीमतों की तुलना करने का कोई तरीका नहीं था। ऑपरेटर जो मन में आता था, वह भाव बताते थे। यदि कोई वाहन खराब हो जाता था तो कोई जवाबदेही नहीं थी। बस फोन कॉल और किस्मत।<br/><br/>उस अराजकता के भीतर 9 महीने रहने के बाद — वास्तविक बुकिंग, वास्तविक कीमतों और वास्तविक शिकायतों को ट्रैक करने के बाद — मेरे पास यह जानने के लिए पर्याप्त डेटा और पर्याप्त हताशा थी कि वास्तव में क्या बनाया जाना चाहिए। वह राहिगो (Rahigo) बना।",
+      pitch: "मैंने एक स्टार्टअप विचार के साथ शुरुआत नहीं की थी — मैंने एक ट्रैवल एजेंसी के साथ शुरुआत की थी। व्यक्तिगत रूप से एक २६-सीटर फोर्स ट्रैवलर का सह-स्वामित्व लिया और दीघा, मंदारमनी और गंगासागर में सैकड़ों आउटस्टेशन यात्राएं चलाईं। हर बुकिंग एक गड़बड़ थी। ग्राहकों के पास कीमतों की तुलना करने का कोई तरीका नहीं था। ऑपरेटर जो मन में आता था, वह भाव बताते थे। यदि कोई वाहन खराब हो जाता था तो कोई जवाबदेही नहीं थी। बस फोन कॉल और किस्मत।<br/><br/>उस अराजकता के भीतर 1 साल रहने के बाद — वास्तविक बुकिंग, वास्तविक कीमतों और वास्तविक शिकायतों को ट्रैक करने के बाद — मेरे पास यह जानने के लिए पर्याप्त डेटा और पर्याप्त हताशा थी कि वास्तव में क्या बनाया जाना चाहिए। वह राहिगो (Rahigo) बना।",
       bullets: [
         "<strong>बेड़ा और संचालन</strong>: व्यक्तिगत रूप से 100+ आउटस्टेशन बुकिंगों में यात्रा रसद (trip logistics), विक्रेता समन्वय और ग्राहक हैंडलिंग का प्रबंधन किया।",
-        "<strong>आपूर्ति नेटवर्क</strong>: 40+ बेड़े ऑपरेटरों को ऑनबोर्ड किया और 9 महीने के क्षेत्रीय मूल्य निर्धारण डेटा को मैप किया — जो अब राहिगो के गतिशील बोली एल्गोरिदम की नींव है।",
+        "<strong>आपूर्ति नेटवर्क</strong>: 40+ बेड़े ऑपरेटरों को ऑनबोर्ड किया और 1 साल के क्षेत्रीय मूल्य निर्धारण डेटा को मैप किया — जो अब राहिगो के गतिशील बोली एल्गोरिदम की नींव है।",
         "<strong>मांग सत्यापन</strong>: उत्पाद कोड की एक भी पंक्ति लिखने से पहले वास्तविक बाजार मांग को सत्यापित करते हुए, प्रति माह 2.4k ऑर्गेनिक विज़िट प्राप्त करने वाले उच्च-इरादे वाले मार्ग खोजों के लिए SEO लैंडिंग पृष्ठ बनाए।"
       ],
       trafficTitle: "रूट इंटेंट और ट्रैफ़िक डैशबोर्ड",
@@ -357,12 +320,12 @@ const customTranslations = {
         caseStudyUrl: "/projects/travel-crm"
       },
       {
-        logo: "OS",
-        name: "ओपन सोर्स",
-        desc: "गिटहब पर साइड प्रोजेक्ट्स और प्रयोग",
-        url: "https://github.com/kraggy09",
-        urlText: "github.com/kraggy09 ↗",
-        caseStudyUrl: null
+        logo: "IS",
+        name: "InvoSync",
+        desc: "एक रिटेल क्लाइंट के लिए तैनात प्रोडक्शन बिलिंग और इन्वेंट्री सिस्टम। यह टर्मिनलों में रीयल-टाइम स्टॉक सिंक, ग्लोबल बारकोड स्कैनिंग, मेमोरी में 30k+ SKU के साथ मल्टी-टैब बिलिंग और डायनेमिक थोक/खुदरा मूल्य निर्धारण को संभालता है। React 19, Zustand, Socket.io, Node.js पर निर्मित।",
+        url: "https://www.loom.com/share/539a545e751d4a079abc1d726ab7a256",
+        urlText: "डेमो देखें ↗",
+        caseStudyUrl: "/projects/invosync"
       }
     ],
     stack: [
@@ -393,7 +356,7 @@ const customTranslations = {
   es: {
     name: "Kaif Shaikh",
     headline: "Ingeniero full-stack con sede en Calcuta. Construyo cosas de extremo a extremo y las entrego, desde un documento de arquitectura en blanco hasta producción.",
-    bio: "Actualmente construyendo <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de alquiler de vehículos grupales nacido de 9 meses de dirigir realmente una agencia de viajes y ver de cerca cada parte rota de la industria. Abierto a roles remotos full-stack en equipos enfocados en producto.",
+    bio: "Actualmente construyendo <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de alquiler de vehículos grupales nacido de 1 año de dirigir realmente una agencia de viajes y ver de cerca cada parte rota de la industria. Abierto a roles remotos full-stack en equipos enfocados en producto.",
     cookingSince: "Cocinando desde 2021 👨‍🍳",
     labels: {
       work: "Experiencia Laboral",
@@ -467,24 +430,6 @@ const customTranslations = {
           { name: "LiveKit WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
         ]
-      },
-      {
-        logo: "S",
-        role: "Ingeniero de Software Interno",
-        company: "Simco Consultancy",
-        date: "Ene 2024 → Mar 2024",
-        location: "Calcuta, India",
-        bullets: [
-          "<strong>Optimización de Latencia</strong>: Diagnostiqué y resolví cuellos de botella de latencia de API en Render, mejorando los tiempos de respuesta en un 30% en los flujos de usuario principales.",
-          "<strong>Automatización de Informes</strong>: Automatizé los flujos de trabajo de informes de clientes utilizando Google Apps Script y App Sheets, ahorrando más de 20 horas semanales y reduciendo el tiempo de generación de informes en un 40%.",
-          "<strong>Scrapers de Competencia</strong>: Creé scrapers headless con Puppeteer.js para extraer y analizar datos de mercado de la competencia."
-        ],
-        tags: [
-          { name: "Apps Script", icon: "https://cdn.simpleicons.org/google/7eb8f7" },
-          { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
-          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-          { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
-        ]
       }
     ],
     sideBusiness: {
@@ -496,10 +441,10 @@ const customTranslations = {
       urlText: "barakahtravels.in ↗",
       tagline: "Copropietario y Operador · Calcuta, India · 2023 – Presente",
       verifiedLabel: "Verificar Sitio Web ↗",
-      pitch: "No empecé con la idea de una startup, empecé con una agencia de viajes. Copropietario personal de una Force Traveller de 26 asientos y realicé cientos de viajes de larga distancia en Digha, Mandarmani y Gangasagar. Cada reserva era un caos. Los clientes no tenían forma de comparar precios. Los operadores cotizaban lo que querían. No había responsabilidad si un vehículo se averiaba. Solo llamadas telefónicas y suerte.<br/><br/>Tras 9 meses viviendo dentro de ese caos (rastreando reservas reales, precios reales y quejas reales), acumulé suficientes datos y frustración como para saber exactamente qué se debía construir. Eso se convirtió en Rahigo.",
+      pitch: "No empecé con la idea de una startup, empecé con una agencia de viajes. Copropietario personal de una Force Traveller de 26 asientos y realicé cientos de viajes de larga distancia en Digha, Mandarmani y Gangasagar. Cada reserva era un caos. Los clientes no tenían forma de comparar precios. Los operadores cotizaban lo que querían. No había responsabilidad si un vehículo se averiaba. Solo llamadas telefónicas y suerte.<br/><br/>Tras 1 año viviendo dentro de ese caos (rastreando reservas reales, precios reales y quejas reales), acumulé suficientes datos y frustración como para saber exactamente qué se debía construir. Eso se convirtió en Rahigo.",
       bullets: [
         "<strong>Flota y Operaciones</strong>: Gestioné personalmente la logística de viajes, la coordinación de proveedores y la atención al cliente en más de 100 reservas de larga distancia.",
-        "<strong>Red de Suministro</strong>: Incorporé a más de 40 operadores de flotas y mapeé 9 meses de datos de precios regionales, ahora la base del algoritmo de subasta dinámica de Rahigo.",
+        "<strong>Red de Suministro</strong>: Incorporé a más de 40 operadores de flotas y mapeé 1 año de datos de precios regionales, ahora la base del algoritmo de subasta dinámica de Rahigo.",
         "<strong>Validación de Demanda</strong>: Creé páginas de destino de SEO para búsquedas de rutas de alta intención que capturaron 2.4k visitas orgánicas al mes, validando la demanda real del mercado antes de escribir una sola línea de código del producto."
       ],
       trafficTitle: "Panel de Tráfico e Intención de Ruta",
@@ -549,12 +494,12 @@ const customTranslations = {
         caseStudyUrl: "/projects/travel-crm"
       },
       {
-        logo: "OS",
-        name: "Open source",
-        desc: "Proyectos paralelos y experimentos en GitHub",
-        url: "https://github.com/kraggy09",
-        urlText: "github.com/kraggy09 ↗",
-        caseStudyUrl: null
+        logo: "IS",
+        name: "InvoSync",
+        desc: "Sistema de facturación e inventario en producción implementado para un cliente minorista. Maneja sincronización de stock en tiempo real entre terminales, escaneo global de códigos de barras, facturación de múltiples pestañas con más de 30k SKU en memoria y rangos dinámicos de precios mayoristas/minoristas. Construido sobre React 19, Zustand, Socket.io, Node.js.",
+        url: "https://www.loom.com/share/539a545e751d4a079abc1d726ab7a256",
+        urlText: "Ver Demo ↗",
+        caseStudyUrl: "/projects/invosync"
       }
     ],
     stack: [
@@ -585,7 +530,7 @@ const customTranslations = {
   fr: {
     name: "Kaif Shaikh",
     headline: "Ingénieur full-stack basé à Calcutta. Je conçois des projets de bout en bout et les déploie — d'un document d'architecture vierge jusqu'à la mise en production.",
-    bio: "Je construis actuellement <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de location de véhicules de groupe né de 9 mois passés à diriger une agence de voyages et à observer de près tous les dysfonctionnements du secteur. Disponible pour des opportunités de développeur full-stack à distance au sein d'équipes axées sur le produit.",
+    bio: "Je construis actuellement <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a>, un marketplace de location de véhicules de groupe né de 1 an passé à diriger une agence de voyages et à observer de près tous les dysfonctionnements du secteur. Disponible pour des opportunités de développeur full-stack à distance au sein d'équipes axées sur le produit.",
     cookingSince: "En cuisine depuis 2021 👨‍🍳",
     labels: {
       work: "Expérience Professionnelle",
@@ -659,24 +604,6 @@ const customTranslations = {
           { name: "LiveKit WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
         ]
-      },
-      {
-        logo: "S",
-        role: "Stagiaire Ingénieur Logiciel",
-        company: "Simco Consultancy",
-        date: "Jan 2024 → Mar 2024",
-        location: "Calcutta, Inde",
-        bullets: [
-          "<strong>Résolution de Latence API</strong>: Diagnostic et résolution de goulots d'étranglement de latence API sur Render, améliorant de 30 % les temps de réponse sur les principaux parcours utilisateurs.",
-          "<strong>Automatisation de Rapports</strong>: Automatisation des rapports clients avec Google Apps Script et App Sheets, économisant 20+ heures de travail hebdomadaire et accélérant la génération des rapports de 40 %.",
-          "<strong>Moissonnage Puppeteer</strong>: Déploiement de scripts Puppeteer headless pour collecter et analyser les données du marché concurrentiel."
-        ],
-        tags: [
-          { name: "Apps Script", icon: "https://cdn.simpleicons.org/google/7eb8f7" },
-          { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
-          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-          { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
-        ]
       }
     ],
     sideBusiness: {
@@ -688,10 +615,10 @@ const customTranslations = {
       urlText: "barakahtravels.in ↗",
       tagline: "Copropriétaire & Exploitant · Calcutta, Inde · 2023 – Présent",
       verifiedLabel: "Vérifier le Site Web ↗",
-      pitch: "Je n'ai pas commencé avec une idée de startup — j'ai commencé avec une agence de voyage. Copropriétaire d'un Force Traveller de 26 places, j'ai géré des centaines de trajets longue distance vers Digha, Mandarmani et Gangasagar. Chaque réservation était un désastre. Les clients n'avaient aucun moyen de comparer les prix. Les transporteurs fixaient leurs tarifs à la tête du client. Aucune responsabilité en cas de panne. Juste des appels et de la chance.<br/><br/>Après 9 mois à vivre dans ce chaos — à suivre les réservations réelles, les prix réels et les plaintes réelles — j'avais accumulé assez de données et de frustration pour savoir exactement ce qui devait être construit. C'est devenu Rahigo.",
+      pitch: "Je n'ai pas commencé avec une idée de startup — j'ai commencé avec une agence de voyage. Copropriétaire d'un Force Traveller de 26 places, j'ai géré des centaines de trajets longue distance vers Digha, Mandarmani et Gangasagar. Chaque réservation était un désastre. Les clients n'avaient aucun moyen de comparer les prix. Les transporteurs fixaient leurs tarifs à la tête du client. Aucune responsabilité en cas de panne. Juste des appels et de la chance.<br/><br/>Après 1 an à vivre dans ce chaos — à suivre les réservations réelles, les prix réels et les plaintes réelles — j'avais accumulé assez de données et de frustration pour savoir exactement ce qui devait être construit. C'est devenu Rahigo.",
       bullets: [
         "<strong>Flotte & Opérations</strong>: Gestion personnelle de la logistique des trajets, de la coordination des prestataires et de la relation client sur plus de 100 réservations longue distance.",
-        "<strong>Réseau d'Offre</strong>: Intégration de 40+ exploitant de flottes et cartographie de 9 mois de données tarifaires régionales — aujourd'hui la base de l'algorithme d'enchères dynamiques de Rahigo.",
+        "<strong>Réseau d'Offre</strong>: Intégration de 40+ exploitant de flottes et cartographie de 1 an de données tarifaires régionales — aujourd'hui la base de l'algorithme d'enchères dynamiques de Rahigo.",
         "<strong>Validation de Demande</strong>: Création de landing pages SEO pour les recherches d'itinéraires à forte intention, capturant 2,4k visites organiques par mois pour valider la demande réelle avant d'écrire la moindre ligne de code."
       ],
       trafficTitle: "Tableau de Bord des Intentions de Trajet",
@@ -741,12 +668,12 @@ const customTranslations = {
         caseStudyUrl: "/projects/travel-crm"
       },
       {
-        logo: "OS",
-        name: "Open source",
-        desc: "Projets personnels et expérimentations sur GitHub",
-        url: "https://github.com/kraggy09",
-        urlText: "github.com/kraggy09 ↗",
-        caseStudyUrl: null
+        logo: "IS",
+        name: "InvoSync",
+        desc: "Système de facturation et d'inventaire en production déployé pour un client de vente au détail. Gère la synchronisation des stocks en temps réel entre les terminaux, la lecture globale des codes-barres, la facturation multi-onglets avec plus de 30 000 SKU en mémoire et des grilles tarifaires dynamiques de gros/détail. Conçu avec React 19, Zustand, Socket.io, Node.js.",
+        url: "https://www.loom.com/share/539a545e751d4a079abc1d726ab7a256",
+        urlText: "Voir la Démo ↗",
+        caseStudyUrl: "/projects/invosync"
       }
     ],
     stack: [
@@ -777,7 +704,7 @@ const customTranslations = {
   ja: {
     name: "Kaif Shaikh",
     headline: "コルカタを拠点とするフルスタックエンジニア。白紙のアーキテクチャ設計書から本番デプロイまで、プロダクトをエンドツーエンドで自立して開発・ローンチします。",
-    bio: "現在は、団体車両レンタルマーケットプレイスである <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> を開発中。実際に9ヶ月間旅行代理店を運営し、業界のあらゆる課題や非効率を間近で見てきた経験から誕生しました。プロダクト重視のチームでのフルスタックのリモートポジションを探しています。",
+    bio: "現在は、団体車両レンタルマーケットプレイスである <a href='https://rahigo.in' target='_blank' class='sliding-link font-medium'>Rahigo</a> を開発中。実際に1年間旅行代理店を運営し、業界のあらゆる課題や非効率を間近で見てきた経験から誕生しました。プロダクト重視のチームでのフルスタックのリモートポジションを探しています。",
     cookingSince: "2021年からクッキング中 👨‍🍳",
     labels: {
       work: "職務経歴",
@@ -851,24 +778,6 @@ const customTranslations = {
           { name: "LiveKit WebRTC", icon: "https://cdn.simpleicons.org/webrtc/7eb8f7" },
           { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
         ]
-      },
-      {
-        logo: "S",
-        role: "ソフトウェアエンジニア（インターン）",
-        company: "Simco Consultancy",
-        date: "2024年1月 → 2024年3月",
-        location: "コルカタ、インド",
-        bullets: [
-          "<strong>API遅延の特定と改善</strong>: Render上で稼働するAPIのレイテンシボトルネックを特定・解消し、主要ユーザーフローのレスポンス時間を30%改善。",
-          "<strong>業務プロセスの自動化</strong>: Google Apps Script and App Sheetsを用いてクライアント向けレポート作成フローを自動化し、毎週20時間以上の工数削減およびレポート生成時間を40%短縮。",
-          "<strong>競合市場データの分析</strong>: ヘッドレスPuppeteerスクレイパーを構築し、競合他社の市場データ自動抽出と競合分析を実施。"
-        ],
-        tags: [
-          { name: "Apps Script", icon: "https://cdn.simpleicons.org/google/7eb8f7" },
-          { name: "Puppeteer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg" },
-          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-          { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
-        ]
       }
     ],
     sideBusiness: {
@@ -880,10 +789,10 @@ const customTranslations = {
       urlText: "barakahtravels.in ↗",
       tagline: "共同経営者 兼 運行管理者 · コルカタ、インド · 2023年 – 現在",
       verifiedLabel: "サイトを開いて検証する ↗",
-      pitch: "私は最初からスタートアップを起業しようとしたのではありません。旅行代理店の運営から始めました。個人で26人乗りの「Force Traveller」車両を共同所有し、ディガ、マンダルマニ、Gangasagarなどの郊外ルートで何百回もの旅行を運行しました。しかし、当時はすべての予約プロセスが崩壊していました。顧客には価格を比較する手段がなく、運行会社は気分で運賃を提示し、走行中に車両が故障しても責任を追及する仕組みがありませんでした。電話と幸運だけに頼る取引でした。<br/><br/>その混乱の真ん中で9ヶ月間、実際の予約データ、実際の価格、実際のクレームと向き合い続けた結果、市場に何が作られるべきかを定義する十分なデータと強い問題意識が蓄積されました。これがのちに「Rahigo」の創業へと繋がったのです。",
+      pitch: "私は最初からスタートアップを起業しようとしたのではありません。旅行代理店の運営から始めました。個人で26人乗りの「Force Traveller」車両を共同所有し、ディガ、マンダルマニ、Gangasagarなどの郊外ルートで何百回もの旅行を運行しました。しかし、当時はすべての予約プロセスが崩壊していました。顧客には価格を比較する手段がなく、運行会社は気分で運賃を提示し、走行中に車両が故障しても責任を追及する仕組みがありませんでした。電話と幸運だけに頼る取引でした。<br/><br/>その混乱の真ん中で1年間、実際の予約データ、実際の価格、実際のクレームと向き合い続けた結果、市場に何が作られるべきかを定義する十分なデータと強い問題意識が蓄積されました。これがのちに「Rahigo」の創業へと繋がったのです。",
       bullets: [
         "<strong>運行＆オペレーション</strong>: 100件以上の郊外旅行予約において、運行ロジスティクス、運行会社コーディネート、および顧客対応を直接統括。",
-        "<strong>供給ネットワーク</strong>: 40社以上のバス運行会社を網羅し、9ヶ月間にわたる地域運賃データを収集 — 現在のRahigoのリアルタイム動的入札アルゴリズムの基礎データを定義。",
+        "<strong>供給ネットワーク</strong>: 40社以上のバス運行会社を網羅し、1年間にわたる地域運賃データを収集 — 現在のRahigoのリアルタイム動的入札アルゴリズムの基礎データを定義。",
         "<strong>需要検証</strong>: 検索インテントの高いルートに特化したSEOランディングページ群を構築し、月間2,400件のオーガニック流入を獲得。プロダクトコードを1行も書く前に、真の市場需要を綿密に検証。"
       ],
       trafficTitle: "ルート意図＆トラフィックダッシュボード",
@@ -933,12 +842,12 @@ const customTranslations = {
         caseStudyUrl: "/projects/travel-crm"
       },
       {
-        logo: "OS",
-        name: "オープンソース",
-        desc: "GitHubでのサイドプロジェクトおよび実験",
-        url: "https://github.com/kraggy09",
-        urlText: "github.com/kraggy09 ↗",
-        caseStudyUrl: null
+        logo: "IS",
+        name: "InvoSync",
+        desc: "小売クライアント向けに導入された本番用請求・在庫管理システム。端末間のリアルタイム在庫同期、グローバルバーコードスキャン、メモリ内30k+ SKUのマルチタブ請求、および動的な卸売/小売価格設定ブラケットを処理します。React 19、Zustand、Socket.io、Node.jsで構築。",
+        url: "https://www.loom.com/share/539a545e751d4a079abc1d726ab7a256",
+        urlText: "デモを見る ↗",
+        caseStudyUrl: "/projects/invosync"
       }
     ],
     stack: [
@@ -1205,10 +1114,9 @@ export default async function Home() {
               href={t.sideBusiness.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[11px] font-mono text-accent bg-accent/5 border border-accent/15 hover:bg-accent/15 transition-all shadow-md group/btn shrink-0"
+              className="text-[12px] text-dim hover:text-accent transition-all font-mono whitespace-nowrap self-center"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              {t.sideBusiness.verifiedLabel}
+              {t.sideBusiness.urlText}
             </a>
           </div>
 
@@ -1244,15 +1152,6 @@ export default async function Home() {
               ))}
             </ul>
           )}
-
-          {/* Interactive Routes Sub-Section */}
-          <div className="pt-6 border-t border-border">
-            <h4 className="text-[12px] font-medium text-text mb-1.5">{t.sideBusiness.trafficTitle}</h4>
-            <p className="text-[11.5px] text-dim mb-4 leading-normal">{t.sideBusiness.trafficSubtitle}</p>
-
-            {/* Call the visual interactive client element */}
-            <BarakahInteractive routes={t.sideBusiness.routes} />
-          </div>
         </div>
       </section>
 

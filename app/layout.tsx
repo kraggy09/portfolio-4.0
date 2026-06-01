@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s |  Kaif Shaikh"
   },
   description:
-    "Official portfolio of  Kaif Shaikh. Co-founder & CEO of Rahigo Mobility. Expert in building end-to-end full-stack architectures, real-time marketplaces, and scalable SaaS.",
+    "Official portfolio of  Kaif Shaikh. Building Rahigo Mobility. Expert in building end-to-end full-stack architectures, real-time marketplaces, and scalable SaaS.",
   keywords: [
     "Kaif Shaikh",
     "Kaif Shaikh",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: " Kaif Shaikh | Full Stack Engineer & Founder",
     description:
-      "Co-founder & CEO of Rahigo Mobility. Full-stack developer building robust, production-ready backend and Web applications.",
+      "Building Rahigo Mobility. Full-stack developer building robust, production-ready backend and Web applications.",
     url: "https://www.kaifsk.com",
     siteName: "Kaif Shaikh Portfolio",
     images: [
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kaif Shaikh | Full Stack Engineer & Founder",
     description:
-      "Co-founder & CEO of Rahigo Mobility. Full-stack engineer specializing in robust backends and end-to-end web architectures.",
+      "Building Rahigo Mobility. Full-stack engineer specializing in robust backends and end-to-end web architectures.",
     creator: "@kaifshaikh_2002",
     images: ["/og-image.png"],
   },

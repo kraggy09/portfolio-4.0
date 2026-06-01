@@ -21,7 +21,7 @@ export default function BarakahInteractive({ routes }: BarakahInteractiveProps) 
   // Material symbols bus icon SVG
   const BusIcon = () => (
     <svg 
-      className="w-4 h-4 text-accent" 
+      className="w-3.5 h-3.5 text-accent animate-pulse" 
       fill="currentColor" 
       viewBox="0 0 24 24"
     >
@@ -30,86 +30,85 @@ export default function BarakahInteractive({ routes }: BarakahInteractiveProps) 
   );
 
   return (
-    <div className="space-y-4 font-sans text-text">
+    <div className="space-y-3 font-sans text-text">
       {/* Route Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {routes.map((route, idx) => (
-          <button
-            key={idx}
-            onClick={() => setActiveIndex(idx)}
-            onMouseEnter={() => setActiveIndex(idx)}
-            className={`w-full text-left p-3.5 rounded-xl border transition-all duration-300 relative cursor-pointer group ${
-              activeIndex === idx
-                ? "bg-accent/5 border-accent/30 shadow-[0_0_15px_rgba(126,184,247,0.03)]"
-                : "bg-tag-bg border-border hover:border-accent/15 hover:bg-tag-bg"
-            }`}
-          >
-            <div className="flex items-center justify-between gap-2 mb-1.5">
-              <span className={`text-[12px] font-mono uppercase tracking-widest ${activeIndex === idx ? "text-accent" : "text-dim"}`}>
-                0{idx + 1}
-              </span>
-              <span className="px-2 py-0.5 rounded-md bg-bg border border-border text-[9px] font-mono text-muted">
-                {route.badge}
-              </span>
-            </div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+        {routes.map((route, idx) => {
+          const isSelected = activeIndex === idx;
+          // Extract visual numbers/abbreviations for space-saving footer
+          const displayStat = route.stat.replace("/mo organic search", "/mo").replace("/mo organic", "/mo").replace("/mo surge seasonal", " seasonal");
+          const displayMetric = route.metric.replace(" Intent Score", "% Int.").replace(" fleet mapped", " Fleets").replace(" baseline data", " Base");
+          
+          return (
+            <button
+              key={idx}
+              onClick={() => setActiveIndex(idx)}
+              onMouseEnter={() => setActiveIndex(idx)}
+              className={`w-full text-left p-3 rounded-xl border transition-all duration-300 relative cursor-pointer group flex flex-col justify-between min-h-[96px] ${
+                isSelected
+                  ? "bg-accent/5 border-accent/30 shadow-[0_0_12px_rgba(126,184,247,0.02)]"
+                  : "bg-tag-bg border-border hover:border-accent/15 hover:bg-tag-bg"
+              }`}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-1.5">
+                  <span className={`text-[10px] font-mono uppercase tracking-widest ${isSelected ? "text-accent" : "text-dim"}`}>
+                    0{idx + 1}
+                  </span>
+                  <span className="px-1.5 py-0.5 rounded-[4px] bg-bg border border-border text-[8.5px] font-mono text-muted">
+                    {route.badge}
+                  </span>
+                </div>
 
-            <p className="text-[13.5px] font-medium text-text group-hover:text-accent transition-colors">
-              {route.name.split(" ↔ ")[1]}
-            </p>
-            <p className="text-[10px] text-dim font-mono mt-1">{route.type}</p>
-          </button>
-        ))}
+                <p className="text-[13px] font-medium text-text group-hover:text-accent transition-colors">
+                  {route.name.split(" ↔ ")[1]}
+                </p>
+              </div>
+
+              <div className="mt-2 flex items-center justify-between gap-2 border-t border-border/40 pt-1.5">
+                <span className="text-[9px] text-dim font-mono">{route.type}</span>
+                <span className="text-[9px] font-mono text-accent font-medium whitespace-nowrap">
+                  {displayStat} · {displayMetric}
+                </span>
+              </div>
+            </button>
+          );
+        })}
       </div>
 
       {/* Interactive Detail Box */}
-      <div className="p-4 rounded-xl bg-tag-bg/50 border border-border relative overflow-hidden space-y-4 shadow-inner">
-        
+      <div className="p-3 rounded-xl bg-tag-bg/50 border border-border relative overflow-hidden flex flex-col sm:flex-row items-stretch gap-3 sm:gap-4 shadow-inner">
         {/* Animated Bus Track */}
-        <div className="flex items-center justify-between gap-4 px-2 py-1 relative">
-          <div className="text-[10px] font-mono text-dim uppercase tracking-widest">KOLKATA</div>
+        <div className="flex items-center justify-between gap-3 px-1 py-1 relative w-full sm:w-[170px] shrink-0 border-b sm:border-b-0 sm:border-r border-border pb-2.5 sm:pb-0 sm:pr-4 self-center">
+          <div className="text-[9px] font-mono text-dim uppercase tracking-widest">KOL</div>
           
           {/* Track Line with Dotted Border */}
-          <div className="flex-grow h-[1px] border-t border-dashed border-border relative">
-            {/* Animated Bus container */}
+          <div className="flex-grow h-[1px] border-t border-dashed border-border relative mx-1 min-w-[50px]">
             <div 
-              className="absolute -top-[7px] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+              className="absolute -top-[5.5px] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
               style={{
-                left: activeIndex === 0 ? "10%" : activeIndex === 1 ? "50%" : "85%",
+                left: activeIndex === 0 ? "15%" : activeIndex === 1 ? "50%" : "85%",
                 transform: "translateX(-50%)"
               }}
             >
-              <div className="p-1 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center shadow-lg animate-bounce duration-1000">
+              <div className="p-0.5 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center shadow-lg">
                 <BusIcon />
               </div>
             </div>
           </div>
           
-          <div className="text-[10px] font-mono text-accent uppercase tracking-widest whitespace-nowrap">
-            {routes[activeIndex].name.split(" ↔ ")[1]}
+          <div className="text-[9px] font-mono text-accent uppercase tracking-widest whitespace-nowrap">
+            {routes[activeIndex].name.split(" ↔ ")[1].substring(0, 5).toUpperCase()}
           </div>
         </div>
 
         {/* Insight Breakdown Metrics */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3.5 border-t border-border">
-          <div className="space-y-1">
-            <span className="text-[9px] font-mono uppercase tracking-widest text-dim">Traffic Capture Hack</span>
-            <p className="text-[13px] text-muted leading-[1.6] font-light">
-              {routes[activeIndex].insight}
-            </p>
-          </div>
-          
-          <div className="flex items-center gap-6 sm:justify-end">
-            <div className="space-y-0.5">
-              <span className="text-[9px] font-mono uppercase tracking-widest text-dim block">SEO Traffic</span>
-              <p className="text-[13px] font-mono text-accent font-medium">{routes[activeIndex].stat}</p>
-            </div>
-            <div className="space-y-0.5">
-              <span className="text-[9px] font-mono uppercase tracking-widest text-dim block">Validation Metric</span>
-              <p className="text-[13px] font-mono text-accent font-medium">{routes[activeIndex].metric}</p>
-            </div>
-          </div>
+        <div className="flex-grow text-left flex flex-col justify-center py-0.5">
+          <span className="text-[8.5px] font-mono uppercase tracking-widest text-accent/80 block mb-0.5">Traffic Capture Hack</span>
+          <p className="text-[12px] text-muted leading-relaxed font-light">
+            {routes[activeIndex].insight}
+          </p>
         </div>
-
       </div>
     </div>
   );
