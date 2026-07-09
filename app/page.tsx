@@ -931,7 +931,7 @@ export default async function Home() {
               {/* Glowing aura around avatar */}
               <div className="absolute inset-0 bg-accent/15 blur-lg rounded-2xl animate-pulse"></div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D5603AQHW1OmdZ0oFLw/profile-displayphoto-shrink_400_400/B56ZbYjuIQGgAg-/0/1747389965554?e=1781740800&v=beta&t=WTICIQxDegERXq_1RB6E8bka0SATJcVqoPxLtYmCOOg"
+                src="https://lh3.googleusercontent.com/a/ACg8ocKTZ55merox7A6INcTdRruPq0MZCRBPVhZiiEFcZym0RbjG_Q1C_Q=s360-c-no"
                 alt={t.name}
                 className="w-full h-full rounded-2xl border-2 border-accent/20 relative z-10 object-cover shadow-2xl hover:border-accent/40 transition-colors duration-300"
               />
